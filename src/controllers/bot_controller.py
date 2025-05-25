@@ -1,5 +1,5 @@
 """
-Controlador principal do bot
+Controlador principal do bot - VERSÃO CORRIGIDA
 """
 
 from telegram import Update
@@ -12,6 +12,7 @@ from controllers.category_controller import CategoryController
 from views.keyboards.main_keyboard import MainKeyboard
 from views.messages.expense_messages import ExpenseMessages
 from utils.state_manager import state_manager, ConversationState
+from controllers.photo_controller import PhotoController
 
 class BotController:
     """Controlador principal do bot"""
@@ -20,7 +21,8 @@ class BotController:
         self.user_controller = UserController()
         self.expense_controller = ExpenseController()
         self.category_controller = CategoryController()
-    
+        self.photo_controller = PhotoController()  # ADICIONAR
+
     async def start_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Comando /start"""
         try:
@@ -30,21 +32,23 @@ class BotController:
             
             logger.info(f"Usuário {telegram_id} ({user_name}) iniciou o bot")
             
-            # Registrar/buscar usuário
-            db_user = await self.user_controller.get_or_create_user(
-                telegram_id, user_name
-            )
+            # Registrar usuário
+            db_user = await self.user_controller.get_or_create_user(telegram_id, user_name)
             
             if not db_user:
-                await update.message.reply_text(
-                    "❌ Erro interno. Tente novamente em alguns instantes."
-                )
+                await update.message.reply_text("❌ Erro interno. Tente novamente.")
                 return
             
-            # Limpar estado e mostrar menu principal
+            # Limpar estado
             state_manager.clear_state(telegram_id)
             
-            message = ExpenseMessages.welcome_message(user_name)
+            # Mensagem de boas-vindas
+            message = f"""👋 Olá, **{user_name}**! Bem-vindo ao GEDIE!
+
+🎯 **Gerencie seus gastos de forma inteligente**
+
+Escolha uma opção para começar:"""
+            
             keyboard = MainKeyboard.get_main_menu()
             
             await update.message.reply_text(
@@ -54,13 +58,11 @@ class BotController:
             )
             
         except Exception as e:
-            logger.error(f"Erro no comando start: {e}")
-            await update.message.reply_text(
-                "❌ Erro interno. Tente novamente."
-            )
+            logger.error(f"Erro no start: {e}")
+            await update.message.reply_text("❌ Erro interno.")
     
     async def callback_router(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Roteador de callbacks dos botões"""
+        """Roteador de callbacks"""
         try:
             query = update.callback_query
             await query.answer()
@@ -70,42 +72,37 @@ class BotController:
             
             logger.info(f"Callback {callback_data} do usuário {user_id}")
             
-            # Parsear callback data: "acao:subacao:parametro"
             parts = callback_data.split(":")
             action = parts[0]
             
-            # Roteamento baseado na ação
             if action == "main":
                 await self._handle_main_menu(query, parts)
             elif action == "expense":
                 await self.expense_controller.handle_callback(query, parts)
             elif action == "category":
                 await self.category_controller.handle_callback(query, parts)
+            elif action == "photo":
+                await self.photo_controller.handle_photo_callback(query, parts)
             elif action == "confirm":
                 await self._handle_confirmation(query, parts)
             else:
-                logger.warning(f"Ação desconhecida: {action}")
                 await query.edit_message_text("❌ Ação não reconhecida.")
         
         except Exception as e:
-            logger.error(f"Erro no callback router: {e}")
+            logger.error(f"Erro no callback: {e}")
             await query.edit_message_text("❌ Erro interno.")
     
     async def message_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Handler para mensagens de texto"""
+        """Handler para mensagens"""
         try:
             user_id = update.effective_user.id
             message_text = update.message.text.strip()
             
-            logger.info(f"Mensagem de {user_id}: {message_text}")
-            
-            # Verificar se usuário está em um fluxo que espera input
             if state_manager.is_waiting_input(user_id):
                 await self.expense_controller.handle_text_input(update, message_text)
             else:
-                # Usuário enviou mensagem fora de contexto
                 await update.message.reply_text(
-                    "🤖 Use os botões abaixo para interagir comigo!",
+                    "🤖 Use os botões abaixo para interagir!",
                     reply_markup=MainKeyboard.get_main_menu()
                 )
         
@@ -114,9 +111,8 @@ class BotController:
             await update.message.reply_text("❌ Erro interno.")
     
     async def _handle_main_menu(self, query, parts):
-        """Manipular ações do menu principal"""
+        """Menu principal"""
         if len(parts) > 1 and parts[1] == "menu":
-            # Mostrar menu principal
             state_manager.clear_state(query.from_user.id)
             
             message = "🏠 **Menu Principal**\n\nEscolha uma opção:"
@@ -129,15 +125,13 @@ class BotController:
             )
     
     async def _handle_confirmation(self, query, parts):
-        """Manipular confirmações gerais"""
+        """Confirmações"""
         user_id = query.from_user.id
         
         if len(parts) > 1:
             if parts[1] == "yes":
-                # Confirmar ação pendente
                 await self.expense_controller.confirm_pending_action(query)
             elif parts[1] == "no":
-                # Cancelar ação
                 state_manager.clear_state(user_id)
                 await query.edit_message_text(
                     "❌ Ação cancelada.",
@@ -145,22 +139,22 @@ class BotController:
                 )
     
     async def error_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Handler de erros gerais"""
-        logger.error(f"Erro não capturado: {context.error}")
+        """Handler de erros"""
+        logger.error(f"Erro: {context.error}")
         
-        if update.message:
-            await update.message.reply_text(
-                "❌ Ocorreu um erro inesperado. Tente novamente."
-            )
-        elif update.callback_query:
-            await update.callback_query.edit_message_text(
-                "❌ Ocorreu um erro inesperado. Tente novamente."
-            )
+        try:
+            if update.message:
+                await update.message.reply_text("❌ Erro inesperado.")
+            elif update.callback_query:
+                await update.callback_query.edit_message_text("❌ Erro inesperado.")
+        except:
+            pass
     
     def get_handlers(self):
-        """Retornar handlers para registrar no bot"""
+        """Retornar handlers"""
         return [
             CommandHandler("start", self.start_command),
             CallbackQueryHandler(self.callback_router),
+            MessageHandler(filters.PHOTO, self.photo_controller.handle_photo),  # ADICIONAR
             MessageHandler(filters.TEXT & ~filters.COMMAND, self.message_handler)
         ]

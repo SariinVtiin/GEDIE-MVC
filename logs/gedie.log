@@ -564,3 +564,288 @@
 2025-05-25 11:32:33 | WARNING  | controllers.bot_controller:callback_router:87 | Ação desconhecida: settings
 2025-05-25 11:32:36 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
 2025-05-25 11:32:36 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 12:13:23 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 12:13:23 | INFO     | __main__:main:31 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 12:13:23 | INFO     | __main__:main:36 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 12:13:23 | INFO     | __main__:main:45 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 12:13:23 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 12:13:23 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 12:13:23 | INFO     | __main__:main:57 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 12:13:23 | INFO     | __main__:main:58 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 12:13:24 | INFO     | __main__:main:69 | 📋 Registrando 3 handlers...
+2025-05-25 12:13:24 | INFO     | __main__:main:78 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 12:13:24 | INFO     | __main__:main:81 | 🤖 GEDIE Bot está rodando...
+2025-05-25 12:13:24 | INFO     | __main__:main:82 | 💡 Pressione Ctrl+C para parar
+2025-05-25 12:13:24 | INFO     | __main__:main:85 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 12:13:24 | INFO     | __main__:main:86 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 12:13:24 | INFO     | __main__:main:87 |      python debug.py monitor <telegram_id>
+2025-05-25 12:13:36 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 12:13:36 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 12:13:39 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:register do usuário 6212796124
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 6212796124
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 6212796124
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 6212796124
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-25 12:13:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 12:13:42 | INFO     | controllers.bot_controller:callback_router:71 | Callback category:expense_select:5 do usuário 6212796124
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 6212796124
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 6212796124
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 5 para usuário 6212796124
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Lazer (🎬)
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 5}
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 6212796124
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 5}
+2025-05-25 12:13:42 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 5 selecionada com sucesso para usuário 6212796124
+2025-05-25 12:13:46 | INFO     | controllers.bot_controller:message_handler:100 | Mensagem de 6212796124: 100
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '100' - User: 6212796124
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 5}
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '100' para usuário 6212796124
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 5}
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 5, 'amount': 100.0}
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 6212796124
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 12:13:46 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 5, 'amount': 100.0}
+2025-05-25 12:13:49 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:confirm do usuário 6212796124
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 6212796124
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 5, 'amount': 100.0}
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 6212796124
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 5, 'amount': 100.0}
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 6212796124
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 5, 'amount': 100.0}
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 5, Amount: 100.0
+2025-05-25 12:13:49 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=1, category_id=5, amount=100.0
+2025-05-25 12:13:50 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 6, Valor: R$ 100.00
+2025-05-25 12:13:53 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:view_menu do usuário 6212796124
+2025-05-25 12:13:53 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 6212796124
+2025-05-25 12:13:53 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 12:13:53 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 12:14:00 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:view:today do usuário 6212796124
+2025-05-25 12:14:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 6212796124
+2025-05-25 12:14:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 12:14:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 12:14:03 | INFO     | controllers.bot_controller:callback_router:71 | Callback main:menu do usuário 6212796124
+2025-05-25 12:14:06 | INFO     | controllers.bot_controller:callback_router:71 | Callback category:menu do usuário 6212796124
+2025-05-25 12:14:06 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: menu - User: 6212796124
+2025-05-25 12:14:06 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK menu - User: 6212796124
+2025-05-25 12:14:06 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.IDLE
+2025-05-25 12:14:06 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-25 12:14:08 | INFO     | controllers.bot_controller:callback_router:71 | Callback category:list do usuário 6212796124
+2025-05-25 12:14:08 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: list - User: 6212796124
+2025-05-25 12:14:08 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK list - User: 6212796124
+2025-05-25 12:14:08 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.IDLE
+2025-05-25 12:14:08 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-25 12:14:11 | INFO     | controllers.bot_controller:callback_router:71 | Callback main:menu do usuário 6212796124
+2025-05-25 12:14:14 | INFO     | controllers.bot_controller:callback_router:71 | Callback settings:menu do usuário 6212796124
+2025-05-25 12:14:14 | WARNING  | controllers.bot_controller:callback_router:87 | Ação desconhecida: settings
+2025-05-25 12:14:19 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 12:14:19 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:08:48 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:08:48 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 13:08:48 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 13:08:48 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 13:08:49 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 13:08:49 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 13:08:49 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 13:08:49 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 13:08:49 | INFO     | __main__:main:72 | 📋 Registrando 3 handlers...
+2025-05-25 13:08:49 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 13:08:49 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-25 13:08:49 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-25 13:08:49 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 13:08:49 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 13:08:49 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-25 13:09:13 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:09:13 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:09:17 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:register do usuário 6212796124
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 6212796124
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 6212796124
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 6212796124
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-25 13:09:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 13:09:19 | INFO     | controllers.bot_controller:callback_router:71 | Callback category:expense_select:7 do usuário 6212796124
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 6212796124
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 6212796124
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 7 para usuário 6212796124
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Educação (📚)
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 7}
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 6212796124
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 7}
+2025-05-25 13:09:19 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 7 selecionada com sucesso para usuário 6212796124
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '10099' - User: 6212796124
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 7}
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '10099' para usuário 6212796124
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 7}
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 7, 'amount': 10099.0}
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 6212796124
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 13:09:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 7, 'amount': 10099.0}
+2025-05-25 13:09:25 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:confirm do usuário 6212796124
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 6212796124
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 7, 'amount': 10099.0}
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 6212796124
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 7, 'amount': 10099.0}
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 6212796124
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 7, 'amount': 10099.0}
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 7, Amount: 10099.0
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=1, category_id=7, amount=10099.0
+2025-05-25 13:09:25 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 7, Valor: R$ 10099.00
+2025-05-25 13:09:28 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:view_menu do usuário 6212796124
+2025-05-25 13:09:28 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 6212796124
+2025-05-25 13:09:28 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 13:09:28 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 13:09:30 | INFO     | controllers.bot_controller:callback_router:71 | Callback expense:view:today do usuário 6212796124
+2025-05-25 13:09:30 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 6212796124
+2025-05-25 13:09:30 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-25 13:09:30 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-25 13:20:51 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-25 13:23:38 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:23:38 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 13:23:38 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 13:23:38 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 13:23:38 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 13:23:38 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 13:23:38 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 13:23:38 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 13:23:39 | INFO     | __main__:main:72 | 📋 Registrando 3 handlers...
+2025-05-25 13:23:39 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 13:23:39 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-25 13:23:39 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-25 13:23:39 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 13:23:39 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 13:23:39 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-25 13:23:47 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:23:47 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:24:00 | INFO     | controllers.bot_controller:callback_router:71 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:24:49 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:24:49 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:24:51 | INFO     | controllers.bot_controller:callback_router:71 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:25:21 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:25:21 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:34:48 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-25 13:34:52 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:34:52 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 13:34:52 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 13:34:52 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 13:34:52 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 13:34:52 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 13:34:52 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 13:34:52 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 13:34:53 | INFO     | __main__:main:72 | 📋 Registrando 3 handlers...
+2025-05-25 13:34:53 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 13:34:53 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-25 13:34:53 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-25 13:34:53 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 13:34:53 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 13:34:53 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-25 13:34:59 | INFO     | controllers.bot_controller:start_command:31 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:34:59 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:35:01 | INFO     | controllers.bot_controller:callback_router:71 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:37:18 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-25 13:37:23 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:37:23 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 13:37:23 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 13:37:23 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 13:37:23 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 13:37:23 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 13:37:23 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 13:37:23 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 13:37:24 | INFO     | __main__:main:72 | 📋 Registrando 4 handlers...
+2025-05-25 13:37:24 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 13:37:24 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-25 13:37:24 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-25 13:37:24 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 13:37:24 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 13:37:24 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-25 13:37:29 | INFO     | controllers.bot_controller:start_command:33 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:37:29 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:37:32 | INFO     | controllers.bot_controller:callback_router:73 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:37:54 | INFO     | controllers.photo_controller:handle_photo:88 | 📷 Foto recebida do usuário 6212796124
+2025-05-25 13:37:56 | INFO     | controllers.photo_controller:handle_photo:112 | Foto baixada: 102267 bytes
+2025-05-25 13:37:56 | INFO     | services.gemini_service:analyze_receipt:26 | Iniciando análise de comprovante (102267 bytes)
+2025-05-25 13:37:58 | ERROR    | services.gemini_service:analyze_receipt:79 | Erro na análise: 404 Gemini 1.0 Pro Vision has been deprecated on July 12, 2024. Consider switching to different model, for example gemini-1.5-flash.
+2025-05-25 13:39:11 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-25 13:41:35 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:41:35 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-05-25 13:41:36 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-05-25 13:41:36 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7213 bytes)
+2025-05-25 13:41:36 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-05-25 13:41:38 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-05-25 13:41:38 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-05-25 13:41:55 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-25 13:41:55 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-25 13:41:55 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-25 13:41:55 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-25 13:41:55 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-25 13:41:55 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-25 13:41:55 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-25 13:41:55 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-25 13:41:56 | INFO     | __main__:main:72 | 📋 Registrando 4 handlers...
+2025-05-25 13:41:56 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-25 13:41:56 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-25 13:41:56 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-25 13:41:56 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-25 13:41:56 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-25 13:41:56 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-25 13:41:58 | INFO     | controllers.bot_controller:start_command:33 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-25 13:41:58 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-25 13:42:01 | INFO     | controllers.bot_controller:callback_router:73 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:42:06 | INFO     | controllers.photo_controller:handle_photo:88 | 📷 Foto recebida do usuário 6212796124
+2025-05-25 13:42:07 | INFO     | controllers.photo_controller:handle_photo:112 | Foto baixada: 102267 bytes
+2025-05-25 13:42:07 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (102267 bytes)
+2025-05-25 13:42:07 | INFO     | services.gemini_service:analyze_receipt:38 | Imagem redimensionada para (768, 1024)
+2025-05-25 13:42:07 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-05-25 13:42:10 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 10.05,
+  "estabelecimento": "BELLAVIA SUPERMERCADOS",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": [],
+  "confianca": 0.9,
+  "observacoes": "Compra realizada...
+2025-05-25 13:42:10 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=10.05, estabelecimento=BELLAVIA SUPERMERCADOS, confiança=0.9
+2025-05-25 13:42:47 | INFO     | controllers.bot_controller:callback_router:73 | Callback photo:cancel do usuário 6212796124
+2025-05-25 13:43:24 | INFO     | controllers.bot_controller:callback_router:73 | Callback photo:guide do usuário 6212796124
+2025-05-25 13:43:40 | INFO     | controllers.photo_controller:handle_photo:88 | 📷 Foto recebida do usuário 6212796124
+2025-05-25 13:43:42 | INFO     | controllers.photo_controller:handle_photo:112 | Foto baixada: 86309 bytes
+2025-05-25 13:43:42 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (86309 bytes)
+2025-05-25 13:43:42 | INFO     | services.gemini_service:analyze_receipt:38 | Imagem redimensionada para (768, 1024)
+2025-05-25 13:43:42 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-05-25 13:43:44 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 49.99,
+  "estabelecimento": "C&A MODAS S.A.",
+  "categoria_sugerida": "outros",
+  "itens_principais": ["CINTO PU FOSCO 40MM"],
+  "confianca": 1.0,
+  "observacoes": null
+}
+``...
+2025-05-25 13:43:44 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=49.99, estabelecimento=C&A MODAS S.A., confiança=1.0
+2025-05-25 13:43:55 | INFO     | controllers.bot_controller:callback_router:73 | Callback photo:confirm do usuário 6212796124
+2025-05-25 13:43:55 | INFO     | controllers.photo_controller:_confirm_photo_expense:364 | ✅ Gasto por foto salvo: ID 8
+2025-05-25 15:58:10 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado

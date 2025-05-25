@@ -11,6 +11,9 @@ import os
 # Adicionar src ao path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
+# IMPORTANTE: Adicionar src ao path ANTES dos imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+
 from telegram.ext import Application
 from decouple import config
 from loguru import logger

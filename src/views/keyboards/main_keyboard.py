@@ -1,5 +1,5 @@
 """
-Teclados principais do bot
+Teclados principais do bot - VERSÃO COM FOTOS
 """
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
@@ -7,27 +7,24 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 class MainKeyboard:
     """Teclados do menu principal"""
     
-    @staticmethod
+    @staticmethod  
     def get_main_menu():
-        """Menu principal com opções básicas"""
+        """Menu principal"""
         keyboard = [
             [
-                InlineKeyboardButton("💰 Registrar Gasto", callback_data="expense:register"),
-                InlineKeyboardButton("💸 Ver Gastos", callback_data="expense:view_menu")
+                InlineKeyboardButton("📷 Enviar Comprovante", callback_data="photo:guide"),
+                InlineKeyboardButton("💰 Registrar Gasto", callback_data="expense:register")
             ],
             [
-                InlineKeyboardButton("📊 Relatórios", callback_data="report:menu"),
+                InlineKeyboardButton("💸 Ver Gastos", callback_data="expense:view_menu"),
                 InlineKeyboardButton("🏷️ Categorias", callback_data="category:menu")
-            ],
-            [
-                InlineKeyboardButton("⚙️ Configurações", callback_data="settings:menu")
             ]
         ]
         return InlineKeyboardMarkup(keyboard)
     
     @staticmethod
     def get_back_to_main():
-        """Botão para voltar ao menu principal"""
+        """Voltar ao menu"""
         keyboard = [
             [InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")]
         ]
@@ -35,11 +32,27 @@ class MainKeyboard:
     
     @staticmethod
     def get_confirm_cancel():
-        """Botões de confirmação/cancelamento"""
+        """Botões de confirmação/cancelamento genéricos"""
         keyboard = [
             [
                 InlineKeyboardButton("✅ Confirmar", callback_data="confirm:yes"),
                 InlineKeyboardButton("❌ Cancelar", callback_data="confirm:no")
+            ]
+        ]
+        return InlineKeyboardMarkup(keyboard)
+    
+    @staticmethod
+    def get_registration_options():
+        """Opções de registro de gastos"""
+        keyboard = [
+            [
+                InlineKeyboardButton("📷 Por Foto (IA)", callback_data="photo:guide"),
+            ],
+            [
+                InlineKeyboardButton("💰 Manual", callback_data="expense:register"),
+            ],
+            [
+                InlineKeyboardButton("🔙 Voltar", callback_data="main:menu")
             ]
         ]
         return InlineKeyboardMarkup(keyboard)
@@ -112,10 +125,12 @@ class CategoryKeyboard:
                     row.append(InlineKeyboardButton(text, callback_data=callback))
             keyboard.append(row)
         
-        # Botões adicionais
-        keyboard.append([
-            InlineKeyboardButton("➕ Nova Categoria", callback_data="category:create")
-        ])
+        # Botões adicionais baseados na ação
+        if action == "select" or action == "expense_select":
+            keyboard.append([
+                InlineKeyboardButton("➕ Nova Categoria", callback_data="category:create")
+            ])
+        
         keyboard.append([
             InlineKeyboardButton("🔙 Voltar", callback_data="main:menu")
         ])
