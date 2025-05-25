@@ -18,9 +18,9 @@ from telegram.ext import Application
 from decouple import config
 from loguru import logger
 
-from config.logging_config import setup_logging
-from config.database_config import test_connection, create_tables
-from controllers.bot_controller import BotController
+from src.config.logging_config import setup_logging
+from src.config.database_config import test_connection, create_tables
+from src.controllers.bot_controller import BotController
 
 def main():
     """Função principal da aplicação"""
@@ -100,7 +100,7 @@ def main():
         
         # Mostrar estados ativos ao parar (se debug ativado)
         if debug_mode:
-            from utils.state_manager import state_manager
+            from src.utils.state_manager import state_manager
             active_states = state_manager.list_all_states()
             if active_states:
                 logger.info("📊 Estados ativos ao parar:")

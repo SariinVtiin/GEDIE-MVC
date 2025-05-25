@@ -4,7 +4,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 async def test():
-    from services.gemini_service import gemini_service
+    from src.services.gemini_service import gemini_service
     print("🤖 Testando conexão com Gemini...")
     
     # Criar imagem de teste simples

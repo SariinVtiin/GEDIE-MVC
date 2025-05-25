@@ -10,9 +10,9 @@ import asyncio
 # Adicionar src ao path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from services.gemini_service import gemini_service
+from src.services.gemini_service import gemini_service
 from loguru import logger
-from config.logging_config import setup_logging
+from src.config.logging_config import setup_logging
 
 async def test_gemini_fix():
     """Testar se o Gemini está funcionando com o novo modelo"""
