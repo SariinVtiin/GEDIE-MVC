@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEDIE - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h1>GEDIE</h1>
+                </div>
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Olá, {{ user_name }}!</span>
+                    </div>
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="welcome-section">
+                <h2>Dashboard em Desenvolvimento</h2>
+                <p>Bem-vindo ao seu painel de controle financeiro!</p>
+                
+                <div class="status-cards">
+                    <div class="status-card success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Login</h3>
+                            <p>Sistema funcionando</p>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card warning">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <h3>Dashboard</h3>
+                            <p>Em desenvolvimento</p>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card info">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <h3>Banco de Dados</h3>
+                            <p>Conectado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Próximas Funcionalidades -->
+            <div class="coming-soon">
+                <h3>
+                    <i class="fas fa-rocket"></i>
+                    Próximas Funcionalidades
+                </h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <h4>Adicionar Despesas</h4>
+                        <p>Registre seus gastos de forma rápida e intuitiva</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h4>Relatórios</h4>
+                        <p>Visualize seus gastos com gráficos e estatísticas</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-tags"></i>
+                        <h4>Categorias</h4>
+                        <p>Organize suas despesas por categorias personalizadas</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Integração Telegram</h4>
+                        <p>Sincronização completa com o bot do Telegram</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEDIE - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo e Título -->
+            <div class="login-header">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h1>GEDIE</h1>
+                <p class="subtitle">Gerenciador de Despesas Inteligente</p>
+            </div>
+
+            <!-- Mensagens Flash -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-triangle' }}"></i>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Formulário de Login -->
+            <form method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="telegram_id">
+                        <i class="fab fa-telegram"></i>
+                        ID do Telegram
+                    </label>
+                    <input 
+                        type="text" 
+                        id="telegram_id" 
+                        name="telegram_id" 
+                        placeholder="Digite seu ID do Telegram"
+                        required
+                        autocomplete="username"
+                    >
+                    <small class="form-help">
+                        Obtenha seu ID através do bot @userinfobot no Telegram
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="access_code">
+                        <i class="fas fa-key"></i>
+                        Código de Acesso
+                    </label>
+                    <input 
+                        type="text" 
+                        id="access_code" 
+                        name="access_code" 
+                        placeholder="000000"
+                        maxlength="6"
+                        pattern="[0-9]{6}"
+                        required
+                        autocomplete="current-password"
+                    >
+                    <small class="form-help">
+                        Código de 6 dígitos enviado pelo bot do Telegram
+                    </small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Entrar
+                </button>
+            </form>
+
+            <!-- Links Auxiliares -->
+            <div class="login-footer">
+                <div class="help-links">
+                    <a href="#" class="help-link">
+                        <i class="fas fa-question-circle"></i>
+                        Como obter meu ID?
+                    </a>
+                    <a href="#" class="help-link">
+                        <i class="fas fa-robot"></i>
+                        Não recebi o código
+                    </a>
+                </div>
+                
+                <div class="telegram-info">
+                    <p>
+                        <i class="fab fa-telegram"></i>
+                        Primeiro acesso? Inicie uma conversa com nosso bot no Telegram:
+                        <strong>@gedie_bot</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Status da Conexão -->
+            <div class="connection-status" id="connectionStatus">
+                <i class="fas fa-circle"></i>
+                <span>Verificando conexão...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

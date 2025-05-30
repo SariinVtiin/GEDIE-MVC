@@ -1,5 +1,5 @@
 """
-Teclados principais do bot - VERSÃO COM FOTOS
+Teclados principais do bot - VERSÃO COM CONFIGURAÇÕES
 """
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
@@ -9,7 +9,7 @@ class MainKeyboard:
     
     @staticmethod  
     def get_main_menu():
-        """Menu principal"""
+        """Menu principal com configurações"""
         keyboard = [
             [
                 InlineKeyboardButton("📷 Enviar Comprovante", callback_data="photo:guide"),
@@ -18,6 +18,10 @@ class MainKeyboard:
             [
                 InlineKeyboardButton("💸 Ver Gastos", callback_data="expense:view_menu"),
                 InlineKeyboardButton("🏷️ Categorias", callback_data="category:menu")
+            ],
+            [
+                InlineKeyboardButton("⚙️ Configurações", callback_data="settings:menu"),
+                InlineKeyboardButton("🆔 Meu ID", callback_data="settings:show_id")
             ]
         ]
         return InlineKeyboardMarkup(keyboard)
@@ -146,6 +150,95 @@ class CategoryKeyboard:
                 InlineKeyboardButton("➕ Nova Categoria", callback_data="category:create")
             ],
             [
+                InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")
+            ]
+        ]
+        return InlineKeyboardMarkup(keyboard)
+
+class SettingsKeyboard:
+    """Teclados de configurações"""
+    
+    @staticmethod
+    def get_settings_menu(has_code: bool = False):
+        """Menu principal de configurações"""
+        keyboard = []
+        
+        if has_code:
+            # Usuário já tem código
+            keyboard.extend([
+                [
+                    InlineKeyboardButton("🔍 Ver Código Atual", callback_data="settings:view_code"),
+                    InlineKeyboardButton("🔄 Regenerar Código", callback_data="settings:regenerate_code")
+                ],
+                [
+                    InlineKeyboardButton("🌐 Como Acessar Web", callback_data="settings:web_help"),
+                    InlineKeyboardButton("🆔 Meu ID Telegram", callback_data="settings:show_id")
+                ]
+            ])
+        else:
+            # Usuário não tem código
+            keyboard.extend([
+                [
+                    InlineKeyboardButton("🔑 Gerar Código de Acesso", callback_data="settings:generate_code")
+                ],
+                [
+                    InlineKeyboardButton("❓ Para que serve?", callback_data="settings:web_help"),
+                    InlineKeyboardButton("🆔 Meu ID Telegram", callback_data="settings:show_id")
+                ]
+            ])
+        
+        # Botão voltar
+        keyboard.append([
+            InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")
+        ])
+        
+        return InlineKeyboardMarkup(keyboard)
+    
+    @staticmethod
+    def get_code_actions():
+        """Ações relacionadas ao código"""
+        keyboard = [
+            [
+                InlineKeyboardButton("🔄 Regenerar Código", callback_data="settings:regenerate_code"),
+                InlineKeyboardButton("🌐 Como Usar", callback_data="settings:web_help")
+            ],
+            [
+                InlineKeyboardButton("🆔 Meu ID", callback_data="settings:show_id"),
+                InlineKeyboardButton("⚙️ Configurações", callback_data="settings:menu")
+            ],
+            [
+                InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")
+            ]
+        ]
+        return InlineKeyboardMarkup(keyboard)
+    
+    @staticmethod
+    def get_no_code_options():
+        """Opções quando não há código"""
+        keyboard = [
+            [
+                InlineKeyboardButton("🔑 Gerar Código Agora", callback_data="settings:generate_code")
+            ],
+            [
+                InlineKeyboardButton("❓ Para que serve?", callback_data="settings:web_help"),
+                InlineKeyboardButton("⚙️ Voltar", callback_data="settings:menu")
+            ],
+            [
+                InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")
+            ]
+        ]
+        return InlineKeyboardMarkup(keyboard)
+    
+    @staticmethod
+    def get_web_help_options():
+        """Opções de ajuda para versão web"""
+        keyboard = [
+            [
+                InlineKeyboardButton("🔑 Gerar/Ver Código", callback_data="settings:view_code"),
+                InlineKeyboardButton("🆔 Meu ID", callback_data="settings:show_id")
+            ],
+            [
+                InlineKeyboardButton("⚙️ Configurações", callback_data="settings:menu"),
                 InlineKeyboardButton("🔙 Menu Principal", callback_data="main:menu")
             ]
         ]

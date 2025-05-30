@@ -1,0 +1,15 @@
+# GEDIE Web Application - Dependencies
+
+# Framework Web
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Banco de Dados
+mysql-connector-python==8.2.0
+
+# Utilitários
+python-decouple==3.8
+Jinja2==3.1.2
+
+# Desenvolvimento (opcional)
+Flask-DebugToolbar==0.13.1

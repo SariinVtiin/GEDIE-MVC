@@ -1,5 +1,5 @@
 """
-Controlador principal do bot - VERSÃO CORRIGIDA
+Controlador principal do bot - VERSÃO COM CONFIGURAÇÕES
 """
 
 from telegram import Update
@@ -9,10 +9,12 @@ from loguru import logger
 from controllers.user_controller import UserController
 from controllers.expense_controller import ExpenseController
 from controllers.category_controller import CategoryController
+from controllers.settings_controller import SettingsController  # NOVO
+from controllers.photo_controller import PhotoController
 from views.keyboards.main_keyboard import MainKeyboard
 from views.messages.expense_messages import ExpenseMessages
+from views.messages.settings_messages import SettingsMessages  # NOVO
 from utils.state_manager import state_manager, ConversationState
-from controllers.photo_controller import PhotoController
 
 class BotController:
     """Controlador principal do bot"""
@@ -21,7 +23,8 @@ class BotController:
         self.user_controller = UserController()
         self.expense_controller = ExpenseController()
         self.category_controller = CategoryController()
-        self.photo_controller = PhotoController()  # ADICIONAR
+        self.photo_controller = PhotoController()
+        self.settings_controller = SettingsController()  # NOVO
 
     async def start_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Comando /start"""
@@ -47,6 +50,9 @@ class BotController:
 
 🎯 **Gerencie seus gastos de forma inteligente**
 
+✨ **Novidade:** Agora você pode acessar a versão web!
+🌐 Configure seu código de acesso em **Configurações**
+
 Escolha uma opção para começar:"""
             
             keyboard = MainKeyboard.get_main_menu()
@@ -61,6 +67,25 @@ Escolha uma opção para começar:"""
             logger.error(f"Erro no start: {e}")
             await update.message.reply_text("❌ Erro interno.")
     
+    async def id_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+        """Comando /id - Mostrar ID do usuário"""
+        try:
+            user = update.effective_user
+            telegram_id = user.id
+            
+            message = SettingsMessages.id_help_message(telegram_id)
+            keyboard = MainKeyboard.get_back_to_main()
+            
+            await update.message.reply_text(
+                message,
+                reply_markup=keyboard,
+                parse_mode='Markdown'
+            )
+            
+        except Exception as e:
+            logger.error(f"Erro no comando /id: {e}")
+            await update.message.reply_text("❌ Erro interno.")
+
     async def callback_router(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Roteador de callbacks"""
         try:
@@ -83,6 +108,8 @@ Escolha uma opção para começar:"""
                 await self.category_controller.handle_callback(query, parts)
             elif action == "photo":
                 await self.photo_controller.handle_photo_callback(query, parts)
+            elif action == "settings":  # NOVO
+                await self.settings_controller.handle_callback(query, parts)
             elif action == "confirm":
                 await self._handle_confirmation(query, parts)
             else:
@@ -138,6 +165,23 @@ Escolha uma opção para começar:"""
                     reply_markup=MainKeyboard.get_back_to_main()
                 )
     
+    async def _handle_show_id(self, query):
+        """Mostrar ID do usuário"""
+        try:
+            user_id = query.from_user.id
+            message = SettingsMessages.id_help_message(user_id)
+            keyboard = MainKeyboard.get_back_to_main()
+            
+            await query.edit_message_text(
+                message,
+                reply_markup=keyboard,
+                parse_mode='Markdown'
+            )
+            
+        except Exception as e:
+            logger.error(f"Erro ao mostrar ID: {e}")
+            await query.edit_message_text("❌ Erro interno.")
+    
     async def error_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handler de erros"""
         logger.error(f"Erro: {context.error}")
@@ -154,7 +198,8 @@ Escolha uma opção para começar:"""
         """Retornar handlers"""
         return [
             CommandHandler("start", self.start_command),
+            CommandHandler("id", self.id_command),  # NOVO
             CallbackQueryHandler(self.callback_router),
-            MessageHandler(filters.PHOTO, self.photo_controller.handle_photo),  # ADICIONAR
+            MessageHandler(filters.PHOTO, self.photo_controller.handle_photo),
             MessageHandler(filters.TEXT & ~filters.COMMAND, self.message_handler)
         ]

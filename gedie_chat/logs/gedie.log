@@ -865,3 +865,207 @@
 2025-05-25 16:32:24 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
 2025-05-25 16:32:24 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
 2025-05-25 16:32:30 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-30 13:42:38 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-30 13:42:38 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-30 13:42:38 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-30 13:42:38 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-30 13:42:38 | INFO     | src.config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-30 13:42:38 | INFO     | src.config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-30 13:42:38 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-30 13:42:38 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-30 13:42:39 | INFO     | __main__:main:72 | 📋 Registrando 4 handlers...
+2025-05-30 13:42:39 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-30 13:42:39 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-30 13:42:39 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-30 13:42:39 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-30 13:42:39 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-30 13:42:39 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-30 13:42:55 | INFO     | src.controllers.bot_controller:start_command:33 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-30 13:42:55 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-30 14:06:14 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-30 14:06:14 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-30 14:06:14 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-30 14:06:14 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-30 14:06:14 | INFO     | src.config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-30 14:06:14 | INFO     | src.config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-30 14:06:14 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-30 14:06:14 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-30 14:06:15 | INFO     | __main__:main:72 | 📋 Registrando 5 handlers...
+2025-05-30 14:06:15 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-30 14:06:15 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-30 14:06:15 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-30 14:06:15 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-30 14:06:15 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-30 14:06:15 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-05-30 14:06:25 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-30 14:06:25 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-30 14:06:30 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:06:30 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:06:33 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6212796124
+2025-05-30 14:06:35 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:06:35 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:06:39 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6212796124
+2025-05-30 14:06:42 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:06:42 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:06:56 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:web_help do usuário 6212796124
+2025-05-30 14:06:56 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: web_help - User: 6212796124
+2025-05-30 14:07:01 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6212796124
+2025-05-30 14:07:03 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:07:03 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:07:11 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 6212796124
+2025-05-30 14:07:11 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 6212796124
+2025-05-30 14:07:15 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:generate_code do usuário 6212796124
+2025-05-30 14:07:15 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: generate_code - User: 6212796124
+2025-05-30 14:07:15 | INFO     | models.user_model:update_access_code:61 | Código de acesso atualizado para usuário 1
+2025-05-30 14:07:15 | INFO     | controllers.settings_controller:_generate_access_code:90 | ✅ Código gerado para usuário 6212796124: 081054
+2025-05-30 14:08:40 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6212796124
+2025-05-30 14:08:43 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:08:43 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:08:48 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 6212796124
+2025-05-30 14:08:48 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 6212796124
+2025-05-30 14:08:52 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:08:52 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:08:55 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:08:55 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:09:33 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:09:33 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:09:34 | ERROR    | controllers.settings_controller:_show_user_id:190 | Erro ao mostrar ID: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-05-30 14:09:43 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-30 14:09:43 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-30 14:09:47 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:09:47 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:09:50 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:09:50 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:09:54 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:09:54 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:09:57 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6212796124
+2025-05-30 14:09:57 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6212796124
+2025-05-30 14:09:57 | ERROR    | controllers.settings_controller:_show_user_id:190 | Erro ao mostrar ID: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-05-30 14:09:59 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 6212796124 (Vitor) iniciou o bot
+2025-05-30 14:09:59 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Vitor (ID: 1)
+2025-05-30 14:10:01 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6212796124
+2025-05-30 14:10:01 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6212796124
+2025-05-30 14:10:03 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 6212796124
+2025-05-30 14:10:03 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 6212796124
+2025-05-30 15:03:01 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 6184756271 (Jonathan) iniciou o bot
+2025-05-30 15:03:01 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Jonathan (6184756271)
+2025-05-30 15:03:01 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 2
+2025-05-30 15:03:01 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-05-30 15:03:15 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 6184756271
+2025-05-30 15:03:15 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 6184756271
+2025-05-30 15:03:15 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-30 15:03:15 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-30 15:03:17 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6184756271
+2025-05-30 15:03:27 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback photo:guide do usuário 6184756271
+2025-05-30 15:03:31 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 6184756271
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 6184756271
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 6184756271
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 6184756271
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-30 15:03:31 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-30 15:03:34 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:9 do usuário 6184756271
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 6184756271
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 6184756271
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 9 para usuário 6184756271
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 9}
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 6184756271
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 9}
+2025-05-30 15:03:34 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 9 selecionada com sucesso para usuário 6184756271
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '107.33' - User: 6184756271
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9}
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '107.33' para usuário 6184756271
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 9}
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 6184756271
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:03:45 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:48 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 6184756271
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 6184756271
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:03:48 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'GP' - User: 6184756271
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33}
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 9, 'amount': 107.33, 'description': 'GP'}
+2025-05-30 15:03:56 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 9, Valor: R$ 107.33
+2025-05-30 15:04:04 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback photo:guide do usuário 6184756271
+2025-05-30 15:04:05 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 6184756271
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 6184756271
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 6184756271
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 6184756271
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-30 15:04:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-05-30 15:04:08 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:10 do usuário 6184756271
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 6184756271
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 6184756271
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 10 para usuário 6184756271
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Transporte (🚗)
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 10}
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 6184756271
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-30 15:04:08 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 10}
+2025-05-30 15:04:09 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 10 selecionada com sucesso para usuário 6184756271
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '383' - User: 6184756271
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10}
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '383' para usuário 6184756271
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 10}
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 6184756271
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:04:13 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:16 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 6184756271
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 6184756271
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:04:16 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'Vitor' - User: 6184756271
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0}
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 6184756271
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 10, 'amount': 383.0, 'description': 'Vitor'}
+2025-05-30 15:04:22 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 10, Valor: R$ 383.00
+2025-05-30 15:04:25 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback photo:guide do usuário 6184756271
+2025-05-30 15:04:30 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6184756271
+2025-05-30 15:04:34 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 6184756271
+2025-05-30 15:04:34 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 6184756271
+2025-05-30 15:04:36 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6184756271
+2025-05-30 15:04:38 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:show_id do usuário 6184756271
+2025-05-30 15:04:38 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: show_id - User: 6184756271
+2025-05-30 15:04:56 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 6184756271
+2025-05-30 15:04:56 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 6184756271
+2025-05-30 15:05:00 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:generate_code do usuário 6184756271
+2025-05-30 15:05:00 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: generate_code - User: 6184756271
+2025-05-30 15:05:00 | INFO     | models.user_model:update_access_code:61 | Código de acesso atualizado para usuário 2
+2025-05-30 15:05:00 | INFO     | controllers.settings_controller:_generate_access_code:90 | ✅ Código gerado para usuário 6184756271: 837645
+2025-05-30 15:05:49 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6184756271
+2025-05-30 15:05:51 | INFO     | __main__:main:99 | 🛑 Bot interrompido pelo usuário
+2025-05-30 15:05:51 | INFO     | __main__:main:110 | 📊 Nenhum estado ativo
+2025-05-30 15:05:51 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado

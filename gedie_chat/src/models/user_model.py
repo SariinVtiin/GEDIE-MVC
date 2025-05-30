@@ -1,5 +1,5 @@
 """
-Model para usuários do sistema
+Model para usuários do sistema - VERSÃO COM CÓDIGO DE ACESSO
 """
 
 from sqlalchemy import Column, BigInteger, String, Boolean
@@ -16,6 +16,7 @@ class User(BaseModel):
     nome = Column(String(100), nullable=False)
     timezone = Column(String(50), default='America/Sao_Paulo', nullable=False)
     ativo = Column(Boolean, default=True, nullable=False)
+    codigo_acesso = Column(String(6), nullable=True)  # NOVO CAMPO
     
     # Relacionamentos
     categories = relationship("Category", back_populates="user", cascade="all, delete-orphan")
@@ -48,9 +49,46 @@ class User(BaseModel):
             logger.error(f"Erro ao criar usuário {telegram_id}: {e}")
             return None
     
+    @classmethod
+    def update_access_code(cls, db_session, user_id, codigo_acesso):
+        """Atualizar código de acesso do usuário"""
+        try:
+            user = db_session.query(cls).filter(cls.id == user_id).first()
+            if user:
+                user.codigo_acesso = codigo_acesso
+                db_session.commit()
+                db_session.refresh(user)
+                logger.info(f"Código de acesso atualizado para usuário {user_id}")
+                return True
+            else:
+                logger.error(f"Usuário {user_id} não encontrado para atualizar código")
+                return False
+        except Exception as e:
+            logger.error(f"Erro ao atualizar código de acesso {user_id}: {e}")
+            db_session.rollback()
+            return False
+    
+    @classmethod
+    def get_by_telegram_id_and_code(cls, db_session, telegram_id, codigo_acesso):
+        """Buscar usuário por Telegram ID e código de acesso (para login web)"""
+        try:
+            user = db_session.query(cls).filter(
+                cls.telegram_id == telegram_id,
+                cls.codigo_acesso == codigo_acesso,
+                cls.ativo == True
+            ).first()
+            return user
+        except Exception as e:
+            logger.error(f"Erro ao buscar usuário por ID e código {telegram_id}: {e}")
+            return None
+    
     def is_active(self):
         """Verificar se usuário está ativo"""
         return self.ativo
+    
+    def has_access_code(self):
+        """Verificar se usuário possui código de acesso"""
+        return self.codigo_acesso is not None and len(self.codigo_acesso) == 6
     
     def get_categories(self, db_session):
         """Obter categorias do usuário"""
