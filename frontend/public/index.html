@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2563eb" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="GEDIE - Gerenciador de Despesas Inteligente. Controle suas finanças de forma simples e intuitiva com IA e integração ao Telegram." />
+  <meta name="keywords" content="controle financeiro, gerenciador de gastos, despesas, finanças pessoais, telegram bot, IA" />
+  <meta name="author" content="GEDIE Team" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="GEDIE - Gerenciador de Despesas Inteligente" />
+  <meta property="og:description" content="Controle suas finanças de forma simples e intuitiva com IA e integração ao Telegram." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="%PUBLIC_URL%" />
+  <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+  <meta property="og:site_name" content="GEDIE" />
+  <meta property="og:locale" content="pt_BR" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GEDIE - Gerenciador de Despesas Inteligente" />
+  <meta name="twitter:description" content="Controle suas finanças de forma simples e intuitiva com IA e integração ao Telegram." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.png" />
+  
+  <!-- Favicons -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//api.gedie.com" />
+  <link rel="dns-prefetch" href="//cdn.gedie.com" />
+  
+  <title>GEDIE - Gerenciador de Despesas Inteligente</title>
+  
+  <!-- Prevent FOUC (Flash of Unstyled Content) -->
+  <style>
+    /* Critical CSS - carrega antes do React */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
+      min-height: 100vh;
+    }
+    
+    /* Loading inicial */
+    .initial-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
+      z-index: 9999;
+    }
+    
+    .initial-loading__content {
+      text-align: center;
+    }
+    
+    .initial-loading__logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      animation: pulse 2s infinite;
+    }
+    
+    .initial-loading__text {
+      font-size: 1.125rem;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+    
+    /* Remover loading quando React carregar */
+    .app-loaded .initial-loading {
+      display: none;
+    }
+    
+    /* Acessibilidade */
+    @media (prefers-reduced-motion: reduce) {
+      .initial-loading__logo {
+        animation: none;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fee2e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      font-family: system-ui, sans-serif;
+    ">
+      <div>
+        <h1 style="color: #dc2626; margin-bottom: 1rem;">JavaScript Necessário</h1>
+        <p style="color: #991b1b; margin-bottom: 1rem;">
+          O GEDIE precisa do JavaScript habilitado para funcionar corretamente.
+        </p>
+        <p style="color: #7f1d1d; font-size: 0.875rem;">
+          Por favor, habilite o JavaScript no seu navegador e recarregue a página.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  
+  <!-- Loading inicial -->
+  <div class="initial-loading" id="initial-loading">
+    <div class="initial-loading__content">
+      <div class="initial-loading__logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="url(#gradient)" />
+          <path
+            d="M30 40h40v6H30v-6zm0 12h40v6H30v-6zm0 12h28v6H30v-6z"
+            fill="white"
+          />
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#10b981" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="initial-loading__text">
+        Carregando GEDIE...
+      </div>
+    </div>
+  </div>
+  
+  <!-- Root element onde o React será montado -->
+  <div id="root"></div>
+  
+  <!-- Scripts adicionais -->
+  <script>
+    // Remove loading inicial quando React carregar
+    window.addEventListener('DOMContentLoaded', function() {
+      // Aguarda um pouco para o React carregar
+      setTimeout(function() {
+        const loading = document.getElementById('initial-loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          loading.style.transition = 'opacity 0.5s ease-out';
+          setTimeout(function() {
+            loading.remove();
+          }, 500);
+        }
+        document.body.classList.add('app-loaded');
+      }, 1000);
+    });
+    
+    // Service Worker registration (opcional)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          })
+          .catch(function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+    
+    // Detectar tema do sistema
+    function detectTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+    
+    // Aplicar tema inicial
+    detectTheme();
+    
+    // Escutar mudanças no tema do sistema
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectTheme);
+    }
+    
+    // Analytics (opcional)
+    (function() {
+      // Google Analytics ou outra ferramenta de analytics
+      // window.gtag = function(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
+      // gtag('config', 'GA_MEASUREMENT_ID');
+    })();
+    
+    // Error tracking global
+    window.addEventListener('error', function(event) {
+      console.error('Global error:', event.error);
+      // Enviar erro para serviço de monitoramento (Sentry, LogRocket, etc.)
+    });
+    
+    window.addEventListener('unhandledrejection', function(event) {
+      console.error('Unhandled promise rejection:', event.reason);
+      // Enviar erro para serviço de monitoramento
+    });
+  </script>
+  
+  <!-- 
+    Outros scripts necessários serão injetados automaticamente pelo Create React App
+    Não adicione scripts do React manualmente aqui
+  -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+.alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid;
+  margin-bottom: var(--spacing-md);
+  animation: alert-slide-in 0.3s ease-out;
+}
+
+.alert__content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.alert__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alert__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert__title {
+  font-weight: var(--font-semibold);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.alert__message {
+  font-size: var(--font-sm);
+  line-height: 1.5;
+}
+
+.alert__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  margin-left: var(--spacing-sm);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  opacity: 0.7;
+}
+
+.alert__close:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.alert__close:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* Variantes */
+.alert--info {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--info-color);
+  color: var(--info-dark);
+}
+
+.alert--success {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--success-color);
+  color: var(--success-dark);
+}
+
+.alert--warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-color);
+  color: var(--warning-dark);
+}
+
+.alert--error {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--error-color);
+  color: var(--error-dark);
+}
+
+/* Animação */
+@keyframes alert-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .alert {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .alert__content {
+    gap: var(--spacing-xs);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .alert--info {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--info-light);
+  }
+  
+  .alert--success {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success-light);
+  }
+  
+  .alert--warning {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning-light);
+  }
+  
+  .alert--error {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--error-light);
+  }
+  
+  .alert__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
