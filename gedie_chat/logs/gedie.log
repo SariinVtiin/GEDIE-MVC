@@ -1069,3 +1069,18 @@
 2025-05-30 15:05:51 | INFO     | __main__:main:99 | 🛑 Bot interrompido pelo usuário
 2025-05-30 15:05:51 | INFO     | __main__:main:110 | 📊 Nenhum estado ativo
 2025-05-30 15:05:51 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-05-30 15:50:48 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-05-30 15:50:48 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-05-30 15:50:48 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-05-30 15:50:48 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-05-30 15:50:48 | INFO     | src.config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-05-30 15:50:48 | INFO     | src.config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-05-30 15:50:48 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: localhost/gedie_db
+2025-05-30 15:50:48 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-05-30 15:50:49 | INFO     | __main__:main:72 | 📋 Registrando 5 handlers...
+2025-05-30 15:50:49 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-05-30 15:50:49 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-05-30 15:50:49 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-05-30 15:50:49 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-05-30 15:50:49 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-05-30 15:50:49 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
