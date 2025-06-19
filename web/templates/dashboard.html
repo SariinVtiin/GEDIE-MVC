@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEDIE - Dashboard</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="dashboard-page">
     <div class="dashboard-container">
@@ -153,6 +154,12 @@
                     {% endif %}
                 </div>
             </section>
+
+            <section class="chart-section">
+                <h3><i class="fas fa-chart-bar"></i> Gráfico de Gastos por Categoria</h3>
+                <canvas id="graficoGastos" height="120"></canvas>
+            </section>
+
         </main>
     </div>
 
@@ -493,6 +500,106 @@
                 });
             });
         }
+
+                function carregarGraficoGastos() {
+            fetch('/api/expenses')
+                .then(res => res.json())
+                .then(data => {
+                    const somaPorCategoria = {};
+                    data.expenses.forEach(item => {
+                        if (!somaPorCategoria[item.categoria]) {
+                            somaPorCategoria[item.categoria] = 0;
+                        }
+                        somaPorCategoria[item.categoria] += parseFloat(item.valor);
+                    });
+
+                    const categorias = Object.keys(somaPorCategoria);
+                    const valores = Object.values(somaPorCategoria);
+
+                    const ctx = document.getElementById('graficoGastos').getContext('2d');
+                    if (window.graficoInstancia) {
+                        window.graficoInstancia.destroy();
+                    }
+                    window.graficoInstancia = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: categorias,
+                            datasets: [{
+                                label: 'Total Gasto (R$)',
+                                data: valores,
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+        }
+
+        // Atualizar gráfico sempre que atualizar despesas
+        function carregarDespesas() {
+            fetch('/api/expenses')
+                .then(res => res.json())
+                .then(data => {
+                    const tbody = document.querySelector('.expenses-table tbody');
+                    tbody.innerHTML = '';
+
+                    data.expenses.forEach((item, i) => {
+                        const tr = document.createElement('tr');
+                        tr.setAttribute('data-index', i + 1);
+                        tr.setAttribute('data-id', item.id);
+
+                        tr.innerHTML = `
+                            <td>${formatarData(item.data_gasto)}</td>
+                            <td>
+                                <span class="text">${item.descricao}</span>
+                                <input type="text" class="input hidden" value="${item.descricao}">
+                            </td>
+                            <td>
+                                <span class="text">${item.categoria}</span>
+                                <select class="input hidden categoria-select">
+                                    ${categoriasOptions(item.categoria)}
+                                </select>
+                            </td>
+                            <td>
+                                <span class="text">R$ ${parseFloat(item.valor).toFixed(2)}</span>
+                                <input type="number" step="0.01" class="input hidden" value="${parseFloat(item.valor).toFixed(2)}">
+                            </td>
+                            <td>
+                                <button class="btn-edit-icon" data-action="editar" data-index="${i + 1}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn-save hidden" data-action="salvar" data-index="${i + 1}" data-data="${item.data_gasto}">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                                <button class="btn-delete" data-action="deletar" data-id="${item.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        `;
+
+                        tbody.appendChild(tr);
+                    });
+
+                    reativarEventos();
+                    carregarGraficoGastos();
+                });
+
+            reativarEventos();
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarGraficoGastos();
+        });
 
     </script>
 </body>
