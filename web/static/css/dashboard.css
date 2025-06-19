@@ -518,3 +518,91 @@
 .expenses-table tbody tr:hover {
     background: rgba(102, 126, 234, 0.05);
 }
+
+.editable-valor {
+    width: 80px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.btn-edit {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background: #45a049;
+}
+
+.input.hidden,
+.text.hidden,
+.btn-save.hidden,
+.btn-edit-icon.hidden {
+    display: none;
+}
+
+.input {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.btn-edit-icon,
+.btn-save {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-edit-icon:hover,
+.btn-save:hover {
+    background: #556cd6;
+}
+
+/* Popup de Sucesso */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup i {
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

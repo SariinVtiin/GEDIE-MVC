@@ -110,15 +110,37 @@
                                     <th>Descrição</th>
                                     <th>Categoria</th>
                                     <th>Valor</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for item in expenses %}
-                                    <tr>
+                                    <tr data-index="{{ loop.index }}" data-id="{{ item.id }}">
                                         <td>{{ item.data_gasto.strftime('%d/%m/%Y') }}</td>
-                                        <td>{{ item.descricao }}</td>
-                                        <td>{{ item.categoria }}</td>
-                                        <td>R$ {{ '%.2f'|format(item.valor) }}</td>
+                                        <td>
+                                            <span class="text">{{ item.descricao }}</span>
+                                            <input type="text" class="input hidden" value="{{ item.descricao }}">
+                                        </td>
+                                        <td>
+                                            <span class="text">{{ item.categoria }}</span>
+                                            <select class="input hidden categoria-select">
+                                                {% for cat in categories %}
+                                                    <option value="{{ cat.nome }}" {% if cat.nome == item.categoria %}selected{% endif %}>{{ cat.nome }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="text">R$ {{ '%.2f'|format(item.valor) }}</span>
+                                            <input type="number" step="0.01" class="input hidden" value="{{ '%.2f'|format(item.valor) }}">
+                                        </td>
+                                        <td>
+                                            <button class="btn-edit-icon" data-action="editar" data-index="{{ loop.index }}">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </button>
+                                            <button class="btn-save hidden" data-action="salvar" data-index="{{ loop.index }}" data-data="{{ item.data_gasto }}">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
@@ -128,8 +150,6 @@
                     {% endif %}
                 </div>
             </section>
-
-
         </main>
     </div>
 
@@ -264,6 +284,7 @@
                     
                     setTimeout(() => {
                         closeModal();
+                        carregarDespesas();
                         // Resetar botão
                         submitBtn.innerHTML = originalText;
                         submitBtn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
@@ -297,6 +318,208 @@
                 }, index * 100);
             });
         });
+
+            function salvarEdicao(index, data) {
+                const row = document.querySelector(`tr[data-index='${index}']`);
+                
+                // ✅ Pegando o ID da despesa direto do atributo data-id da <tr>
+                const expenseId = row.getAttribute('data-id');
+
+                const inputs = row.querySelectorAll('.input');
+                const descricao = inputs[0].value;
+                const categoria = row.querySelector('.categoria-select').value;
+                const novo_valor = inputs[2].value;
+
+                fetch('/update-expense', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: new URLSearchParams({
+                        'id': expenseId,
+                        'descricao': descricao,
+                        'data_gasto': data,
+                        'categoria': categoria,
+                        'novo_valor': novo_valor
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        row.querySelectorAll('.text')[0].textContent = descricao;
+                        row.querySelectorAll('.text')[1].textContent = categoria;
+                        row.querySelectorAll('.text')[2].textContent = 'R$ ' + parseFloat(novo_valor).toFixed(2);
+
+                        row.querySelectorAll('.input').forEach(el => el.classList.add('hidden'));
+                        row.querySelectorAll('.text').forEach(el => el.classList.remove('hidden'));
+                        row.querySelector('.btn-save').classList.add('hidden');
+                        row.querySelector('.btn-edit-icon').classList.remove('hidden');
+
+                        mostrarPopupSucesso();
+                    } else {
+                        alert('Erro: ' + data.message);
+                    }
+                })
+                .catch(err => {
+                    alert('Erro ao salvar: ' + err.message);
+                });
+            }
+
+                function mostrarPopupSucesso() {
+                    const popup = document.getElementById('popup-sucesso');
+                    popup.classList.remove('hidden');
+                    setTimeout(() => {
+                        popup.classList.add('hidden');
+                    }, 2000);
+                }
+
+    </script>
+
+    <!-- Popup de sucesso -->
+    <div id="popup-sucesso" class="popup hidden">
+        <div class="popup-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Alteração realizada com sucesso!</p>
+        </div>
+    </div>
+
+    <script>
+        function ativarEdicao(index) {
+            const row = document.querySelector(`tr[data-index='${index}']`);
+            row.querySelectorAll('.text').forEach(el => el.classList.add('hidden'));
+            row.querySelectorAll('.input').forEach(el => el.classList.remove('hidden'));
+            row.querySelector('.btn-edit-icon').classList.add('hidden');
+            row.querySelector('.btn-save').classList.remove('hidden');
+        }
+        function salvarEdicao(index, data) {
+            const row = document.querySelector(`tr[data-index='${index}']`);
+            const expenseId = row.getAttribute('data-id');
+            const inputs = row.querySelectorAll('.input');
+            const descricao = inputs[0].value;
+            const categoria = row.querySelector('.categoria-select').value;
+            const novo_valor = inputs[2].value;
+
+            fetch('/update-expense', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: new URLSearchParams({
+                    'id': expenseId,
+                    'descricao': descricao,
+                    'data_gasto': data,
+                    'categoria': categoria,
+                    'novo_valor': novo_valor
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    row.querySelectorAll('.text')[0].textContent = descricao;
+                    row.querySelectorAll('.text')[1].textContent = categoria;
+                    row.querySelectorAll('.text')[2].textContent = 'R$ ' + parseFloat(novo_valor).toFixed(2);
+
+                    row.querySelectorAll('.input').forEach(el => el.classList.add('hidden'));
+                    row.querySelectorAll('.text').forEach(el => el.classList.remove('hidden'));
+                    row.querySelector('.btn-save').classList.add('hidden');
+                    row.querySelector('.btn-edit-icon').classList.remove('hidden');
+
+                    mostrarPopupSucesso();
+                } else {
+                    alert('Erro: ' + data.message);
+                }
+            })
+            .catch(err => {
+                alert('Erro ao salvar: ' + err.message);
+            });
+        }
+
+        function mostrarPopupSucesso() {
+            const popup = document.getElementById('popup-sucesso');
+            popup.classList.remove('hidden');
+            setTimeout(() => popup.classList.add('hidden'), 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('button[data-action]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const action = this.dataset.action;
+                    const index = this.dataset.index;
+                    const dataGasto = this.dataset.data || '';
+
+                    if (action === 'editar') {
+                        ativarEdicao(index);
+                    } else if (action === 'salvar') {
+                        salvarEdicao(index, dataGasto);
+                    }
+                });
+            });
+        });
+
+        function carregarDespesas() {
+            fetch('/api/expenses')
+                .then(res => res.json())
+                .then(data => {
+                    const tbody = document.querySelector('.expenses-table tbody');
+                    tbody.innerHTML = '';
+
+                    data.expenses.forEach((item, i) => {
+                        const tr = document.createElement('tr');
+                        tr.setAttribute('data-index', i + 1);
+                        tr.setAttribute('data-id', item.id);
+
+                        tr.innerHTML = `
+                            <td>${formatarData(item.data_gasto)}</td>
+                            <td>
+                                <span class="text">${item.descricao}</span>
+                                <input type="text" class="input hidden" value="${item.descricao}">
+                            </td>
+                            <td>
+                                <span class="text">${item.categoria}</span>
+                                <select class="input hidden categoria-select">
+                                    ${categoriasOptions(item.categoria)}
+                                </select>
+                            </td>
+                            <td>
+                                <span class="text">R$ ${parseFloat(item.valor).toFixed(2)}</span>
+                                <input type="number" step="0.01" class="input hidden" value="${parseFloat(item.valor).toFixed(2)}">
+                            </td>
+                            <td>
+                                <button class="btn-edit-icon" data-action="editar" data-index="${i + 1}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn-save hidden" data-action="salvar" data-index="${i + 1}" data-data="${item.data_gasto}">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        `;
+
+                        tbody.appendChild(tr);
+                    });
+
+                    reativarEventos();
+                });
+        }
+
+        function formatarData(data) {
+            const d = new Date(data);
+            return d.toLocaleDateString('pt-BR');
+        }
+
+        // Gera os <option> do <select> com a categoria atual selecionada
+        function categoriasOptions(selecionada) {
+            const todas = JSON.parse('{{ categories|tojson|safe }}');
+            return todas.map(c => `<option value="${c.nome}" ${c.nome === selecionada ? 'selected' : ''}>${c.nome}</option>`).join('');
+        }
+
+        function reativarEventos() {
+            document.querySelectorAll('button[data-action]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const action = this.dataset.action;
+                    const index = this.dataset.index;
+                    const dataGasto = this.dataset.data || '';
+                    if (action === 'editar') ativarEdicao(index);
+                    else if (action === 'salvar') salvarEdicao(index, dataGasto);
+                });
+            });
+        }
+
     </script>
 </body>
 </html>

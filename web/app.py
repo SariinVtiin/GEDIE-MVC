@@ -132,7 +132,7 @@ def dashboard():
     """Dashboard principal com listagem de despesas"""
     expenses = DatabaseManager.execute_query(
         """
-        SELECT e.valor, e.descricao, e.data_gasto, c.nome AS categoria
+        SELECT e.id, e.valor, e.descricao, e.data_gasto, c.nome AS categoria
         FROM expenses e
         JOIN categories c ON e.category_id = c.id
         WHERE e.user_id = %s
@@ -141,7 +141,14 @@ def dashboard():
         (session['user_id'],),
         fetch='all'
     )
-    return render_template('dashboard.html', user_name=session.get('user_name'), expenses=expenses)
+
+    categories = DatabaseManager.execute_query(
+    "SELECT nome FROM categories WHERE user_id = %s AND tipo = 'DESPESA' AND ativo = 1",
+    (session['user_id'],),
+    fetch='all'
+    )
+
+    return render_template('dashboard.html', user_name=session.get('user_name'), expenses=expenses, categories=categories)
 
 @app.route('/api/test-db')
 def test_db():
@@ -187,6 +194,63 @@ def add_expense():
     except Exception as e:
         print(f"Erro ao adicionar despesa: {e}")
         return jsonify({'status': 'error', 'message': 'Erro ao salvar a despesa.'})
+
+@app.route('/update-expense', methods=['POST'])
+@login_required
+def update_expense():
+    expense_id = request.form.get('id')
+    descricao = request.form.get('descricao')
+    data_gasto = request.form.get('data_gasto')
+    categoria = request.form.get('categoria')
+    novo_valor = request.form.get('novo_valor')
+
+    if not all([expense_id, descricao, data_gasto, categoria, novo_valor]):
+        return jsonify({'status': 'error', 'message': 'Dados incompletos'})
+
+    try:
+        # Buscar o ID da categoria selecionada
+        categoria_info = DatabaseManager.execute_query(
+            "SELECT id FROM categories WHERE nome = %s AND user_id = %s",
+            (categoria, session['user_id']),
+            fetch='one'
+        )
+        if not categoria_info:
+            return jsonify({'status': 'error', 'message': 'Categoria inválida'})
+
+        DatabaseManager.execute_query(
+            """
+            UPDATE expenses
+            SET descricao = %s,
+                data_gasto = %s,
+                valor = %s,
+                category_id = %s,
+                updated_at = NOW()
+            WHERE id = %s AND user_id = %s
+            """,
+            (descricao, data_gasto, novo_valor, categoria_info['id'], expense_id, session['user_id'])
+        )
+
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        print(f"Erro ao atualizar despesa: {e}")
+        return jsonify({'status': 'error', 'message': 'Erro ao atualizar a despesa'})
+
+@app.route('/api/expenses')
+@login_required
+def api_expenses():
+    """Retorna todas as despesas do usuário logado"""
+    expenses = DatabaseManager.execute_query(
+        """
+        SELECT e.id, e.valor, e.descricao, e.data_gasto, c.nome AS categoria
+        FROM expenses e
+        JOIN categories c ON e.category_id = c.id
+        WHERE e.user_id = %s
+        ORDER BY e.data_gasto DESC
+        """,
+        (session['user_id'],),
+        fetch='all'
+    )
+    return jsonify({'expenses': expenses})
 
 
 if __name__ == '__main__':
