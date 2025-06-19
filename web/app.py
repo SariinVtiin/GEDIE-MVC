@@ -252,6 +252,24 @@ def api_expenses():
     )
     return jsonify({'expenses': expenses})
 
+@app.route('/delete-expense', methods=['POST'])
+@login_required
+def delete_expense():
+    expense_id = request.form.get('id')
+
+    if not expense_id:
+        return jsonify({'status': 'error', 'message': 'ID inválido'})
+
+    try:
+        DatabaseManager.execute_query(
+            "DELETE FROM expenses WHERE id = %s AND user_id = %s",
+            (expense_id, session['user_id'])
+        )
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        print(f"Erro ao excluir despesa: {e}")
+        return jsonify({'status': 'error', 'message': 'Erro ao excluir despesa'})
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

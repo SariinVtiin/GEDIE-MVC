@@ -140,8 +140,11 @@
                                             <button class="btn-save hidden" data-action="salvar" data-index="{{ loop.index }}" data-data="{{ item.data_gasto }}">
                                                 <i class="fas fa-check"></i>
                                             </button>
+                                            <button class="btn-delete" data-action="deletar" data-id="{{ item.id }}">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
                                         </td>
-                                    </tr>
+                                        </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
@@ -304,91 +307,6 @@
             });
         });
 
-        // Animação de entrada suave
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.status-card, .feature-card');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
-
-            function salvarEdicao(index, data) {
-                const row = document.querySelector(`tr[data-index='${index}']`);
-                
-                // ✅ Pegando o ID da despesa direto do atributo data-id da <tr>
-                const expenseId = row.getAttribute('data-id');
-
-                const inputs = row.querySelectorAll('.input');
-                const descricao = inputs[0].value;
-                const categoria = row.querySelector('.categoria-select').value;
-                const novo_valor = inputs[2].value;
-
-                fetch('/update-expense', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    body: new URLSearchParams({
-                        'id': expenseId,
-                        'descricao': descricao,
-                        'data_gasto': data,
-                        'categoria': categoria,
-                        'novo_valor': novo_valor
-                    })
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        row.querySelectorAll('.text')[0].textContent = descricao;
-                        row.querySelectorAll('.text')[1].textContent = categoria;
-                        row.querySelectorAll('.text')[2].textContent = 'R$ ' + parseFloat(novo_valor).toFixed(2);
-
-                        row.querySelectorAll('.input').forEach(el => el.classList.add('hidden'));
-                        row.querySelectorAll('.text').forEach(el => el.classList.remove('hidden'));
-                        row.querySelector('.btn-save').classList.add('hidden');
-                        row.querySelector('.btn-edit-icon').classList.remove('hidden');
-
-                        mostrarPopupSucesso();
-                    } else {
-                        alert('Erro: ' + data.message);
-                    }
-                })
-                .catch(err => {
-                    alert('Erro ao salvar: ' + err.message);
-                });
-            }
-
-                function mostrarPopupSucesso() {
-                    const popup = document.getElementById('popup-sucesso');
-                    popup.classList.remove('hidden');
-                    setTimeout(() => {
-                        popup.classList.add('hidden');
-                    }, 2000);
-                }
-
-    </script>
-
-    <!-- Popup de sucesso -->
-    <div id="popup-sucesso" class="popup hidden">
-        <div class="popup-content">
-            <i class="fas fa-check-circle"></i>
-            <p>Alteração realizada com sucesso!</p>
-        </div>
-    </div>
-
-    <script>
-        function ativarEdicao(index) {
-            const row = document.querySelector(`tr[data-index='${index}']`);
-            row.querySelectorAll('.text').forEach(el => el.classList.add('hidden'));
-            row.querySelectorAll('.input').forEach(el => el.classList.remove('hidden'));
-            row.querySelector('.btn-edit-icon').classList.add('hidden');
-            row.querySelector('.btn-save').classList.remove('hidden');
-        }
         function salvarEdicao(index, data) {
             const row = document.querySelector(`tr[data-index='${index}']`);
             const expenseId = row.getAttribute('data-id');
@@ -428,6 +346,32 @@
             .catch(err => {
                 alert('Erro ao salvar: ' + err.message);
             });
+        }
+                function mostrarPopupSucesso() {
+                    const popup = document.getElementById('popup-sucesso');
+                    popup.classList.remove('hidden');
+                    setTimeout(() => {
+                        popup.classList.add('hidden');
+                    }, 2000);
+                }
+
+    </script>
+
+    <!-- Popup de sucesso -->
+    <div id="popup-sucesso" class="popup hidden">
+        <div class="popup-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Alteração realizada com sucesso!</p>
+        </div>
+    </div>
+
+    <script>
+        function ativarEdicao(index) {
+            const row = document.querySelector(`tr[data-index='${index}']`);
+            row.querySelectorAll('.text').forEach(el => el.classList.add('hidden'));
+            row.querySelectorAll('.input').forEach(el => el.classList.remove('hidden'));
+            row.querySelector('.btn-edit-icon').classList.add('hidden');
+            row.querySelector('.btn-save').classList.remove('hidden');
         }
 
         function mostrarPopupSucesso() {
@@ -487,6 +431,9 @@
                                 <button class="btn-save hidden" data-action="salvar" data-index="${i + 1}" data-data="${item.data_gasto}">
                                     <i class="fas fa-check"></i>
                                 </button>
+                                <button class="btn-delete" data-action="deletar" data-id="${item.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
                             </td>
                         `;
 
@@ -495,6 +442,8 @@
 
                     reativarEventos();
                 });
+
+            reativarEventos();
         }
 
         function formatarData(data) {
@@ -508,14 +457,39 @@
             return todas.map(c => `<option value="${c.nome}" ${c.nome === selecionada ? 'selected' : ''}>${c.nome}</option>`).join('');
         }
 
+        function deletarDespesa(id) {
+            if (!confirm('Tem certeza que deseja excluir esta despesa?')) return;
+
+            fetch('/delete-expense', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'id': id })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    carregarDespesas();
+                } else {
+                    alert('Erro: ' + data.message);
+                }
+            })
+            .catch(err => {
+                alert('Erro ao excluir: ' + err.message);
+            });
+        }
+
+
         function reativarEventos() {
             document.querySelectorAll('button[data-action]').forEach(button => {
                 button.addEventListener('click', function () {
                     const action = this.dataset.action;
                     const index = this.dataset.index;
                     const dataGasto = this.dataset.data || '';
+                    const id = this.dataset.id;
+
                     if (action === 'editar') ativarEdicao(index);
                     else if (action === 'salvar') salvarEdicao(index, dataGasto);
+                    else if (action === 'deletar') deletarDespesa(id);
                 });
             });
         }
