@@ -72,7 +72,7 @@
                     Próximas Funcionalidades
                 </h3>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card" onclick="loadCategories(); openModal();">
                         <i class="fas fa-plus-circle"></i>
                         <h4>Adicionar Despesas</h4>
                         <p>Registre seus gastos de forma rápida e intuitiva</p>
@@ -99,5 +99,95 @@
             </div>
         </main>
     </div>
+
+        <!-- Modal Adicionar Despesa -->
+    <div id="expenseModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Adicionar Nova Despesa</h3>
+            <form id="expenseForm">
+                <label>Valor:</label>
+                <input type="number" step="0.01" name="valor" required>
+
+                <label>Descrição:</label>
+                <input type="text" name="descricao" required>
+
+                <label>Data do Gasto:</label>
+                <input type="date" name="data_gasto" required>
+
+                <label>Categoria:</label>
+                <select name="category_id" required id="categorySelect">
+                    <!-- Vai ser preenchido via JS -->
+                </select>
+
+                <button type="submit" class="btn-primary">Salvar</button>
+                <button type="button" onclick="closeModal()" class="btn-cancel">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+    // Função para abrir o modal
+    function openModal() {
+        document.getElementById('expenseModal').classList.remove('hidden');
+
+        // Preencher a data com hoje
+        const today = new Date().toISOString().split('T')[0];
+        document.querySelector('#expenseForm input[name="data_gasto"]').value = today;
+    }
+
+
+    // Fechar modal
+    function closeModal() {
+        document.getElementById('expenseModal').classList.add('hidden');
+        // Limpar o formulário ao fechar (opcional, mas recomendado)
+        document.getElementById('expenseForm').reset();
+    }
+
+
+    // Carregar categorias disponíveis
+    function loadCategories() {
+        fetch('/api/categories')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('categorySelect');
+                select.innerHTML = '';
+
+                if (data.categories && data.categories.length > 0) {
+                    data.categories.forEach(cat => {
+                        const option = document.createElement('option');
+                        option.value = cat.id;
+                        option.textContent = cat.nome;
+                        select.appendChild(option);
+                    });
+                } else {
+                    const option = document.createElement('option');
+                    option.value = "";
+                    option.textContent = "Nenhuma categoria encontrada";
+                    select.appendChild(option);
+                }
+            });
+    }
+
+
+    // Enviar formulário via AJAX
+    document.getElementById('expenseForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch('/add-expense', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert(data.message);
+            if (data.status === 'success') {
+                closeModal();
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>

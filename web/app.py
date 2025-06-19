@@ -17,11 +17,11 @@ app.secret_key = 'gedie_secret_key_2024'  # Em produção, usar variável de amb
 
 # Configurações do banco de dados
 DB_CONFIG = {
-    'host': 'localhost',
-    'port': 3306,
-    'user': 'gedie_user',
-    'password': 'senha_super_segura_123',
-    'database': 'gedie_db',
+    'host': 'maglev.proxy.rlwy.net',
+    'port': 37354,
+    'user': 'root',
+    'password': 'ZIaAQSYzODTZyRnaSSOcPAYtAgYMSDkH',
+    'database': 'railway',
     'charset': 'utf8mb4'
 }
 
@@ -140,6 +140,43 @@ def test_db():
         connection.close()
         return jsonify({'status': 'success', 'message': 'Conexão com banco OK'})
     return jsonify({'status': 'error', 'message': 'Falha na conexão'})
+
+@app.route('/api/categories')
+@login_required
+def get_categories():
+    """Listar categorias do tipo DESPESA para o usuário"""
+    categories = DatabaseManager.execute_query(
+        "SELECT id, nome FROM categories WHERE user_id = %s AND tipo = 'DESPESA' AND ativo = 1",
+        (session['user_id'],),
+        fetch='all'
+    )
+    return jsonify({'categories': categories})
+
+@app.route('/add-expense', methods=['POST'])
+@login_required
+def add_expense():
+    """Adicionar nova despesa"""
+    valor = request.form.get('valor')
+    descricao = request.form.get('descricao')
+    data_gasto = request.form.get('data_gasto')
+    category_id = request.form.get('category_id')
+
+    if not all([valor, descricao, data_gasto, category_id]):
+        return jsonify({'status': 'error', 'message': 'Todos os campos são obrigatórios.'})
+
+    try:
+        DatabaseManager.execute_query(
+            """
+            INSERT INTO expenses (valor, descricao, data_gasto, category_id, user_id, created_at, updated_at)
+            VALUES (%s, %s, %s, %s, %s, NOW(), NOW())
+            """,
+            (valor, descricao, data_gasto, category_id, session['user_id'])
+        )
+        return jsonify({'status': 'success', 'message': 'Despesa adicionada com sucesso!'})
+    except Exception as e:
+        print(f"Erro ao adicionar despesa: {e}")
+        return jsonify({'status': 'error', 'message': 'Erro ao salvar a despesa.'})
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
