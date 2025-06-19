@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEDIE - Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="dashboard-page">
     <div class="dashboard-container">
@@ -35,159 +35,235 @@
         <!-- Main Content -->
         <main class="dashboard-main">
             <div class="welcome-section">
-                <h2>Dashboard em Desenvolvimento</h2>
-                <p>Bem-vindo ao seu painel de controle financeiro!</p>
+                <h2>Dashboard Financeiro</h2>
+                <p>Bem-vindo ao seu painel de controle financeiro inteligente!</p>
                 
                 <div class="status-cards">
                     <div class="status-card success">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Login</h3>
-                            <p>Sistema funcionando</p>
+                            <h3>Sistema Online</h3>
+                            <p>Tudo funcionando perfeitamente</p>
                         </div>
                     </div>
                     
                     <div class="status-card warning">
                         <i class="fas fa-tools"></i>
                         <div>
-                            <h3>Dashboard</h3>
-                            <p>Em desenvolvimento</p>
+                            <h3>Dashboard Ativo</h3>
+                            <p>Pronto para usar</p>
                         </div>
                     </div>
                     
                     <div class="status-card info">
                         <i class="fas fa-database"></i>
                         <div>
-                            <h3>Banco de Dados</h3>
-                            <p>Conectado</p>
+                            <h3>Base de Dados</h3>
+                            <p>Conexão estável</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Próximas Funcionalidades -->
+            <!-- Funcionalidades -->
             <div class="coming-soon">
                 <h3>
                     <i class="fas fa-rocket"></i>
-                    Próximas Funcionalidades
+                    Suas Ferramentas Financeiras
                 </h3>
                 <div class="features-grid">
                     <div class="feature-card" onclick="loadCategories(); openModal();">
                         <i class="fas fa-plus-circle"></i>
                         <h4>Adicionar Despesas</h4>
-                        <p>Registre seus gastos de forma rápida e intuitiva</p>
+                        <p>Registre seus gastos de forma rápida e organize suas finanças</p>
                     </div>
                     
                     <div class="feature-card">
                         <i class="fas fa-chart-pie"></i>
-                        <h4>Relatórios</h4>
-                        <p>Visualize seus gastos com gráficos e estatísticas</p>
+                        <h4>Relatórios Visuais</h4>
+                        <p>Analise seus gastos com gráficos inteligentes e insights</p>
                     </div>
                     
                     <div class="feature-card">
                         <i class="fas fa-tags"></i>
-                        <h4>Categorias</h4>
-                        <p>Organize suas despesas por categorias personalizadas</p>
+                        <h4>Categorias Smart</h4>
+                        <p>Organize automaticamente suas despesas por categorias</p>
                     </div>
                     
                     <div class="feature-card">
                         <i class="fas fa-mobile-alt"></i>
-                        <h4>Integração Telegram</h4>
-                        <p>Sincronização completa com o bot do Telegram</p>
+                        <h4>Sincronização Total</h4>
+                        <p>Integração completa com Telegram e outros dispositivos</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-        <!-- Modal Adicionar Despesa -->
+    <!-- Modal Adicionar Despesa -->
     <div id="expenseModal" class="modal hidden">
         <div class="modal-content">
-            <h3>Adicionar Nova Despesa</h3>
+            <h3>💰 Nova Despesa</h3>
             <form id="expenseForm">
-                <label>Valor:</label>
-                <input type="number" step="0.01" name="valor" required>
+                <div>
+                    <label>💵 Valor:</label>
+                    <input type="number" step="0.01" name="valor" placeholder="Ex: 29.90" required>
+                </div>
 
-                <label>Descrição:</label>
-                <input type="text" name="descricao" required>
+                <div>
+                    <label>📝 Descrição:</label>
+                    <input type="text" name="descricao" placeholder="Ex: Almoço no restaurante" required>
+                </div>
 
-                <label>Data do Gasto:</label>
-                <input type="date" name="data_gasto" required>
+                <div>
+                    <label>📅 Data do Gasto:</label>
+                    <input type="date" name="data_gasto" required>
+                </div>
 
-                <label>Categoria:</label>
-                <select name="category_id" required id="categorySelect">
-                    <!-- Vai ser preenchido via JS -->
-                </select>
+                <div>
+                    <label>🏷️ Categoria:</label>
+                    <select name="category_id" required id="categorySelect">
+                        <option value="">Carregando categorias...</option>
+                    </select>
+                </div>
 
-                <button type="submit" class="btn-primary">Salvar</button>
-                <button type="button" onclick="closeModal()" class="btn-cancel">Cancelar</button>
-
+                <div class="modal-buttons">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i>
+                        Salvar Despesa
+                    </button>
+                    <button type="button" onclick="closeModal()" class="btn-cancel">
+                        <i class="fas fa-times"></i>
+                        Cancelar
+                    </button>
+                </div>
             </form>
         </div>
     </div>
 
     <script>
-    // Função para abrir o modal
-    function openModal() {
-        document.getElementById('expenseModal').classList.remove('hidden');
+        // Função para abrir o modal
+        function openModal() {
+            document.getElementById('expenseModal').classList.remove('hidden');
+            
+            // Preencher a data com hoje
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelector('#expenseForm input[name="data_gasto"]').value = today;
+            
+            // Focar no campo valor
+            setTimeout(() => {
+                document.querySelector('#expenseForm input[name="valor"]').focus();
+            }, 100);
+        }
 
-        // Preencher a data com hoje
-        const today = new Date().toISOString().split('T')[0];
-        document.querySelector('#expenseForm input[name="data_gasto"]').value = today;
-    }
+        // Fechar modal
+        function closeModal() {
+            document.getElementById('expenseModal').classList.add('hidden');
+            // Limpar o formulário ao fechar
+            document.getElementById('expenseForm').reset();
+        }
 
-
-    // Fechar modal
-    function closeModal() {
-        document.getElementById('expenseModal').classList.add('hidden');
-        // Limpar o formulário ao fechar (opcional, mas recomendado)
-        document.getElementById('expenseForm').reset();
-    }
-
-
-    // Carregar categorias disponíveis
-    function loadCategories() {
-        fetch('/api/categories')
-            .then(response => response.json())
-            .then(data => {
-                const select = document.getElementById('categorySelect');
-                select.innerHTML = '';
-
-                if (data.categories && data.categories.length > 0) {
-                    data.categories.forEach(cat => {
-                        const option = document.createElement('option');
-                        option.value = cat.id;
-                        option.textContent = cat.nome;
-                        select.appendChild(option);
-                    });
-                } else {
-                    const option = document.createElement('option');
-                    option.value = "";
-                    option.textContent = "Nenhuma categoria encontrada";
-                    select.appendChild(option);
-                }
-            });
-    }
-
-
-    // Enviar formulário via AJAX
-    document.getElementById('expenseForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-
-        fetch('/add-expense', {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => res.json())
-        .then(data => {
-            alert(data.message);
-            if (data.status === 'success') {
+        // Fechar modal clicando fora dele
+        document.getElementById('expenseModal').addEventListener('click', function(e) {
+            if (e.target === this) {
                 closeModal();
             }
         });
-    });
-    </script>
 
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Carregar categorias disponíveis
+        function loadCategories() {
+            const select = document.getElementById('categorySelect');
+            select.innerHTML = '<option value="">Carregando...</option>';
+            
+            fetch('/api/categories')
+                .then(response => response.json())
+                .then(data => {
+                    select.innerHTML = '';
+
+                    if (data.categories && data.categories.length > 0) {
+                        data.categories.forEach(cat => {
+                            const option = document.createElement('option');
+                            option.value = cat.id;
+                            option.textContent = cat.nome;
+                            select.appendChild(option);
+                        });
+                    } else {
+                        const option = document.createElement('option');
+                        option.value = "";
+                        option.textContent = "Nenhuma categoria encontrada";
+                        select.appendChild(option);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar categorias:', error);
+                    select.innerHTML = '<option value="">Erro ao carregar categorias</option>';
+                });
+        }
+
+        // Enviar formulário via AJAX
+        document.getElementById('expenseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.btn-primary');
+            const originalText = submitBtn.innerHTML;
+            
+            // Feedback visual
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...';
+            submitBtn.disabled = true;
+
+            fetch('/add-expense', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Sucesso - feedback visual positivo
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Salvo!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+                    
+                    setTimeout(() => {
+                        closeModal();
+                        // Resetar botão
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+                        submitBtn.disabled = false;
+                    }, 1500);
+                } else {
+                    throw new Error(data.message || 'Erro ao salvar');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao salvar despesa: ' + (error.message || 'Tente novamente'));
+                
+                // Resetar botão
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+
+        // Animação de entrada suave
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.status-card, .feature-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>
