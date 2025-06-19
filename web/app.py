@@ -129,8 +129,19 @@ def logout():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    """Dashboard principal"""
-    return render_template('dashboard.html', user_name=session.get('user_name'))
+    """Dashboard principal com listagem de despesas"""
+    expenses = DatabaseManager.execute_query(
+        """
+        SELECT e.valor, e.descricao, e.data_gasto, c.nome AS categoria
+        FROM expenses e
+        JOIN categories c ON e.category_id = c.id
+        WHERE e.user_id = %s
+        ORDER BY e.data_gasto DESC
+        """,
+        (session['user_id'],),
+        fetch='all'
+    )
+    return render_template('dashboard.html', user_name=session.get('user_name'), expenses=expenses)
 
 @app.route('/api/test-db')
 def test_db():

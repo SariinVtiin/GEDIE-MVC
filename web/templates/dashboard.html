@@ -97,6 +97,39 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Lista de Despesas -->
+            <section class="expenses-section">
+                <h3><i class="fas fa-list"></i> Suas Despesas</h3>
+                <div class="expenses-list">
+                    {% if expenses %}
+                        <table class="expenses-table">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Descrição</th>
+                                    <th>Categoria</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in expenses %}
+                                    <tr>
+                                        <td>{{ item.data_gasto.strftime('%d/%m/%Y') }}</td>
+                                        <td>{{ item.descricao }}</td>
+                                        <td>{{ item.categoria }}</td>
+                                        <td>R$ {{ '%.2f'|format(item.valor) }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p>Nenhuma despesa registrada ainda.</p>
+                    {% endif %}
+                </div>
+            </section>
+
+
         </main>
     </div>
 
