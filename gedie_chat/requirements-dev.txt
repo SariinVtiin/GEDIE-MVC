@@ -1,14 +1,24 @@
-# Incluir requirements principais
--r requirements.txt
+# Bot Framework
+python-telegram-bot==20.7
 
-# Desenvolvimento
+# Database
+SQLAlchemy==2.0.23
+PyMySQL==1.1.0
+alembic==1.13.1
+
+# Configuration
+python-decouple==3.8
+
+# Utilities
+loguru==0.7.2
+python-dateutil==2.8.2
+
+# Development (opcional)
 pytest==7.4.3
 pytest-asyncio==0.21.1
-pytest-cov==4.1.0
 black==23.11.0
 flake8==6.1.0
-isort==5.12.0
-mypy==1.7.1
 
-# Debugging
-ipdb==0.13.13
+# Adicionar estas linhas:
+google-generativeai==0.3.2
+pillow==10.1.0

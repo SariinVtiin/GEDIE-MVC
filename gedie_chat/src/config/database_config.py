@@ -2,7 +2,7 @@
 Configuração do banco de dados MySQL
 """
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from decouple import config
@@ -50,7 +50,7 @@ def test_connection():
     """Testar conexão com o banco"""
     try:
         with engine.connect() as connection:
-            result = connection.execute("SELECT 1")
+            connection.execute(text("SELECT 1"))
             logger.info("✅ Conexão com MySQL estabelecida com sucesso!")
             return True
     except Exception as e:

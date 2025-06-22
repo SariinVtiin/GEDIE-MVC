@@ -1,24 +1,26 @@
-# Bot Framework
+# Core – Telegram Bot
 python-telegram-bot==20.7
 
-# Database
-SQLAlchemy==2.0.23
-PyMySQL==1.1.0
-alembic==1.13.1
+# Banco de dados
+SQLAlchemy==2.0.29
+PyMySQL==1.1.1                  #  ← driver usado no URI mysql+pymysql://
+# Se preferir mysqlconnector, troque o URI e remova PyMySQL
+# mysql-connector-python==8.4.0
 
-# Configuration
-python-decouple==3.8
+# Web (Flask dashboard)
+Flask==3.0.3
+Werkzeug==3.0.1                 # (vem com Flask)
 
-# Utilities
+# IA Gemini
+google-generativeai==0.5.4
+Pillow==10.3.0                  # gerar imagens de teste
+
+# Config & utilidades
+python-decouple==3.8            # leitura de .env
+python-dotenv==1.0.1
 loguru==0.7.2
-python-dateutil==2.8.2
 
-# Development (opcional)
-pytest==7.4.3
-pytest-asyncio==0.21.1
-black==23.11.0
-flake8==6.1.0
-
-# Adicionar estas linhas:
-google-generativeai==0.3.2
-pillow==10.1.0
+# Testes
+pytest==8.2.0
+pytest-asyncio==0.23.7
+pytest-cov==5.0.0

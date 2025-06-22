@@ -1319,3 +1319,1274 @@
 2025-06-10 09:58:01 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
 2025-06-10 09:58:08 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 6212796124
 2025-06-10 09:58:53 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-06-19 21:02:20 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:02:20 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-06-19 21:02:20 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-06-19 21:02:20 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-06-19 21:02:22 | ERROR    | src.config.database_config:test_connection:57 | ❌ Erro ao conectar com MySQL: Not an executable object: 'SELECT 1'
+2025-06-19 21:02:22 | ERROR    | __main__:main:50 | ❌ Falha na conexão com o banco!
+2025-06-19 21:05:24 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:05:24 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-06-19 21:05:24 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-06-19 21:05:24 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-06-19 21:05:26 | INFO     | src.config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:05:26 | INFO     | src.config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:05:26 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: maglev.proxy.rlwy.net/railway
+2025-06-19 21:05:26 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-06-19 21:05:27 | INFO     | __main__:main:72 | 📋 Registrando 5 handlers...
+2025-06-19 21:05:27 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-06-19 21:05:27 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-06-19 21:05:27 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-06-19 21:05:27 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-06-19 21:05:27 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-06-19 21:05:27 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-06-19 21:07:49 | INFO     | __main__:main:118 | 👋 GEDIE Bot finalizado
+2025-06-19 21:25:58 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:25:58 | INFO     | src.services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:25:58 | INFO     | src.services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:25:58 | INFO     | src.services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:25:58 | INFO     | src.services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:26:00 | INFO     | src.services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:26:00 | INFO     | src.services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:26:00 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:26:00 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:26:00 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:26:00 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:26:46 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:26:46 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:26:46 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:26:46 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:26:47 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:26:47 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:26:47 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:26:47 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 26, 47, 407545), 'updated_at': datetime.datetime(2025, 6, 20, 0, 26, 47, 407545)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:26:47 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:26:47 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:26:47 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:26:48 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:26:48 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:26:48 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:26:50 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["Arroz 5kg", "Feijão 1kg"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:26:50 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:26:50 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:26:50 | INFO     | src.services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:26:50 | INFO     | src.services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:26:50 | INFO     | src.services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:26:50 | INFO     | src.services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:26:52 | INFO     | src.services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:26:52 | INFO     | src.services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:26:52 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:26:52 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:26:52 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:26:52 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:30:21 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:30:21 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:30:21 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:30:21 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:30:22 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:30:22 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:30:22 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:30:22 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 30, 22, 687097), 'updated_at': datetime.datetime(2025, 6, 20, 0, 30, 22, 687097)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:30:22 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:30:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:30:22 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:30:24 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:30:24 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:30:24 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:30:25 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["Arroz 5kg", "Feijão 1kg"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:30:25 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:30:25 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:30:25 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:30:25 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:30:25 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:30:51 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:30:51 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:30:51 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:30:51 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:30:52 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:30:52 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:30:52 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:30:53 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 30, 52, 937730), 'updated_at': datetime.datetime(2025, 6, 20, 0, 30, 52, 937730)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:30:53 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:30:53 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:30:53 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:30:54 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:30:54 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:30:54 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:30:55 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:30:55 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:30:55 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:30:55 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:30:55 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:30:55 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:31:10 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:31:10 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:31:10 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:31:10 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:31:11 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:31:11 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:31:11 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:31:11 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 31, 11, 469087), 'updated_at': datetime.datetime(2025, 6, 20, 0, 31, 11, 469087)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:31:11 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:31:11 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:31:11 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:31:13 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:31:13 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:31:13 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:31:14 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:31:14 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:31:14 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:31:14 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:31:14 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:31:14 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:31:29 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:31:29 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:31:29 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:31:29 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:31:30 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:31:30 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:31:30 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:31:30 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 31, 30, 566560), 'updated_at': datetime.datetime(2025, 6, 20, 0, 31, 30, 566560)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:31:30 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:31:30 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:31:30 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:31:32 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:31:32 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:31:32 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:31:33 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:31:33 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:31:34 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:31:34 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:31:34 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:31:34 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:32:23 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:32:23 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:32:23 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:32:23 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:32:24 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:32:24 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:32:24 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:32:24 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 32, 24, 488674), 'updated_at': datetime.datetime(2025, 6, 20, 0, 32, 24, 488674)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:32:24 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:32:24 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:32:25 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:32:25 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:32:25 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:32:27 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:32:27 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:32:56 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:32:56 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:32:57 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:32:57 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:32:58 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:32:58 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:32:58 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:32:58 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 32, 58, 351180), 'updated_at': datetime.datetime(2025, 6, 20, 0, 32, 58, 351180)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:32:58 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:32:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:32:58 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:32:59 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:32:59 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:32:59 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:33:01 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:33:01 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:33:01 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:33:01 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:33:01 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:33:01 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:34:25 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:34:25 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:34:25 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:34:25 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:34:26 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:34:26 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:34:26 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:34:27 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 34, 26, 735422), 'updated_at': datetime.datetime(2025, 6, 20, 0, 34, 26, 735422)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:34:27 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:34:27 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:34:27 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:34:28 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:34:28 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:34:28 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:34:29 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:34:29 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:34:29 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:34:29 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:34:29 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:34:29 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:35:35 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:35:35 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:35:35 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:35:35 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:35:36 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:35:36 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:35:36 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:35:36 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 35, 36, 558851), 'updated_at': datetime.datetime(2025, 6, 20, 0, 35, 36, 558851)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:35:36 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:35:36 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:35:36 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:35:38 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:35:38 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:35:38 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:35:40 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:35:40 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:35:40 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:35:40 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:35:40 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:35:40 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 21:36:09 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:36:09 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-06-19 21:36:09 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-06-19 21:36:09 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-06-19 21:36:16 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 21:36:16 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-19 21:36:16 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 21:36:17 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-19 21:36:17 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 21:36:17 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-19 21:36:17 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-19 21:36:18 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 20, 0, 36, 17, 978676), 'updated_at': datetime.datetime(2025, 6, 20, 0, 36, 17, 978676)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-19 21:36:18 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 21:36:18 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-19 21:36:18 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-19 21:36:19 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-19 21:36:19 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-19 21:36:19 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-19 21:36:21 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-19 21:36:21 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-19 21:36:21 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:36:21 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-19 21:36:21 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-19 21:36:21 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 22:07:57 | INFO     | src.config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-19 22:07:57 | INFO     | __main__:main:34 | 🐛 MODO DEBUG ATIVADO
+2025-06-19 22:07:57 | INFO     | __main__:main:39 | 🚀 Iniciando GEDIE Bot...
+2025-06-19 22:07:57 | INFO     | __main__:main:48 | 🗄️ Testando conexão com banco de dados...
+2025-06-19 22:07:59 | INFO     | src.config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-19 22:08:00 | INFO     | src.config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-19 22:08:00 | INFO     | __main__:main:60 | 🗄️ Conectado ao MySQL: maglev.proxy.rlwy.net/railway
+2025-06-19 22:08:00 | INFO     | __main__:main:61 | 🤖 Token do Bot: 7643045903...9_4uT3UFF0
+2025-06-19 22:08:00 | INFO     | __main__:main:72 | 📋 Registrando 5 handlers...
+2025-06-19 22:08:00 | INFO     | __main__:main:81 | ✅ Todos os handlers registrados com sucesso!
+2025-06-19 22:08:00 | INFO     | __main__:main:84 | 🤖 GEDIE Bot está rodando...
+2025-06-19 22:08:00 | INFO     | __main__:main:85 | 💡 Pressione Ctrl+C para parar
+2025-06-19 22:08:00 | INFO     | __main__:main:88 | 🔍 Debug ativado - logs detalhados disponíveis
+2025-06-19 22:08:00 | INFO     | __main__:main:89 | 🛠️ Para debug de usuário específico, use:
+2025-06-19 22:08:00 | INFO     | __main__:main:90 |      python debug.py monitor <telegram_id>
+2025-06-19 22:08:30 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:08:31 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Alex Maxwel (948885701)
+2025-06-19 22:08:37 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 19
+2025-06-19 22:08:37 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
+2025-06-19 22:12:23 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:12:23 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:12:25 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:12:25 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:12:25 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:12:25 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:12:25 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:12:26 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:12:26 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:12:26 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:12:27 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:12:27 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:12:28 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:12:39 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:12:39 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:12:41 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:12:41 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:12:42 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:generate_code do usuário 948885701
+2025-06-19 22:12:42 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: generate_code - User: 948885701
+2025-06-19 22:12:43 | INFO     | models.user_model:update_access_code:61 | Código de acesso atualizado para usuário 19
+2025-06-19 22:12:44 | INFO     | controllers.settings_controller:_generate_access_code:90 | ✅ Código gerado para usuário 948885701: 684532
+2025-06-19 22:12:54 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:12:54 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:13:52 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:13:52 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:13:52 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:13:52 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:13:52 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:13:54 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:13:54 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:13:54 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:13:55 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:66 do usuário 948885701
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 66 para usuário 948885701
+2025-06-19 22:13:55 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Transporte (🚗)
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 66}
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 66}
+2025-06-19 22:13:56 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 66 selecionada com sucesso para usuário 948885701
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 66}
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 66}
+2025-06-19 22:14:05 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 66, 'amount': 25.0}
+2025-06-19 22:14:06 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:14:06 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:14:06 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 66, 'amount': 25.0}
+2025-06-19 22:14:47 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:confirm do usuário 948885701
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 948885701
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 66, 'amount': 25.0}
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 948885701
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 66, 'amount': 25.0}
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 948885701
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 66, 'amount': 25.0}
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 66, Amount: 25.0
+2025-06-19 22:14:47 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=19, category_id=66, amount=25.0
+2025-06-19 22:14:48 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 17, Valor: R$ 25.00
+2025-06-19 22:15:12 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:15:12 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:15:20 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 948885701
+2025-06-19 22:16:37 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:16:37 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:16:37 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:16:37 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:16:37 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:16:38 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:16:38 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:16:38 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:17:03 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:17:03 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:17:04 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:17:36 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:18:17 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 948885701
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 948885701
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:18:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'almoço' - User: 948885701
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:18:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0, 'description': 'almoço'}
+2025-06-19 22:18:41 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 18, Valor: R$ 25.00
+2025-06-19 22:21:31 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:21:32 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:21:35 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:21:35 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:21:36 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:21:36 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:21:36 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:21:36 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:21:36 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:21:36 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:21:37 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:21:48 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:21:48 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:21:50 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:21:50 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:21:51 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:21:51 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:21:51 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:21:51 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:21:51 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:21:51 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:21:52 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:22:03 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:22:03 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:22:05 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:22:05 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:22:16 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:22:17 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:23:13 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:23:13 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:23:17 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:23:17 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:25:20 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:25:20 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:25:21 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:25:21 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:25:21 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:25:21 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:25:21 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:25:22 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:25:22 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:25:22 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:25:23 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:25:23 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:25:23 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:25:23 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:25:23 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:25:23 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:25:24 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:25:35 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:25:35 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:25:37 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:25:37 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:25:39 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:25:39 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:25:40 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:25:50 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:25:50 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:25:52 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:25:52 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:25:54 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:25:54 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:26:05 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:26:05 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:33:06 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:33:07 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:33:09 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:33:09 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:33:09 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:33:09 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:33:09 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:33:10 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:33:10 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:33:10 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:33:12 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:33:12 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:33:13 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:33:16 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:33:17 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:33:17 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:33:17 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:33:23 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:33:23 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:33:25 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:33:25 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:33:25 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:33:25 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:33:25 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:33:26 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:33:26 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:33:26 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:33:27 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:33:27 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:33:28 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:33:38 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:33:39 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:33:40 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:33:40 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:33:42 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:33:42 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:33:54 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:33:54 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:37:55 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:37:55 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:37:58 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:regenerate_code do usuário 948885701
+2025-06-19 22:37:58 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: regenerate_code - User: 948885701
+2025-06-19 22:37:59 | INFO     | models.user_model:update_access_code:61 | Código de acesso atualizado para usuário 19
+2025-06-19 22:37:59 | INFO     | controllers.settings_controller:_regenerate_access_code:158 | ✅ Código regenerado para usuário 948885701: 017482
+2025-06-19 22:38:56 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:38:57 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:38:59 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:38:59 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:38:59 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:38:59 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:38:59 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:39:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:39:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:39:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:39:01 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:39:01 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:39:02 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:39:12 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:39:13 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:39:49 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:39:49 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:39:51 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:39:51 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:39:53 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:39:53 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:39:54 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:40:04 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:40:04 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:41:52 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:41:52 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:41:54 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:41:54 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:41:54 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:41:54 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:41:54 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:41:55 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:41:55 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:41:55 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:41:56 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:41:56 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:41:57 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:42:07 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:42:07 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:42:09 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:42:09 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:42:09 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:42:09 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:42:09 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:42:10 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:42:10 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:42:10 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:42:11 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:42:11 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:42:12 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:42:22 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:42:23 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:42:24 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:42:24 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:42:26 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:42:26 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:42:38 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:42:38 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:48:39 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:48:40 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:48:42 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:48:42 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:48:42 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:48:42 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:48:42 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:48:43 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:48:43 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:48:43 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:48:44 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:48:44 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:48:45 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:48:45 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:46 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:48:46 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:46 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:48 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:confirm do usuário 948885701
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 948885701
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 948885701
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 948885701
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 65, Amount: 25.0
+2025-06-19 22:48:48 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=19, category_id=65, amount=25.0
+2025-06-19 22:48:49 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 19, Valor: R$ 25.00
+2025-06-19 22:48:51 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:48:51 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:48:53 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:48:53 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:48:53 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:48:53 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:48:53 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:48:54 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:48:54 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:48:54 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:48:55 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:48:55 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:48:56 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:48:56 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:57 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:48:57 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:57 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:58 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 948885701
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 948885701
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:48:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'almoço' - User: 948885701
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:49:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0, 'description': 'almoço'}
+2025-06-19 22:49:02 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 20, Valor: R$ 25.00
+2025-06-19 22:49:04 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:49:04 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:49:06 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:49:06 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:49:11 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:49:11 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:49:13 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:49:13 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:50:01 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:50:01 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:50:02 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:50:02 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:50:02 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:50:02 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:50:02 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:50:03 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:50:03 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:50:03 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:50:04 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:50:04 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:50:04 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:50:04 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:50:04 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:50:04 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:50:05 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:50:31 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:50:31 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:50:31 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:50:31 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:50:36 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:today do usuário 948885701
+2025-06-19 22:50:36 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:50:36 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:50:36 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:52:54 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:52:54 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:53:00 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:53:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:53:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:53:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:53:41 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:today do usuário 948885701
+2025-06-19 22:53:41 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:53:41 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:53:41 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:54:02 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 948885701
+2025-06-19 22:54:03 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:54:03 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:54:03 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:54:03 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:54:05 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:week do usuário 948885701
+2025-06-19 22:54:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:54:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:54:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:54:07 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 948885701
+2025-06-19 22:54:09 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:54:09 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:54:09 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:54:09 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:54:11 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:month do usuário 948885701
+2025-06-19 22:54:11 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:54:11 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:54:11 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:55:21 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:55:21 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:55:23 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:55:23 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:55:23 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:55:23 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:55:23 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:55:24 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:55:24 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:55:24 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:55:25 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:55:25 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:55:26 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:55:26 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:27 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:55:27 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:27 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:29 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:confirm do usuário 948885701
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 948885701
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 948885701
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 948885701
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 65, Amount: 25.0
+2025-06-19 22:55:29 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=19, category_id=65, amount=25.0
+2025-06-19 22:55:30 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 21, Valor: R$ 25.00
+2025-06-19 22:55:32 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:55:33 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:55:34 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:55:34 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:55:34 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:55:34 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:55:34 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:55:35 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:55:35 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:55:35 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:55:36 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:55:36 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:55:36 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:55:36 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:55:36 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:55:36 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:55:37 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:38 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:40 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 948885701
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 948885701
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:55:40 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'almoço' - User: 948885701
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:55:42 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0, 'description': 'almoço'}
+2025-06-19 22:55:44 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 22, Valor: R$ 25.00
+2025-06-19 22:55:46 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:55:46 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:55:48 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:55:48 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:55:54 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:55:54 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:55:56 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:55:56 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:55:58 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:55:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:55:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:55:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:56:00 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:today do usuário 948885701
+2025-06-19 22:56:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:56:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:56:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:56:03 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:56:03 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:56:05 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:56:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:56:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:56:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:56:07 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:month do usuário 948885701
+2025-06-19 22:56:07 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:56:07 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:56:07 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:56:10 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:56:10 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:57:22 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:57:22 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:57:24 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:57:24 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:57:26 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:57:26 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:57:27 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:57:27 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:28 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:57:28 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:28 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:30 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:confirm do usuário 948885701
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK confirm - User: 948885701
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE CONFIRMAR CALLBACK - User: 948885701
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_save_expense_from_callback:311 | Salvando gasto via callback - User: 948885701
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_save_expense_from_callback:312 |     Dados completos: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_save_expense_from_callback:313 |     Category: 65, Amount: 25.0
+2025-06-19 22:57:30 | INFO     | controllers.expense_controller:_save_expense_from_callback:337 | Criando gasto: user_id=19, category_id=65, amount=25.0
+2025-06-19 22:57:31 | INFO     | controllers.expense_controller:_save_expense_from_callback:374 | ✅ Gasto salvo com sucesso: ID 23, Valor: R$ 25.00
+2025-06-19 22:57:33 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:57:34 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:57:35 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:register do usuário 948885701
+2025-06-19 22:57:35 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK register - User: 948885701
+2025-06-19 22:57:35 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:57:35 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:57:35 | INFO     | controllers.expense_controller:_start_expense_registration:66 | Iniciando registro de gasto para usuário 948885701
+2025-06-19 22:57:36 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS DEFINIR SELECTING_CATEGORY - User: 948885701
+2025-06-19 22:57:36 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:57:36 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:57:37 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback category:expense_select:65 do usuário 948885701
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:handle_callback:31 | Category callback: expense_select - User: 948885701
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG CALLBACK expense_select - User: 948885701
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.SELECTING_CATEGORY
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {}
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:_select_category_for_expense:49 | Selecionando categoria 65 para usuário 948885701
+2025-06-19 22:57:37 | INFO     | controllers.category_controller:_select_category_for_expense:61 | Categoria encontrada: Alimentação (🍔)
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_select_category_for_expense:75 | Dados existentes antes de salvar categoria: {}
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_select_category_for_expense:86 | Dados após salvar categoria: {'category_id': 65}
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_debug_user_state:19 | 🔍 CATEGORY DEBUG APÓS SELECIONAR CATEGORIA - User: 948885701
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_debug_user_state:20 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_debug_user_state:21 |     Dados: {'category_id': 65}
+2025-06-19 22:57:38 | INFO     | controllers.category_controller:_select_category_for_expense:101 | ✅ Categoria 65 selecionada com sucesso para usuário 948885701
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: '25' - User: 948885701
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_AMOUNT
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65}
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor '25' para usuário 948885701
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 65}
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 948885701
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:39 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:41 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:add_description do usuário 948885701
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK add_description - User: 948885701
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG ANTES DE SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS SOLICITAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:57:41 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG TEXT INPUT: 'almoço' - User: 948885701
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0}
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS ADICIONAR DESCRIÇÃO - User: 948885701
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.WAITING_DESCRIPTION
+2025-06-19 22:57:43 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 65, 'amount': 25.0, 'description': 'almoço'}
+2025-06-19 22:57:44 | INFO     | controllers.expense_controller:_save_expense_from_message:440 | ✅ Gasto salvo com sucesso: ID 24, Valor: R$ 25.00
+2025-06-19 22:57:47 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:57:47 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:57:49 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 22:57:49 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 22:57:54 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:view_code do usuário 948885701
+2025-06-19 22:57:54 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: view_code - User: 948885701
+2025-06-19 22:57:56 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:57:57 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:57:58 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:57:58 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:57:58 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:57:58 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:58:00 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:today do usuário 948885701
+2025-06-19 22:58:00 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:58:00 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:58:00 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:58:03 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:58:03 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 22:58:05 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view_menu do usuário 948885701
+2025-06-19 22:58:05 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view_menu - User: 948885701
+2025-06-19 22:58:05 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:58:05 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:58:06 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback expense:view:month do usuário 948885701
+2025-06-19 22:58:06 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG CALLBACK view - User: 948885701
+2025-06-19 22:58:06 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.IDLE
+2025-06-19 22:58:06 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {}
+2025-06-19 22:58:09 | INFO     | src.controllers.bot_controller:start_command:36 | Usuário 948885701 (Alex Maxwel) iniciou o bot
+2025-06-19 22:58:09 | INFO     | controllers.user_controller:get_or_create_user:23 | Usuário encontrado: Alex Maxwel (ID: 19)
+2025-06-19 23:00:13 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback settings:menu do usuário 948885701
+2025-06-19 23:00:13 | INFO     | controllers.settings_controller:handle_callback:24 | Settings callback: menu - User: 948885701
+2025-06-19 23:00:23 | INFO     | src.controllers.bot_controller:callback_router:98 | Callback main:menu do usuário 948885701
+2025-06-22 02:34:33 | INFO     | config.logging_config:setup_logging:40 | 📝 Sistema de logging configurado
+2025-06-22 02:34:33 | INFO     | tests.test_database:test_database:23 | 🗄️ Testando configuração do banco de dados...
+2025-06-22 02:34:33 | INFO     | config.database_config:test_connection:54 | ✅ Conexão com MySQL estabelecida com sucesso!
+2025-06-22 02:34:33 | INFO     | tests.test_database:test_database:31 | 📋 Criando tabelas...
+2025-06-22 02:34:34 | INFO     | config.database_config:create_tables:64 | ✅ Tabelas criadas com sucesso!
+2025-06-22 02:34:34 | INFO     | tests.test_database:test_database:37 | 🧪 Testando operações CRUD...
+2025-06-22 02:34:34 | INFO     | tests.test_database:test_database:43 | 👤 Criando usuário de teste...
+2025-06-22 02:34:34 | ERROR    | models.user_model:create_user:49 | Erro ao criar usuário 123456789: (pymysql.err.IntegrityError) (1062, "Duplicate entry '123456789' for key 'users.telegram_id'")
+[SQL: INSERT INTO users (telegram_id, nome, timezone, ativo, codigo_acesso, created_at, updated_at) VALUES (%(telegram_id)s, %(nome)s, %(timezone)s, %(ativo)s, %(codigo_acesso)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'telegram_id': 123456789, 'nome': 'Usuário Teste', 'timezone': 'America/Sao_Paulo', 'ativo': 1, 'codigo_acesso': None, 'created_at': datetime.datetime(2025, 6, 22, 5, 34, 34, 390216), 'updated_at': datetime.datetime(2025, 6, 22, 5, 34, 34, 390216)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-22 02:34:34 | ERROR    | tests.test_database:test_database:46 | ❌ Falha ao criar usuário
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_process_amount_input:200 | Processando valor 'R$ 123,45' para usuário 1001
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_process_amount_input:215 | Dados atuais antes de salvar valor: {'category_id': 1}
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_process_amount_input:227 | Dados após salvar valor: {'category_id': 1, 'amount': 123.45}
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_debug_user_state:31 | 🔍 DEBUG APÓS CONFIRMAR VALOR - User: 1001
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_debug_user_state:32 |     Estado: ConversationState.CONFIRMING_EXPENSE
+2025-06-22 02:34:34 | INFO     | controllers.expense_controller:_debug_user_state:33 |     Dados: {'category_id': 1, 'amount': 123.45}
+2025-06-22 02:34:34 | INFO     | services.gemini_service:test_connection:189 | 🧪 Testando conexão com Gemini API...
+2025-06-22 02:34:35 | INFO     | services.gemini_service:test_connection:196 | ✅ Conexão com Gemini API funcionando
+2025-06-22 02:34:36 | INFO     | services.gemini_service:analyze_receipt:29 | Iniciando análise de comprovante (7289 bytes)
+2025-06-22 02:34:36 | INFO     | services.gemini_service:analyze_receipt:76 | Enviando para análise do Gemini 1.5 Flash...
+2025-06-22 02:34:37 | INFO     | services.gemini_service:analyze_receipt:81 | Resposta bruta do Gemini: ```json
+{
+  "valor_total": 34.40,
+  "estabelecimento": "SUPERMERCADO TESTE LTDA",
+  "categoria_sugerida": "alimentacao",
+  "itens_principais": ["ARROZ 5KG", "FEIJÃO 1KG"],
+  "confianca": 1.0,
+  "obser...
+2025-06-22 02:34:37 | INFO     | services.gemini_service:analyze_receipt:105 | ✅ Análise concluída: valor=34.4, estabelecimento=SUPERMERCADO TESTE LTDA, confiança=1.0
+2025-06-22 02:34:38 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-22 02:34:38 | INFO     | controllers.user_controller:get_or_create_user:28 | Criando novo usuário: Tester (999)
+2025-06-22 02:34:38 | INFO     | models.category_model:create_default_categories:60 | ✅ 8 categorias padrão criadas para usuário 1
+2025-06-22 02:34:38 | INFO     | controllers.user_controller:get_or_create_user:34 | Usuário criado com 8 categorias padrão
