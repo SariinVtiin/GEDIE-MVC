@@ -11,3 +11,9 @@ Gerar Código de Acesso
     Quando eu clico no botão    Configurações
     Quando eu clico no botão    Ver Código Atual
     Então o bot deve responder com mensagem contendo    Seu Código de Acesso Atual
+
+Regenerar Código de Acesso
+    E envio o comando    /start
+    Quando eu clico no botão    Configurações
+    Quando eu clico no botão    Regenerar Código
+    Então o bot deve responder com mensagem contendo    Código Regenerado!

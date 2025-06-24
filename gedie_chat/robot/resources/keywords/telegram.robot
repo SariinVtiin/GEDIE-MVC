@@ -25,3 +25,7 @@ Então o bot deve responder com mensagem contendo
     [Arguments]    ${expected}
     Wait For Reply Containing    ${expected}    ${TIMEOUT}
 
+Quando eu envio o comprovante
+    ${img}=    Evaluate    TelegramLibrary.generate_fake_receipt()    modules=TelegramLibrary
+    Send Image    ${img}
+

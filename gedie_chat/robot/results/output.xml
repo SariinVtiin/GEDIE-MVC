@@ -1,590 +1,814 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.10 on win32)" generated="2025-06-19T22:57:20.995892" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.10 on win32)" generated="2025-06-23T21:33:51.608644" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests">
 <suite id="s1-s1" name="Flows" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows">
 <suite id="s1-s1-s1" name="Expense Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\expense_flow.robot">
 <test id="s1-s1-s1-t1" name="Registrar Gasto - Sem Descrição" line="14">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:21.269512" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:21.401484" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:21.966266" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:57:21.242486" elapsed="0.723780"/>
+<msg time="2025-06-23T21:33:51.875886" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:33:51.998999" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:33:52.526056" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:33:51.847861" elapsed="0.678195"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:21.242486" elapsed="0.723780"/>
+<status status="PASS" start="2025-06-23T21:33:51.847861" elapsed="0.678195"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:21.966266" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:33:52.526056" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:21.966266" elapsed="0.296121"/>
+<status status="PASS" start="2025-06-23T21:33:52.526056" elapsed="0.280255"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:57:21.966266" elapsed="0.296121"/>
+<status status="PASS" start="2025-06-23T21:33:52.526056" elapsed="0.280255"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:24.167270" level="INFO">🖱️ Botão 'Registrar Gasto' clicado</msg>
+<msg time="2025-06-23T21:33:54.716439" level="INFO">🖱️ Clicado: 💰 Registrar Gasto</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:22.263388" elapsed="1.903882"/>
+<status status="PASS" start="2025-06-23T21:33:52.806311" elapsed="1.910128"/>
 </kw>
 <arg>Registrar Gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:22.263388" elapsed="1.903882"/>
+<status status="PASS" start="2025-06-23T21:33:52.806311" elapsed="1.910128"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:26.081740" level="INFO">🖱️ Botão 'Alimentação' clicado</msg>
+<msg time="2025-06-23T21:33:56.654571" level="INFO">🖱️ Clicado: 🍔 Alimentação</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:24.167270" elapsed="1.914470"/>
+<status status="PASS" start="2025-06-23T21:33:54.717441" elapsed="1.937130"/>
 </kw>
 <arg>${CATEGORIA_BTN}</arg>
-<status status="PASS" start="2025-06-19T22:57:24.167270" elapsed="1.914470"/>
+<status status="PASS" start="2025-06-23T21:33:54.716439" elapsed="1.938132"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:27.508260" level="INFO">✅ Encontrado: '💵 Valor do gasto\n\n🍔 Categoria: Alimentação\n\nDigite o valor gasto (apenas números):\nExemplo: 25.50 ou 25,50'</msg>
+<msg time="2025-06-23T21:33:58.145926" level="INFO">✅ Encontrado: '💵 Valor do gasto\n\n🍔 Categoria: Alimentação\n\nDigite o valor gasto (apenas números):\nExemplo: 25.50 ou 25,50'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:26.082741" elapsed="1.425519"/>
+<status status="PASS" start="2025-06-23T21:33:56.655572" elapsed="1.490354"/>
 </kw>
 <arg>Valor do gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:26.082741" elapsed="1.425519"/>
+<status status="PASS" start="2025-06-23T21:33:56.654571" elapsed="1.491355"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:27.509261" level="INFO">➡️ Enviando: 25</msg>
+<msg time="2025-06-23T21:33:58.146927" level="INFO">➡️ Texto: 25</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:27.508260" elapsed="0.153139"/>
+<status status="PASS" start="2025-06-23T21:33:58.146927" elapsed="0.150137"/>
 </kw>
 <arg>${VALOR_GASTO}</arg>
-<status status="PASS" start="2025-06-19T22:57:27.508260" elapsed="0.153139"/>
+<status status="PASS" start="2025-06-23T21:33:58.145926" elapsed="0.151138"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:29.094428" level="INFO">✅ Encontrado: '✅ Confirmar gasto\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 19/06/2025\n\nDeseja adicionar uma descrição ou confirmar o gasto?'</msg>
+<msg time="2025-06-23T21:33:59.702340" level="INFO">✅ Encontrado: '✅ Confirmar gasto\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 23/06/2025\n\nDeseja adicionar uma descrição ou confirmar o gasto?'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:27.662400" elapsed="1.432028"/>
+<status status="PASS" start="2025-06-23T21:33:58.297064" elapsed="1.405276"/>
 </kw>
 <arg>confirmar gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:27.661399" elapsed="1.433029"/>
+<status status="PASS" start="2025-06-23T21:33:58.297064" elapsed="1.405276"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:29.954441" level="INFO">🖱️ Botão 'Confirmar Sem Descrição' clicado</msg>
+<msg time="2025-06-23T21:34:00.420994" level="INFO">🖱️ Clicado: ✅ Confirmar Sem Descrição</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:29.095430" elapsed="0.859011"/>
+<status status="PASS" start="2025-06-23T21:33:59.702340" elapsed="0.718654"/>
 </kw>
 <arg>Confirmar Sem Descrição</arg>
-<status status="PASS" start="2025-06-19T22:57:29.094428" elapsed="0.860013"/>
+<status status="PASS" start="2025-06-23T21:33:59.702340" elapsed="0.718654"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:32.638367" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 19/06/2025\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
+<msg time="2025-06-23T21:34:02.977595" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 23/06/2025\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:29.954441" elapsed="2.683926"/>
+<status status="PASS" start="2025-06-23T21:34:00.421995" elapsed="2.555600"/>
 </kw>
 <arg>gasto registrado com sucesso</arg>
-<status status="PASS" start="2025-06-19T22:57:29.954441" elapsed="2.683926"/>
+<status status="PASS" start="2025-06-23T21:34:00.421995" elapsed="2.556601"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:32.639367" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:32.639367" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:32.642370" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:57:32.638367" elapsed="0.004003"/>
+<msg time="2025-06-23T21:34:02.978596" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:02.979597" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:02.993610" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:02.978596" elapsed="0.015014"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:32.638367" elapsed="0.004003"/>
+<status status="PASS" start="2025-06-23T21:34:02.978596" elapsed="0.015014"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:21.241485" elapsed="11.400885"/>
+<status status="PASS" start="2025-06-23T21:33:51.846860" elapsed="11.146750"/>
 </test>
 <test id="s1-s1-s1-t2" name="Registrar Gasto - Com Descrição" line="24">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:32.645374" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:32.793387" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:33.414617" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:57:32.643371" elapsed="0.771246"/>
+<msg time="2025-06-23T21:34:02.996612" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:03.128303" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:03.722843" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:02.994611" elapsed="0.728232"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:32.643371" elapsed="0.771246"/>
+<status status="PASS" start="2025-06-23T21:34:02.994611" elapsed="0.728232"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:33.415617" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:34:03.723844" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:33.415617" elapsed="0.323753"/>
+<status status="PASS" start="2025-06-23T21:34:03.722843" elapsed="0.298270"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:57:33.414617" elapsed="0.325754"/>
+<status status="PASS" start="2025-06-23T21:34:03.722843" elapsed="0.298270"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:35.699380" level="INFO">🖱️ Botão 'Registrar Gasto' clicado</msg>
+<msg time="2025-06-23T21:34:05.931370" level="INFO">🖱️ Clicado: 💰 Registrar Gasto</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:33.740371" elapsed="1.960010"/>
+<status status="PASS" start="2025-06-23T21:34:04.022115" elapsed="1.909255"/>
 </kw>
 <arg>Registrar Gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:33.740371" elapsed="1.960010"/>
+<status status="PASS" start="2025-06-23T21:34:04.022115" elapsed="1.909255"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:37.671797" level="INFO">🖱️ Botão 'Alimentação' clicado</msg>
+<msg time="2025-06-23T21:34:07.841106" level="INFO">🖱️ Clicado: 🍔 Alimentação</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:35.700381" elapsed="1.971416"/>
+<status status="PASS" start="2025-06-23T21:34:05.931370" elapsed="1.909736"/>
 </kw>
 <arg>${CATEGORIA_BTN}</arg>
-<status status="PASS" start="2025-06-19T22:57:35.700381" elapsed="1.971416"/>
+<status status="PASS" start="2025-06-23T21:34:05.931370" elapsed="1.909736"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:39.149381" level="INFO">✅ Encontrado: '💵 Valor do gasto\n\n🍔 Categoria: Alimentação\n\nDigite o valor gasto (apenas números):\nExemplo: 25.50 ou 25,50'</msg>
+<msg time="2025-06-23T21:34:09.292243" level="INFO">✅ Encontrado: '💵 Valor do gasto\n\n🍔 Categoria: Alimentação\n\nDigite o valor gasto (apenas números):\nExemplo: 25.50 ou 25,50'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:37.672798" elapsed="1.476583"/>
+<status status="PASS" start="2025-06-23T21:34:07.842107" elapsed="1.450136"/>
 </kw>
 <arg>valor do gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:37.671797" elapsed="1.477584"/>
+<status status="PASS" start="2025-06-23T21:34:07.841106" elapsed="1.451137"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:39.150382" level="INFO">➡️ Enviando: 25</msg>
+<msg time="2025-06-23T21:34:09.292243" level="INFO">➡️ Texto: 25</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:39.150382" elapsed="0.168941"/>
+<status status="PASS" start="2025-06-23T21:34:09.292243" elapsed="0.154141"/>
 </kw>
 <arg>${VALOR_GASTO}</arg>
-<status status="PASS" start="2025-06-19T22:57:39.150382" elapsed="0.168941"/>
+<status status="PASS" start="2025-06-23T21:34:09.292243" elapsed="0.154141"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:40.796518" level="INFO">✅ Encontrado: '✅ Confirmar gasto\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 19/06/2025\n\nDeseja adicionar uma descrição ou confirmar o gasto?'</msg>
+<msg time="2025-06-23T21:34:10.872387" level="INFO">✅ Encontrado: '✅ Confirmar gasto\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 23/06/2025\n\nDeseja adicionar uma descrição ou confirmar o gasto?'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:39.320324" elapsed="1.477195"/>
+<status status="PASS" start="2025-06-23T21:34:09.447385" elapsed="1.425002"/>
 </kw>
 <arg>confirmar gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:39.320324" elapsed="1.477195"/>
+<status status="PASS" start="2025-06-23T21:34:09.447385" elapsed="1.426003"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:41.598591" level="INFO">🖱️ Botão 'Adicionar Descrição' clicado</msg>
+<msg time="2025-06-23T21:34:11.636794" level="INFO">🖱️ Clicado: ✏️ Adicionar Descrição</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:40.797519" elapsed="0.801072"/>
+<status status="PASS" start="2025-06-23T21:34:10.873388" elapsed="0.763406"/>
 </kw>
 <arg>Adicionar Descrição</arg>
-<status status="PASS" start="2025-06-19T22:57:40.797519" elapsed="0.801072"/>
+<status status="PASS" start="2025-06-23T21:34:10.873388" elapsed="0.763406"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:43.073408" level="INFO">✅ Encontrado: '📝 Descrição do gasto\n\nDigite uma descrição para o gasto (opcional):\nExemplo: Almoço no restaurante X'</msg>
+<msg time="2025-06-23T21:34:13.060837" level="INFO">✅ Encontrado: '📝 Descrição do gasto\n\nDigite uma descrição para o gasto (opcional):\nExemplo: Almoço no restaurante X'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:41.598591" elapsed="1.474817"/>
+<status status="PASS" start="2025-06-23T21:34:11.637795" elapsed="1.423042"/>
 </kw>
 <arg>descrição do gasto</arg>
-<status status="PASS" start="2025-06-19T22:57:41.598591" elapsed="1.474817"/>
+<status status="PASS" start="2025-06-23T21:34:11.637795" elapsed="1.423042"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:43.073408" level="INFO">➡️ Enviando: almoço</msg>
+<msg time="2025-06-23T21:34:13.061752" level="INFO">➡️ Texto: almoço</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:43.073408" elapsed="0.166981"/>
+<status status="PASS" start="2025-06-23T21:34:13.061752" elapsed="0.151039"/>
 </kw>
 <arg>${DESCRICAO}</arg>
-<status status="PASS" start="2025-06-19T22:57:43.073408" elapsed="0.166981"/>
+<status status="PASS" start="2025-06-23T21:34:13.061752" elapsed="0.151039"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:45.909231" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 19/06/2025\n📝 Descrição: almoço\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
+<msg time="2025-06-23T21:34:15.781853" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 23/06/2025\n📝 Descrição: almoço\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:43.241390" elapsed="2.667841"/>
+<status status="PASS" start="2025-06-23T21:34:13.213791" elapsed="2.568062"/>
 </kw>
 <arg>gasto registrado com sucesso</arg>
-<status status="PASS" start="2025-06-19T22:57:43.241390" elapsed="2.667841"/>
+<status status="PASS" start="2025-06-23T21:34:13.212791" elapsed="2.569062"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:46.231298" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 19/06/2025\n📝 Descrição: almoço\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
+<msg time="2025-06-23T21:34:16.095137" level="INFO">✅ Encontrado: '🎉 Gasto registrado com sucesso!\n\n💰 Valor: R$ 25,00\n🍔 Categoria: Alimentação\n📅 Data: 23/06/2025\n📝 Descrição: almoço\n\n✅ Seu gasto foi salvo e já está nos seus relatórios!'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:45.909231" elapsed="0.323068"/>
+<status status="PASS" start="2025-06-23T21:34:15.782854" elapsed="0.312283"/>
 </kw>
 <arg>${DESCRICAO}</arg>
-<status status="PASS" start="2025-06-19T22:57:45.909231" elapsed="0.323068"/>
+<status status="PASS" start="2025-06-23T21:34:15.781853" elapsed="0.313284"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:46.232299" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:46.233300" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:46.245310" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:57:46.232299" elapsed="0.013011"/>
+<msg time="2025-06-23T21:34:16.096138" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:16.096138" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:16.108149" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:16.096138" elapsed="0.012011"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:46.232299" elapsed="0.013011"/>
+<status status="PASS" start="2025-06-23T21:34:16.096138" elapsed="0.012011"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:32.643371" elapsed="13.602940"/>
+<status status="PASS" start="2025-06-23T21:34:02.994611" elapsed="13.113538"/>
 </test>
 <doc>Fluxos de registro de gasto (com e sem descrição)</doc>
-<status status="PASS" start="2025-06-19T22:57:21.021544" elapsed="25.224767"/>
+<status status="PASS" start="2025-06-23T21:33:51.633667" elapsed="24.475483"/>
 </suite>
-<suite id="s1-s1-s2" name="Settings Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\settings_flow.robot">
-<test id="s1-s1-s2-t1" name="Gerar Código de Acesso" line="9">
+<suite id="s1-s1-s2" name="My Id" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\my_id.robot">
+<test id="s1-s1-s2-t1" name="Ver Meu ID" line="9">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:46.252316" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:46.384291" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:47.000362" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:57:46.251316" elapsed="0.749046"/>
+<msg time="2025-06-23T21:34:16.115155" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:16.264291" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:16.910865" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:16.113153" elapsed="0.797712"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:46.250315" elapsed="0.750047"/>
+<status status="PASS" start="2025-06-23T21:34:16.113153" elapsed="0.798715"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:47.001363" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:34:16.911868" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:47.001363" elapsed="0.310914"/>
+<status status="PASS" start="2025-06-23T21:34:16.911868" elapsed="0.326295"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:57:47.000362" elapsed="0.311915"/>
+<status status="PASS" start="2025-06-23T21:34:16.911868" elapsed="0.326295"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:49.222832" level="INFO">🖱️ Botão 'Configurações' clicado</msg>
+<msg time="2025-06-23T21:34:19.195584" level="INFO">🖱️ Clicado: 🆔 Meu ID</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:47.313276" elapsed="1.909556"/>
+<status status="PASS" start="2025-06-23T21:34:17.238163" elapsed="1.958180"/>
+</kw>
+<arg>Meu ID</arg>
+<status status="PASS" start="2025-06-23T21:34:17.238163" elapsed="1.958180"/>
+</kw>
+<kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
+<kw name="Wait For Reply Containing" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:20.688666" level="INFO">Sleeping for 4s (0:00:04) on GetHistoryRequest flood wait</msg>
+<msg time="2025-06-23T21:34:24.847259" level="INFO">✅ Encontrado: '🆔 Seu ID do Telegram\n\nID: 948885701\n\nℹ️ Este é seu identificador único no Telegram.\n\n✅ Como usar:\n1. Copie este número: 948885701\n2. Acesse a versão web do GEDIE\n3. Cole este ID no campo "ID do Telegram"\n4. Digite seu código de acesso de 6 dígitos\n\n🌐 Versão web: http://localhost:5000'</msg>
+<arg>${expected}</arg>
+<arg>${TIMEOUT}</arg>
+<status status="PASS" start="2025-06-23T21:34:19.196584" elapsed="5.650675"/>
+</kw>
+<arg>Seu ID do Telegram</arg>
+<status status="PASS" start="2025-06-23T21:34:19.196584" elapsed="5.650675"/>
+</kw>
+<kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
+<kw name="Close Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:24.848260" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:24.848260" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:24.851263" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:24.848260" elapsed="0.003003"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:24.847259" elapsed="0.004004"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:16.113153" elapsed="8.739111"/>
+</test>
+<doc>Smoke: Exibe o ID de Telegram do usuário</doc>
+<status status="PASS" start="2025-06-23T21:34:16.110166" elapsed="8.742098"/>
+</suite>
+<suite id="s1-s1-s3" name="Settings Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\settings_flow.robot">
+<test id="s1-s1-s3-t1" name="Gerar Código de Acesso" line="9">
+<kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
+<kw name="Open Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:24.858269" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:24.980380" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:25.504857" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:24.856268" elapsed="0.648589"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:24.856268" elapsed="0.648589"/>
+</kw>
+<kw name="E envio o comando" owner="telegram">
+<kw name="Send Command" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:25.505857" level="INFO">➡️ Texto: /start</msg>
+<arg>${command}</arg>
+<status status="PASS" start="2025-06-23T21:34:25.505857" elapsed="0.274250"/>
+</kw>
+<arg>/start</arg>
+<status status="PASS" start="2025-06-23T21:34:25.505857" elapsed="0.274250"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:27.637314" level="INFO">🖱️ Clicado: ⚙️ Configurações</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:34:25.781108" elapsed="1.856206"/>
 </kw>
 <arg>Configurações</arg>
-<status status="PASS" start="2025-06-19T22:57:47.313276" elapsed="1.909556"/>
+<status status="PASS" start="2025-06-23T21:34:25.781108" elapsed="1.857207"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:50.681646" level="INFO">Sleeping for 3s (0:00:03) on GetHistoryRequest flood wait</msg>
-<msg time="2025-06-19T22:57:54.322551" level="INFO">🖱️ Botão 'Ver Código Atual' clicado</msg>
+<msg time="2025-06-23T21:34:29.503795" level="INFO">🖱️ Clicado: 🔍 Ver Código Atual</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:49.223833" elapsed="5.099720"/>
+<status status="PASS" start="2025-06-23T21:34:27.638315" elapsed="1.865480"/>
 </kw>
 <arg>Ver Código Atual</arg>
-<status status="PASS" start="2025-06-19T22:57:49.223833" elapsed="5.099720"/>
+<status status="PASS" start="2025-06-23T21:34:27.638315" elapsed="1.865480"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:55.763359" level="INFO">✅ Encontrado: '🔐 Seu Código de Acesso Atual\n\n🔑 Código: 017482\n\n✅ Status: Ativo e funcionando\n\n🌐 Para acessar a versão web:\n1. Vá para: http://localhost:5000\n2. Use seu ID do Telegram\n3. Digite este código\n\nEscolha uma ação:'</msg>
+<msg time="2025-06-23T21:34:30.914080" level="INFO">✅ Encontrado: '🔐 Seu Código de Acesso Atual\n\n🔑 Código: 070583\n\n✅ Status: Ativo e funcionando\n\n🌐 Para acessar a versão web:\n1. Vá para: http://localhost:5000\n2. Use seu ID do Telegram\n3. Digite este código\n\nEscolha uma ação:'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:54.323553" elapsed="1.439806"/>
+<status status="PASS" start="2025-06-23T21:34:29.504796" elapsed="1.409284"/>
 </kw>
 <arg>Seu Código de Acesso Atual</arg>
-<status status="PASS" start="2025-06-19T22:57:54.323553" elapsed="1.439806"/>
+<status status="PASS" start="2025-06-23T21:34:29.504796" elapsed="1.409284"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:55.764359" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:55.764359" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:55.777370" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:57:55.764359" elapsed="0.013011"/>
+<msg time="2025-06-23T21:34:30.915080" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:30.915080" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:30.919083" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:30.915080" elapsed="0.004003"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:55.764359" elapsed="0.013011"/>
+<status status="PASS" start="2025-06-23T21:34:30.914080" elapsed="0.005003"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:46.250315" elapsed="9.527055"/>
+<status status="PASS" start="2025-06-23T21:34:24.856268" elapsed="6.062815"/>
+</test>
+<test id="s1-s1-s3-t2" name="Regenerar Código de Acesso" line="15">
+<kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
+<kw name="Open Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:30.922086" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:31.044197" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:31.562668" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:30.920085" elapsed="0.643585"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:30.920085" elapsed="0.643585"/>
+</kw>
+<kw name="E envio o comando" owner="telegram">
+<kw name="Send Command" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:31.563670" level="INFO">➡️ Texto: /start</msg>
+<arg>${command}</arg>
+<status status="PASS" start="2025-06-23T21:34:31.563670" elapsed="0.276251"/>
+</kw>
+<arg>/start</arg>
+<status status="PASS" start="2025-06-23T21:34:31.563670" elapsed="0.277252"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:33.697609" level="INFO">🖱️ Clicado: ⚙️ Configurações</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:34:31.840922" elapsed="1.856687"/>
+</kw>
+<arg>Configurações</arg>
+<status status="PASS" start="2025-06-23T21:34:31.840922" elapsed="1.856687"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:35.568307" level="INFO">🖱️ Clicado: 🔄 Regenerar Código</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:34:33.697609" elapsed="1.870698"/>
+</kw>
+<arg>Regenerar Código</arg>
+<status status="PASS" start="2025-06-23T21:34:33.697609" elapsed="1.870698"/>
+</kw>
+<kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
+<kw name="Wait For Reply Containing" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:38.190325" level="INFO">✅ Encontrado: '🔄 Código Regenerado!\n\n🔑 Novo código: 209686\n\n✅ O código anterior foi invalidado\n✅ Use este novo código para acessar a web\n\n⚠️ Atenção: Se você estava logado na versão web, precisará fazer login novamente com o novo código.\n\n🌐 Acesse: http://localhost:5000'</msg>
+<arg>${expected}</arg>
+<arg>${TIMEOUT}</arg>
+<status status="PASS" start="2025-06-23T21:34:35.568307" elapsed="2.622018"/>
+</kw>
+<arg>Código Regenerado!</arg>
+<status status="PASS" start="2025-06-23T21:34:35.568307" elapsed="2.622018"/>
+</kw>
+<kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
+<kw name="Close Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:38.191326" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:38.191326" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:38.205338" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:38.191326" elapsed="0.014012"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:38.191326" elapsed="0.014012"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:30.920085" elapsed="7.286254"/>
 </test>
 <doc>Geração e visualização de código de acesso</doc>
-<status status="PASS" start="2025-06-19T22:57:46.247312" elapsed="9.531060"/>
+<status status="PASS" start="2025-06-23T21:34:24.853265" elapsed="13.353074"/>
 </suite>
-<suite id="s1-s1-s3" name="View Expenses Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\view_expenses_flow.robot">
-<test id="s1-s1-s3-t1" name="Ver Gastos de Hoje" line="9">
+<suite id="s1-s1-s4" name="Upload Receipt Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\upload_receipt_flow.robot">
+<test id="s1-s1-s4-t1" name="Enviar Comprovante — Confirmar" line="15">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:55.783376" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:57:55.914262" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:57:56.485865" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:57:55.781374" elapsed="0.704491"/>
+<msg time="2025-06-23T21:34:38.212344" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:38.333109" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:38.862590" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:38.210343" elapsed="0.652247"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:55.781374" elapsed="0.704491"/>
+<status status="PASS" start="2025-06-23T21:34:38.210343" elapsed="0.652247"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:56.485865" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:34:38.863591" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:57:56.485865" elapsed="0.294035"/>
+<status status="PASS" start="2025-06-23T21:34:38.863591" elapsed="0.275251"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:57:56.485865" elapsed="0.294035"/>
+<status status="PASS" start="2025-06-23T21:34:38.862590" elapsed="0.276252"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:57:58.720200" level="INFO">🖱️ Botão 'Ver Gastos' clicado</msg>
+<msg time="2025-06-23T21:34:40.992519" level="INFO">🖱️ Clicado: 📷 Enviar Comprovante</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:57:56.779900" elapsed="1.940300"/>
+<status status="PASS" start="2025-06-23T21:34:39.138842" elapsed="1.853677"/>
 </kw>
-<arg>Ver Gastos</arg>
-<status status="PASS" start="2025-06-19T22:57:56.779900" elapsed="1.940300"/>
+<arg>Enviar Comprovante</arg>
+<status status="PASS" start="2025-06-23T21:34:39.138842" elapsed="1.853677"/>
+</kw>
+<kw name="Gerar E Enviar Comprovante">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-23T21:34:41.011536" level="INFO">${img} = C:\Users\Alexm\AppData\Local\Temp\receipt_7h6tvapc.png</msg>
+<var>${img}</var>
+<arg>TelegramLibrary.generate_fake_receipt()</arg>
+<arg>modules=TelegramLibrary</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-23T21:34:40.993520" elapsed="0.018016"/>
+</kw>
+<kw name="Send Image" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:41.012538" level="INFO">📤 Imagem: C:\Users\Alexm\AppData\Local\Temp\receipt_7h6tvapc.png</msg>
+<msg time="2025-06-23T21:34:41.018543" level="INFO">Uploading file of 5222 bytes in 1 chunks of 131072</msg>
+<arg>${img}</arg>
+<doc>Keyword para enviar foto/arquivo (comprovante).</doc>
+<status status="PASS" start="2025-06-23T21:34:41.011536" elapsed="0.318290"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:40.993520" elapsed="0.336306"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:46.592500" level="INFO">🖱️ Clicado: ✅ Confirmar Gasto</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:34:41.329826" elapsed="5.262674"/>
+</kw>
+<arg>Confirmar</arg>
+<status status="PASS" start="2025-06-23T21:34:41.329826" elapsed="5.262674"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:00.147273" level="INFO">✅ Encontrado: '💸 Ver Gastos\n\nEscolha o período:'</msg>
+<msg time="2025-06-23T21:34:49.121948" level="INFO">✅ Encontrado: '📷 Gasto registrado por foto!\n\n💰 Valor: R$ 25,00\n💳 Categoria: Outros\n📅 Data: 23/06/2025\n📝 Descrição: 📷 None\n\n🎉 Gasto salvo com sucesso!'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:57:58.720200" elapsed="1.427073"/>
+<status status="PASS" start="2025-06-23T21:34:46.592500" elapsed="2.529448"/>
 </kw>
-<arg>escolha o período</arg>
-<status status="PASS" start="2025-06-19T22:57:58.720200" elapsed="1.428075"/>
+<arg>Gasto registrado por foto!</arg>
+<status status="PASS" start="2025-06-23T21:34:46.592500" elapsed="2.529448"/>
+</kw>
+<kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
+<kw name="Close Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:49.122949" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:49.122949" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:49.133959" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:49.122949" elapsed="0.011010"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:49.122949" elapsed="0.012011"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:38.210343" elapsed="10.924617"/>
+</test>
+<test id="s1-s1-s4-t2" name="Enviar Comprovante — Cancelar" line="23">
+<kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
+<kw name="Open Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:49.136962" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:49.258073" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:49.778643" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:49.135961" elapsed="0.642682"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:49.135961" elapsed="0.642682"/>
+</kw>
+<kw name="E envio o comando" owner="telegram">
+<kw name="Send Command" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:49.779644" level="INFO">➡️ Texto: /start</msg>
+<arg>${command}</arg>
+<status status="PASS" start="2025-06-23T21:34:49.779644" elapsed="0.269973"/>
+</kw>
+<arg>/start</arg>
+<status status="PASS" start="2025-06-23T21:34:49.779644" elapsed="0.269973"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:00.895589" level="INFO">🖱️ Botão 'Hoje' clicado</msg>
+<msg time="2025-06-23T21:34:52.078990" level="INFO">🖱️ Clicado: 📷 Enviar Comprovante</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:58:00.148275" elapsed="0.747314"/>
+<status status="PASS" start="2025-06-23T21:34:50.049617" elapsed="2.029373"/>
+</kw>
+<arg>Enviar Comprovante</arg>
+<status status="PASS" start="2025-06-23T21:34:50.049617" elapsed="2.029373"/>
+</kw>
+<kw name="Gerar E Enviar Comprovante">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-23T21:34:52.086996" level="INFO">${img} = C:\Users\Alexm\AppData\Local\Temp\receipt_ojy8hq3q.png</msg>
+<var>${img}</var>
+<arg>TelegramLibrary.generate_fake_receipt()</arg>
+<arg>modules=TelegramLibrary</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-23T21:34:52.078990" elapsed="0.008006"/>
+</kw>
+<kw name="Send Image" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:52.086996" level="INFO">📤 Imagem: C:\Users\Alexm\AppData\Local\Temp\receipt_ojy8hq3q.png</msg>
+<msg time="2025-06-23T21:34:52.093003" level="INFO">Uploading file of 5247 bytes in 1 chunks of 131072</msg>
+<arg>${img}</arg>
+<doc>Keyword para enviar foto/arquivo (comprovante).</doc>
+<status status="PASS" start="2025-06-23T21:34:52.086996" elapsed="0.324296"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:52.078990" elapsed="0.332302"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:57.673059" level="INFO">🖱️ Clicado: ❌ Cancelar</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:34:52.411292" elapsed="5.261767"/>
+</kw>
+<arg>Cancelar</arg>
+<status status="PASS" start="2025-06-23T21:34:52.411292" elapsed="5.261767"/>
+</kw>
+<kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
+<kw name="Wait For Reply Containing" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:59.088518" level="INFO">✅ Encontrado: '❌ Análise cancelada\n\nVocê pode tentar novamente quando quiser.'</msg>
+<arg>${expected}</arg>
+<arg>${TIMEOUT}</arg>
+<status status="PASS" start="2025-06-23T21:34:57.674060" elapsed="1.414458"/>
+</kw>
+<arg>Análise cancelada</arg>
+<status status="PASS" start="2025-06-23T21:34:57.674060" elapsed="1.414458"/>
+</kw>
+<kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
+<kw name="Close Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:59.089519" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:59.089519" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:59.102531" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:34:59.089519" elapsed="0.013012"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:59.088518" elapsed="0.014013"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:49.134960" elapsed="9.967571"/>
+</test>
+<doc>Fluxos de envio de comprovante + confirmação e cancelamento</doc>
+<status status="PASS" start="2025-06-23T21:34:38.207341" elapsed="20.896190"/>
+</suite>
+<suite id="s1-s1-s5" name="View Expenses Flow" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\flows\view_expenses_flow.robot">
+<test id="s1-s1-s5-t1" name="Ver Gastos de Hoje" line="9">
+<kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
+<kw name="Open Connection" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:59.108536" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:34:59.229646" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:34:59.756220" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:34:59.107535" elapsed="0.648685"/>
+</kw>
+<status status="PASS" start="2025-06-23T21:34:59.107535" elapsed="0.648685"/>
+</kw>
+<kw name="E envio o comando" owner="telegram">
+<kw name="Send Command" owner="TelegramLibrary">
+<msg time="2025-06-23T21:34:59.757221" level="INFO">➡️ Texto: /start</msg>
+<arg>${command}</arg>
+<status status="PASS" start="2025-06-23T21:34:59.757221" elapsed="0.276253"/>
+</kw>
+<arg>/start</arg>
+<status status="PASS" start="2025-06-23T21:34:59.756220" elapsed="0.277254"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:35:01.898367" level="INFO">🖱️ Clicado: 💸 Ver Gastos</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:35:00.034476" elapsed="1.863891"/>
+</kw>
+<arg>Ver Gastos</arg>
+<status status="PASS" start="2025-06-23T21:35:00.034476" elapsed="1.863891"/>
+</kw>
+<kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
+<kw name="Wait For Reply Containing" owner="TelegramLibrary">
+<msg time="2025-06-23T21:35:03.303645" level="INFO">✅ Encontrado: '💸 Ver Gastos\n\nEscolha o período:'</msg>
+<arg>${expected}</arg>
+<arg>${TIMEOUT}</arg>
+<status status="PASS" start="2025-06-23T21:35:01.899369" elapsed="1.405276"/>
+</kw>
+<arg>escolha o período</arg>
+<status status="PASS" start="2025-06-23T21:35:01.899369" elapsed="1.405276"/>
+</kw>
+<kw name="Quando eu clico no botão" owner="telegram">
+<kw name="Click Button" owner="TelegramLibrary">
+<msg time="2025-06-23T21:35:04.072343" level="INFO">🖱️ Clicado: 📅 Hoje</msg>
+<arg>${button_text}</arg>
+<status status="PASS" start="2025-06-23T21:35:03.304645" elapsed="0.767698"/>
 </kw>
 <arg>Hoje</arg>
-<status status="PASS" start="2025-06-19T22:58:00.148275" elapsed="0.747314"/>
+<status status="PASS" start="2025-06-23T21:35:03.304645" elapsed="0.767698"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:02.327193" level="INFO">✅ Encontrado: '📊 Gastos de Hoje\n\n💰 Total: R$ 200,00\n📝 8 gastos\n\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🚗 R$ 25,00 - Transporte (19/06)'</msg>
+<msg time="2025-06-23T21:35:06.602191" level="INFO">✅ Encontrado: '📊 Gastos de Hoje\n\n💰 Total: R$ 400,00\n📝 15 gastos\n\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n\n... e mais 5 gastos'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:00.896590" elapsed="1.430603"/>
+<status status="PASS" start="2025-06-23T21:35:04.072343" elapsed="2.529848"/>
 </kw>
 <arg>Gastos de Hoje</arg>
-<status status="PASS" start="2025-06-19T22:58:00.895589" elapsed="1.431604"/>
+<status status="PASS" start="2025-06-23T21:35:04.072343" elapsed="2.529848"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:02.609094" level="INFO">✅ Encontrado: '📊 Gastos de Hoje\n\n💰 Total: R$ 200,00\n📝 8 gastos\n\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🚗 R$ 25,00 - Transporte (19/06)'</msg>
+<msg time="2025-06-23T21:35:06.868433" level="INFO">✅ Encontrado: '📊 Gastos de Hoje\n\n💰 Total: R$ 400,00\n📝 15 gastos\n\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n\n... e mais 5 gastos'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:02.328194" elapsed="0.280900"/>
+<status status="PASS" start="2025-06-23T21:35:06.603191" elapsed="0.265242"/>
 </kw>
 <arg>Total: R$</arg>
-<status status="PASS" start="2025-06-19T22:58:02.327193" elapsed="0.282903"/>
+<status status="PASS" start="2025-06-23T21:35:06.602191" elapsed="0.266242"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:02.610096" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:58:02.610096" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:58:02.623107" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:58:02.610096" elapsed="0.013011"/>
+<msg time="2025-06-23T21:35:06.869434" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:35:06.869434" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:35:06.882446" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:35:06.869434" elapsed="0.014013"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:02.610096" elapsed="0.013011"/>
+<status status="PASS" start="2025-06-23T21:35:06.868433" elapsed="0.015014"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:57:55.781374" elapsed="6.842734"/>
+<status status="PASS" start="2025-06-23T21:34:59.106534" elapsed="7.776913"/>
 </test>
-<test id="s1-s1-s3-t2" name="Ver Gastos deste Mês" line="17">
+<test id="s1-s1-s5-t2" name="Ver Gastos deste Mês" line="17">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:02.626110" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:58:02.747220" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:58:03.269290" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:58:02.625109" elapsed="0.644181"/>
+<msg time="2025-06-23T21:35:06.885449" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:35:07.006558" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:35:07.532036" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:35:06.884448" elapsed="0.647588"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:02.624108" elapsed="0.645182"/>
+<status status="PASS" start="2025-06-23T21:35:06.884448" elapsed="0.647588"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:03.269290" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:35:07.532036" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:58:03.269290" elapsed="0.327086"/>
+<status status="PASS" start="2025-06-23T21:35:07.532036" elapsed="0.275250"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:58:03.269290" elapsed="0.327086"/>
+<status status="PASS" start="2025-06-23T21:35:07.532036" elapsed="0.275250"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:05.447744" level="INFO">🖱️ Botão 'Ver Gastos' clicado</msg>
+<msg time="2025-06-23T21:35:09.672705" level="INFO">🖱️ Clicado: 💸 Ver Gastos</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:58:03.597377" elapsed="1.850367"/>
+<status status="PASS" start="2025-06-23T21:35:07.808287" elapsed="1.865419"/>
 </kw>
 <arg>Ver Gastos</arg>
-<status status="PASS" start="2025-06-19T22:58:03.596376" elapsed="1.851368"/>
+<status status="PASS" start="2025-06-23T21:35:07.808287" elapsed="1.865419"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:05.806787" level="INFO">✅ Encontrado: '💸 Ver Gastos\n\nEscolha o período:'</msg>
+<msg time="2025-06-23T21:35:11.080506" level="INFO">✅ Encontrado: '💸 Ver Gastos\n\nEscolha o período:'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:05.448745" elapsed="0.358042"/>
+<status status="PASS" start="2025-06-23T21:35:09.673706" elapsed="1.407802"/>
 </kw>
 <arg>escolha o período</arg>
-<status status="PASS" start="2025-06-19T22:58:05.448745" elapsed="0.358042"/>
+<status status="PASS" start="2025-06-23T21:35:09.673706" elapsed="1.407802"/>
 </kw>
 <kw name="Quando eu clico no botão" owner="telegram">
 <kw name="Click Button" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:06.567464" level="INFO">🖱️ Botão 'Este Mês' clicado</msg>
+<msg time="2025-06-23T21:35:11.804164" level="INFO">🖱️ Clicado: 📊 Este Mês</msg>
 <arg>${button_text}</arg>
-<doc>Clica em botão inline que contenha *button_text* (case-insensitive, sem emoji).</doc>
-<status status="PASS" start="2025-06-19T22:58:05.807788" elapsed="0.759676"/>
+<status status="PASS" start="2025-06-23T21:35:11.081508" elapsed="0.722656"/>
 </kw>
 <arg>Este Mês</arg>
-<status status="PASS" start="2025-06-19T22:58:05.807788" elapsed="0.759676"/>
+<status status="PASS" start="2025-06-23T21:35:11.081508" elapsed="0.722656"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:08.035243" level="INFO">✅ Encontrado: '📊 Gastos deste Mês\n\n💰 Total: R$ 200,00\n📝 8 gastos\n\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🚗 R$ 25,00 - Transporte (19/06)'</msg>
+<msg time="2025-06-23T21:35:14.367493" level="INFO">✅ Encontrado: '📊 Gastos deste Mês\n\n💰 Total: R$ 600,00\n📝 23 gastos\n\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n\n... e mais 13 gastos'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:06.568466" elapsed="1.466777"/>
+<status status="PASS" start="2025-06-23T21:35:11.805165" elapsed="2.562328"/>
 </kw>
 <arg>Gastos deste Mês</arg>
-<status status="PASS" start="2025-06-19T22:58:06.567464" elapsed="1.467779"/>
+<status status="PASS" start="2025-06-23T21:35:11.804164" elapsed="2.563329"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:08.298831" level="INFO">✅ Encontrado: '📊 Gastos deste Mês\n\n💰 Total: R$ 200,00\n📝 8 gastos\n\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🍔 R$ 25,00 - Alimentação (19/06)\n• 🍔 R$ 25,00 - Alimentação almoço (19/06)\n• 🚗 R$ 25,00 - Transporte (19/06)'</msg>
+<msg time="2025-06-23T21:35:14.630733" level="INFO">✅ Encontrado: '📊 Gastos deste Mês\n\n💰 Total: R$ 600,00\n📝 23 gastos\n\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 💳 R$ 25,00 - Outros 📷 None (23/06)\n• 🍔 R$ 25,00 - Alimentação almoço (23/06)\n• 🍔 R$ 25,00 - Alimentação (23/06)\n\n... e mais 13 gastos'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:08.036245" elapsed="0.262586"/>
+<status status="PASS" start="2025-06-23T21:35:14.367493" elapsed="0.263240"/>
 </kw>
 <arg>Total: R$</arg>
-<status status="PASS" start="2025-06-19T22:58:08.036245" elapsed="0.262586"/>
+<status status="PASS" start="2025-06-23T21:35:14.367493" elapsed="0.263240"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:08.299832" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:58:08.299832" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:58:08.302579" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:58:08.298831" elapsed="0.003748"/>
+<msg time="2025-06-23T21:35:14.631734" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:35:14.631734" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:35:14.643744" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:35:14.631734" elapsed="0.012010"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:08.298831" elapsed="0.003748"/>
+<status status="PASS" start="2025-06-23T21:35:14.630733" elapsed="0.013011"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:02.624108" elapsed="5.679465"/>
+<status status="PASS" start="2025-06-23T21:35:06.883447" elapsed="7.760297"/>
 </test>
 <doc>Fluxos de visualização de gastos (Hoje e Este Mês)</doc>
-<status status="PASS" start="2025-06-19T22:57:55.778372" elapsed="12.525201"/>
+<status status="PASS" start="2025-06-23T21:34:59.104533" elapsed="15.540212"/>
 </suite>
-<status status="PASS" start="2025-06-19T22:57:21.020543" elapsed="47.284031"/>
+<status status="PASS" start="2025-06-23T21:33:51.631666" elapsed="83.013079"/>
 </suite>
 <suite id="s1-s2" name="Smoke" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\smoke">
 <suite id="s1-s2-s1" name="Start Command" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\gedie_chat\robot\tests\smoke\start_command.robot">
 <test id="s1-s2-s1-t1" name="CT01 - Boas‑Vindas" line="10">
 <kw name="Dado que inicio a sessão com o bot" owner="telegram" type="SETUP">
 <kw name="Open Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:08.310581" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:58:08.442355" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:58:08.997558" level="INFO">📡 Conexão Telegram estabelecida</msg>
-<doc>Abre sessão com a conta de teste (TG_API_ID / TG_API_HASH / TG_PHONE).</doc>
-<status status="PASS" start="2025-06-19T22:58:08.309579" elapsed="0.687979"/>
+<msg time="2025-06-23T21:35:14.652752" level="INFO">Connecting to 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:35:14.772862" level="INFO">Connection to 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:35:15.309350" level="INFO">📡 Conexão Telegram OK</msg>
+<doc>Login com conta de teste.</doc>
+<status status="PASS" start="2025-06-23T21:35:14.650751" elapsed="0.658599"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:08.308578" elapsed="0.688980"/>
+<status status="PASS" start="2025-06-23T21:35:14.650751" elapsed="0.658599"/>
 </kw>
 <kw name="E envio o comando" owner="telegram">
 <kw name="Send Command" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:08.997558" level="INFO">➡️ Enviando: /start</msg>
+<msg time="2025-06-23T21:35:15.309350" level="INFO">➡️ Texto: /start</msg>
 <arg>${command}</arg>
-<doc>Envia texto simples para o bot.</doc>
-<status status="PASS" start="2025-06-19T22:58:08.997558" elapsed="0.291974"/>
+<status status="PASS" start="2025-06-23T21:35:15.309350" elapsed="0.285259"/>
 </kw>
 <arg>/start</arg>
-<status status="PASS" start="2025-06-19T22:58:08.997558" elapsed="0.291974"/>
+<status status="PASS" start="2025-06-23T21:35:15.309350" elapsed="0.285259"/>
 </kw>
 <kw name="Então o bot deve responder com mensagem contendo" owner="telegram">
 <kw name="Wait For Reply Containing" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:10.714070" level="INFO">✅ Encontrado: '👋 Olá, Alex Maxwel! Bem-vindo ao GEDIE!\n\n🎯 Gerencie seus gastos de forma inteligente\n\n✨ Novidade: Agora você pode acessar a versão web!\n🌐 Configure seu código de acesso em Configurações\n\nEscolha uma opção para começar:'</msg>
+<msg time="2025-06-23T21:35:17.061456" level="INFO">✅ Encontrado: '👋 Olá, Alex Maxwel! Bem-vindo ao GEDIE!\n\n🎯 Gerencie seus gastos de forma inteligente\n\n✨ Novidade: Agora você pode acessar a versão web!\n🌐 Configure seu código de acesso em Configurações\n\nEscolha uma opção para começar:'</msg>
 <arg>${expected}</arg>
 <arg>${TIMEOUT}</arg>
-<doc>Espera até *timeout* s por mensagem contendo *expected*.
-Funciona mesmo quando o bot **edita** a mesma mensagem (texto muda, id permanece).</doc>
-<status status="PASS" start="2025-06-19T22:58:09.290533" elapsed="1.423537"/>
+<status status="PASS" start="2025-06-23T21:35:15.595609" elapsed="1.465847"/>
 </kw>
 <arg>Bem-vindo ao GEDIE</arg>
-<status status="PASS" start="2025-06-19T22:58:09.289532" elapsed="1.424538"/>
+<status status="PASS" start="2025-06-23T21:35:15.595609" elapsed="1.465847"/>
 </kw>
 <kw name="Encerro a sessão" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<msg time="2025-06-19T22:58:10.715070" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
-<msg time="2025-06-19T22:58:10.715070" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
-<msg time="2025-06-19T22:58:10.718073" level="INFO">🔌 Conexão Telegram encerrada</msg>
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:58:10.715070" elapsed="0.003003"/>
+<msg time="2025-06-23T21:35:17.062457" level="INFO">Disconnecting from 149.154.175.55:443/TcpFull...</msg>
+<msg time="2025-06-23T21:35:17.062457" level="INFO">Disconnection from 149.154.175.55:443/TcpFull complete!</msg>
+<msg time="2025-06-23T21:35:17.075469" level="INFO">🔌 Conexão Telegram encerrada</msg>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:35:17.062457" elapsed="0.013012"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:10.715070" elapsed="0.003003"/>
+<status status="PASS" start="2025-06-23T21:35:17.062457" elapsed="0.013012"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:08.308578" elapsed="2.409495"/>
+<status status="PASS" start="2025-06-23T21:35:14.649750" elapsed="2.425719"/>
 </test>
 <kw name="Close All Connections" owner="telegram" type="TEARDOWN">
 <kw name="Close Connection" owner="TelegramLibrary">
-<doc>Fecha a sessão se estiver conectada.</doc>
-<status status="PASS" start="2025-06-19T22:58:10.719073" elapsed="0.000000"/>
+<doc>Desconecta, ignorando se já estiver offline.</doc>
+<status status="PASS" start="2025-06-23T21:35:17.076470" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-06-19T22:58:10.719073" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-23T21:35:17.076470" elapsed="0.000000"/>
 </kw>
 <doc>Smoke: Valida mensagem de boas‑vindas do comando /start</doc>
-<status status="PASS" start="2025-06-19T22:58:08.306577" elapsed="2.412496"/>
+<status status="PASS" start="2025-06-23T21:35:14.647748" elapsed="2.428722"/>
 </suite>
-<status status="PASS" start="2025-06-19T22:58:08.304574" elapsed="2.415501"/>
+<status status="PASS" start="2025-06-23T21:35:14.645747" elapsed="2.431723"/>
 </suite>
-<status status="PASS" start="2025-06-19T22:57:20.996893" elapsed="49.724182"/>
+<status status="PASS" start="2025-06-23T21:33:51.609644" elapsed="85.468828"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="5" fail="0" skip="0" id="s1-s1" name="Flows">Tests.Flows</stat>
+<stat pass="10" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="9" fail="0" skip="0" id="s1-s1" name="Flows">Tests.Flows</stat>
 <stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Expense Flow">Tests.Flows.Expense Flow</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="Settings Flow">Tests.Flows.Settings Flow</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s3" name="View Expenses Flow">Tests.Flows.View Expenses Flow</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="My Id">Tests.Flows.My Id</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s3" name="Settings Flow">Tests.Flows.Settings Flow</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s4" name="Upload Receipt Flow">Tests.Flows.Upload Receipt Flow</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s5" name="View Expenses Flow">Tests.Flows.View Expenses Flow</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s2" name="Smoke">Tests.Smoke</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s2-s1" name="Start Command">Tests.Smoke.Start Command</stat>
 </suite>
