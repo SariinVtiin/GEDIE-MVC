@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.10 on win32)" generated="2025-06-25T20:23:59.625718" rpa="false" schemaversion="5">
+<suite id="s1" name="Gedie Tests" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto\gedie_tests.robot">
+<kw name="Open Browser To Login Page" type="SETUP">
+<kw name="Open Browser">
+<msg time="2025-06-25T20:23:59.668758" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-06-25T20:23:59.668758" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-06-25T20:23:59.669759" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed">
+<arg>${SELENIUM_SPEED}</arg>
+<status status="NOT RUN" start="2025-06-25T20:23:59.670760" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<status status="NOT RUN" start="2025-06-25T20:23:59.671761" elapsed="0.000000"/>
+</kw>
+<doc>Abre o navegador e navega para a página de login</doc>
+<status status="FAIL" start="2025-06-25T20:23:59.667757" elapsed="0.004004">No keyword with name 'Open Browser' found.</status>
+</kw>
+<test id="s1-t1" name="(H2C1) Login Bem Sucedido Com Credenciais Corretas" line="82">
+<doc>Testa login com ID Telegram e Código de Acesso válidos.</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.671761" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t2" name="(H2C2) Login Com Código de Acesso Incorreto" line="90">
+<doc>Testa login com ID Telegram válido e Código de Acesso inválido.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.672761" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t3" name="(H2C5) Login Com ID Telegram Não Cadastrado" line="100">
+<doc>Testa login com ID Telegram não existente.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.673763" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t4" name="(H2C8) Logout Manual" line="110">
+<doc>Testa a funcionalidade de logout.</doc>
+<tag>login</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.674764" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t5" name="(H5C1) Registrar Despesa Manualmente Com Todos os Campos" line="118">
+<doc>Testa o registro de uma nova despesa manualmente.</doc>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.675763" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t6" name="(H5C3) Tentar Registrar Despesa Sem Valor" line="176">
+<doc>Testa a validação do campo valor obrigatório.</doc>
+<tag>expense</tag>
+<tag>negative</tag>
+<tag>requires_login</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.676765" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t7" name="(H6C1) Editar Valor de Uma Despesa" line="211">
+<doc>Testa a edição do valor de uma despesa existente.</doc>
+<tag>edit</tag>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.676765" elapsed="0.001001">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t8" name="(H7C1) Excluir Despesa" line="255">
+<doc>Testa a remoção de uma despesa.</doc>
+<tag>delete</tag>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.677766" elapsed="0.001001">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t9" name="(H9C1) Visualizar Gráfico de Gastos" line="358">
+<doc>Verifica se o gráfico de gastos é exibido.</doc>
+<tag>dashboard</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-06-25T20:23:59.678767" elapsed="0.001001">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2025-06-25T20:23:59.681769" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2025-06-25T20:23:59.681769" elapsed="0.000000">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>Suite de Testes Automatizados para o Sistema GEDIE
+Sistema de Gestão de Despesas Inteligente
+Testes completos baseados nos casos de teste fornecidos</doc>
+<status status="FAIL" start="2025-06-25T20:23:59.626720" elapsed="0.055049">Suite setup failed:
+No keyword with name 'Open Browser' found.
+
+Also suite teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="9" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">dashboard</stat>
+<stat pass="0" fail="1" skip="0">delete</stat>
+<stat pass="0" fail="1" skip="0">edit</stat>
+<stat pass="0" fail="4" skip="0">expense</stat>
+<stat pass="0" fail="4" skip="0">login</stat>
+<stat pass="0" fail="3" skip="0">negative</stat>
+<stat pass="0" fail="6" skip="0">requires_login</stat>
+<stat pass="0" fail="4" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="9" skip="0" id="s1" name="Gedie Tests">Gedie Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-25T20:23:59.648740" level="ERROR">Error in file 'C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto\gedie_tests.robot' on line 6: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\python312.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\venv
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\venv\Lib\site-packages</msg>
+<msg time="2025-06-25T20:23:59.664754" level="ERROR">Error in file 'C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto\resources\common_keywords.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\python312.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\venv
+  C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\venv\Lib\site-packages</msg>
+</errors>
+</robot>

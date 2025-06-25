@@ -1,0 +1,2414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.10 on win32)" generated="2025-06-25T20:29:21.630527" rpa="false" schemaversion="5">
+<suite id="s1" name="Gedie Tests" source="C:\Users\Alexm\Documents\Workdir\UCB\GEDIE\GEDIE-MVC\web\projeto\gedie_tests.robot">
+<kw name="Open Browser To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:22.551476" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5000/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:22.551476" elapsed="3.179857"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-25T20:29:25.732334" elapsed="0.019017"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-06-25T20:29:25.751351" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:25.751351" elapsed="0.308704"/>
+</kw>
+<doc>Abre o navegador e navega para a página de login</doc>
+<status status="PASS" start="2025-06-25T20:29:22.550475" elapsed="3.509580"/>
+</kw>
+<test id="s1-t1" name="(H2C1) Login Bem Sucedido Com Credenciais Corretas" line="82">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:26.060727" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:26.060727" elapsed="0.938229"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:26.998956" elapsed="0.305486"/>
+</kw>
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:27.304442" elapsed="0.624764"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:27.929206" elapsed="0.619355"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:28.548561" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:28.548561" elapsed="0.949995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:29.498556" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:29.498556" elapsed="0.939822"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:30.438378" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:30.438378" elapsed="6.002670"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:29:27.304442" elapsed="9.136606"/>
+</kw>
+<kw name="Verify On Dashboard Page">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:29:36.441048" elapsed="0.304315"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:36.745363" elapsed="0.307456"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:37.684675" level="INFO">Element 'css=.welcome-section h2' contains text 'Dashboard Financeiro'.</msg>
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>Dashboard Financeiro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:29:37.052819" elapsed="0.631856"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:38.332592" level="INFO">Element 'css=.user-info span' is displayed.</msg>
+<arg>${USER_INFO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:29:37.684675" elapsed="0.647917"/>
+</kw>
+<doc>Verifica se está na página do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:29:36.441048" elapsed="1.891544"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:29:38.332592" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:29:38.333592" elapsed="0.000000"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:29:38.332592" elapsed="0.001000"/>
+</kw>
+<doc>Testa login com ID Telegram e Código de Acesso válidos.</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-06-25T20:29:26.060055" elapsed="12.273537"/>
+</test>
+<test id="s1-t2" name="(H2C2) Login Com Código de Acesso Incorreto" line="90">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:38.334593" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:38.334593" elapsed="0.616642"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:38.951235" elapsed="0.305275"/>
+</kw>
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:39.256510" elapsed="0.617082"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:39.873592" elapsed="0.616016"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:40.489608" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:40.489608" elapsed="0.943942"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:41.433550" level="INFO">Typing text '999999' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:41.433550" elapsed="0.940898"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:42.374448" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:42.374448" elapsed="3.101066"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${INVALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:29:39.256510" elapsed="6.219004"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:45.778466" level="INFO">Current location is 'http://localhost:5000/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:45.475514" elapsed="0.302952"/>
+</kw>
+<kw name="Verify Flash Message">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2025-06-25T20:29:45.779468" level="INFO">${selector} = css=.alert-error</msg>
+<var>${selector}</var>
+<arg>'${message_type}' == 'error'</arg>
+<arg>${ALERT_ERROR}</arg>
+<arg>${ALERT_SUCCESS}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2025-06-25T20:29:45.778466" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:29:45.779468" elapsed="0.611492"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:47.000667" level="INFO">Element 'css=.alert-error' contains text 'ID do Telegram ou código de acesso incorretos'.</msg>
+<arg>${selector}</arg>
+<arg>${expected_message}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:29:46.390960" elapsed="0.609707"/>
+</kw>
+<arg>ID do Telegram ou código de acesso incorretos</arg>
+<arg>error</arg>
+<doc>Verifica mensagem flash do tipo especificado</doc>
+<status status="PASS" start="2025-06-25T20:29:45.778466" elapsed="1.222201"/>
+</kw>
+<kw name="Verify On Login Page">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:47.304366" level="INFO">Current location is 'http://localhost:5000/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:47.000667" elapsed="0.303699"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:47.304366" elapsed="0.305279"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:48.218409" level="INFO">Element 'id=access_code' is displayed.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:29:47.609645" elapsed="0.608764"/>
+</kw>
+<doc>Verifica se está na página de login</doc>
+<status status="PASS" start="2025-06-25T20:29:47.000667" elapsed="1.217742"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:29:48.218409" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:29:48.218409" elapsed="0.001001"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:29:48.218409" elapsed="0.001001"/>
+</kw>
+<doc>Testa login com ID Telegram válido e Código de Acesso inválido.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-06-25T20:29:38.333592" elapsed="9.885818"/>
+</test>
+<test id="s1-t3" name="(H2C5) Login Com ID Telegram Não Cadastrado" line="100">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:48.220411" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:48.220411" elapsed="0.612839"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:48.833250" elapsed="0.305048"/>
+</kw>
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:49.139299" elapsed="0.616258"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:49.755557" elapsed="0.615948"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:50.371505" level="INFO">Typing text '999999999001' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:50.371505" elapsed="0.946127"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:51.317632" level="INFO">Typing text '111111' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:51.317632" elapsed="0.940814"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:52.258446" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:52.258446" elapsed="3.085359"/>
+</kw>
+<arg>999999999001</arg>
+<arg>111111</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:29:49.138298" elapsed="6.205507"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:55.647394" level="INFO">Current location is 'http://localhost:5000/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:55.343805" elapsed="0.303589"/>
+</kw>
+<kw name="Verify Flash Message">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2025-06-25T20:29:55.648395" level="INFO">${selector} = css=.alert-error</msg>
+<var>${selector}</var>
+<arg>'${message_type}' == 'error'</arg>
+<arg>${ALERT_ERROR}</arg>
+<arg>${ALERT_SUCCESS}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2025-06-25T20:29:55.647394" elapsed="0.001001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:29:55.648395" elapsed="0.608927"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:56.866416" level="INFO">Element 'css=.alert-error' contains text 'ID do Telegram ou código de acesso incorretos'.</msg>
+<arg>${selector}</arg>
+<arg>${expected_message}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:29:56.257322" elapsed="0.609094"/>
+</kw>
+<arg>ID do Telegram ou código de acesso incorretos</arg>
+<arg>error</arg>
+<doc>Verifica mensagem flash do tipo especificado</doc>
+<status status="PASS" start="2025-06-25T20:29:55.647394" elapsed="1.219022"/>
+</kw>
+<kw name="Verify On Login Page">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:57.170226" level="INFO">Current location is 'http://localhost:5000/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:56.866416" elapsed="0.303810"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:57.170226" elapsed="0.304279"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:58.083428" level="INFO">Element 'id=access_code' is displayed.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:29:57.474505" elapsed="0.608923"/>
+</kw>
+<doc>Verifica se está na página de login</doc>
+<status status="PASS" start="2025-06-25T20:29:56.866416" elapsed="1.217012"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:29:58.083428" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:29:58.084429" elapsed="0.000000"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:29:58.083428" elapsed="0.001001"/>
+</kw>
+<doc>Testa login com ID Telegram não existente.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-06-25T20:29:48.219410" elapsed="9.865019"/>
+</test>
+<test id="s1-t4" name="(H2C8) Logout Manual" line="110">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:29:58.085429" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:29:58.085429" elapsed="0.614303"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:29:58.699732" elapsed="0.304845"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:59.004577" elapsed="0.616890"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:29:59.621467" elapsed="0.616075"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:00.237542" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:00.237542" elapsed="0.943476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:01.181018" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:01.181018" elapsed="0.941494"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:02.122512" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:02.122512" elapsed="5.647732"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:29:59.004577" elapsed="8.765667"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:07.770244" elapsed="0.303061"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:08.073305" elapsed="0.305333"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:29:59.004577" elapsed="9.374061"/>
+</kw>
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:08.683620" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:08.379639" elapsed="0.303981"/>
+</kw>
+<msg time="2025-06-25T20:30:08.683620" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:08.379639" elapsed="0.303981"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:09.775392" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:30:09.775392" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:30:08.683620" elapsed="1.092773">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:30:09.776393" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:08.683620" elapsed="1.092773"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:09.776393" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:09.776393" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:09.776393" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:09.776393" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:09.776393" elapsed="0.001001"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:09.777394" elapsed="0.612079"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:10.389473" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:10.389473" elapsed="1.506889"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:11.896362" elapsed="0.302575"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:30:08.683620" elapsed="3.515317"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:08.683620" elapsed="3.515317"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:30:08.378638" elapsed="3.820299"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:30:12.198937" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:13.033493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:30:13.033493" level="FAIL">Location should have been 'http://localhost:5000/dashboard' but was 'http://localhost:5000/login'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-06-25T20:30:12.199934" elapsed="0.834560">Location should have been 'http://localhost:5000/dashboard' but was 'http://localhost:5000/login'.</status>
+</kw>
+<msg time="2025-06-25T20:30:13.034494" level="INFO">${is_on_dashboard} = False</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:12.199934" elapsed="0.834560"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.035495" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:13.035495" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:13.034494" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:13.034494" elapsed="0.001001"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:30:12.199934" elapsed="0.835561"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:30:12.199934" elapsed="0.835561"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:30:12.198937" elapsed="0.836558"/>
+</kw>
+<doc>Testa a funcionalidade de logout.</doc>
+<tag>login</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-06-25T20:29:58.084429" elapsed="14.951066"/>
+</test>
+<test id="s1-t5" name="(H5C1) Registrar Despesa Manualmente Com Todos os Campos" line="118">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:13.036496" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:13.036496" elapsed="0.613707"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:13.650203" elapsed="0.305149"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:13.956353" elapsed="0.617061"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:14.573414" elapsed="0.615829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:15.189243" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:15.189243" elapsed="0.943429"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:16.132672" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:16.132672" elapsed="0.940683"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:17.073355" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:17.073355" elapsed="5.643258"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:30:13.955352" elapsed="8.761261"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:22.716613" elapsed="0.303887"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.020500" elapsed="0.305400"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:30:13.955352" elapsed="9.370548"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:23.633222" level="INFO">${count_before} = 22</msg>
+<var>${count_before}</var>
+<arg>css=.expenses-table tbody tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.325900" elapsed="0.307322"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:30:23.633222" level="INFO">Despesas antes: 22</msg>
+<arg>Despesas antes: ${count_before}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.633222" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:30:23.634222" level="INFO">${today} = 2025-06-25</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.633222" elapsed="0.001000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:30:23.634222" level="INFO">${timestamp} = 203023</msg>
+<var>${timestamp}</var>
+<arg>result_format=%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.634222" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:30:23.634222" level="INFO">${test_desc} = Despesa Manual Teste 203023</msg>
+<var>${test_desc}</var>
+<arg>Despesa Manual Teste ${timestamp}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.634222" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:23.635223" level="INFO">Executing JavaScript:
+const formData = new FormData();formData.append('valor', '50.00');formData.append('descricao', 'Despesa Manual Teste 203023');formData.append('data_gasto', '2025-06-25');formData.append('category_id', '1');fetch('/add-expense', {method: 'POST',body: formData}).then(response =&gt; response.json()).then(data =&gt; {console.log('Resposta:', data);if (data.status === 'success') {location.reload();} else {console.error('Erro ao adicionar:', data.message);}}).catch(error =&gt; console.error('Erro na requisição:', error));
+Without any arguments.</msg>
+<arg>const formData = new FormData();</arg>
+<arg>formData.append('valor', '${DEFAULT_EXPENSE_VALUE}');</arg>
+<arg>formData.append('descricao', '${test_desc}');</arg>
+<arg>formData.append('data_gasto', '${today}');</arg>
+<arg>formData.append('category_id', '1');</arg>
+<arg>fetch('/add-expense', {</arg>
+<arg>method: 'POST',</arg>
+<arg>body: formData</arg>
+<arg>}).then(response =&gt; response.json())</arg>
+<arg>.then(data =&gt; {</arg>
+<arg>console.log('Resposta:', data);</arg>
+<arg>if (data.status === 'success') {</arg>
+<arg>location.reload();</arg>
+<arg>} else {</arg>
+<arg>console.error('Erro ao adicionar:', data.message);</arg>
+<arg>}</arg>
+<arg>})</arg>
+<arg>.catch(error =&gt; console.error('Erro na requisição:', error));</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.634222" elapsed="0.305279"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:30:26.940314" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:30:23.939501" elapsed="3.000813"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:28.284596" level="INFO">${count_after} = 23</msg>
+<var>${count_after}</var>
+<arg>css=.expenses-table tbody tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:26.940314" elapsed="1.344282"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:30:28.284596" level="INFO">Despesas depois: 23</msg>
+<arg>Despesas depois: ${count_after}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.284596" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:28.896671" level="INFO">Current page contains text 'Despesa Manual Teste 203023'.</msg>
+<arg>${test_desc}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.285597" elapsed="0.611074"/>
+</kw>
+<msg time="2025-06-25T20:30:28.896671" level="INFO">${expense_added} = True</msg>
+<var>${expense_added}</var>
+<arg>Page Should Contain</arg>
+<arg>${test_desc}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.284596" elapsed="0.612075"/>
+</kw>
+<if>
+<branch type="IF" condition="${expense_added}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:30:28.897672" level="INFO">✓ Despesa adicionada com sucesso</msg>
+<arg>✓ Despesa adicionada com sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.896671" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:30:28.896671" elapsed="0.001001"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${count_increased}</var>
+<arg>${count_after} &gt; ${count_before}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${count_increased}">
+<kw name="Log" owner="BuiltIn">
+<arg>✓ Número de despesas aumentou</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Despesa não foi adicionada</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.001001"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.001001"/>
+</branch>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.001001"/>
+</if>
+<status status="NOT RUN" start="2025-06-25T20:30:28.897672" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:28.896671" elapsed="0.002002"/>
+</if>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.898673" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:29.202601" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.899674" elapsed="0.302927"/>
+</kw>
+<msg time="2025-06-25T20:30:29.202601" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.899674" elapsed="0.302927"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:30.282310" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:30:30.282310" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:30:29.202601" elapsed="1.079709">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:30:30.282310" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:29.202601" elapsed="1.079709"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:30.283311" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:30.283311" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:30.283311" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:30.282310" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:30.282310" elapsed="0.001001"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:30.283311" elapsed="0.609290"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:30.892601" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:30.892601" elapsed="1.553309"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:32.445910" elapsed="0.303375"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:30:29.202601" elapsed="3.546684"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:29.202601" elapsed="3.546684"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:30:28.898673" elapsed="3.850612"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.898673" elapsed="3.850612"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:30:28.898673" elapsed="3.850612"/>
+</kw>
+<doc>Testa o registro de uma nova despesa manualmente.</doc>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-06-25T20:30:13.036496" elapsed="19.712789"/>
+</test>
+<test id="s1-t6" name="(H5C3) Tentar Registrar Despesa Sem Valor" line="176">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:32.750286" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:32.750286" elapsed="0.966041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:33.716327" elapsed="0.306278"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:34.022605" elapsed="0.617609"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:34.640214" elapsed="0.616291"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:35.256505" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:35.256505" elapsed="0.944795"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:36.201300" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:36.201300" elapsed="0.946733"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:37.148033" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:37.148033" elapsed="5.579528"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:30:34.022605" elapsed="8.704956"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:42.727561" elapsed="0.302923"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:43.030484" elapsed="0.304966"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:30:34.022605" elapsed="9.312845"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_EXPENSE_BTN}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:43.335450" elapsed="0.612006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:43.947456" level="INFO">Clicking element 'css=.feature-card:first-child'.</msg>
+<arg>${ADD_EXPENSE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:43.947456" elapsed="0.631397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EXPENSE_MODAL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:44.578853" elapsed="0.612551"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:30:45.191404" level="INFO">${today} = 2025-06-25</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:30:45.191404" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:45.192405" level="INFO">Typing text 'Compra Teste Sem Valor' into text field 'name=descricao'.</msg>
+<arg>${EXPENSE_DESC_FIELD}</arg>
+<arg>Compra Teste Sem Valor</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:45.191404" elapsed="0.952928"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:46.144332" level="INFO">Typing text '2025-06-25' into text field 'name=data_gasto'.</msg>
+<arg>${EXPENSE_DATE_FIELD}</arg>
+<arg>${today}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:46.144332" elapsed="0.944056"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${EXPENSE_MODAL_SAVE_BTN}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-25T20:30:47.088388" elapsed="0.916036"/>
+</kw>
+<msg time="2025-06-25T20:30:48.004424" level="INFO">${save_enabled} = True</msg>
+<var>${save_enabled}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${EXPENSE_MODAL_SAVE_BTN}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:47.088388" elapsed="0.916036"/>
+</kw>
+<if>
+<branch type="IF" condition="${save_enabled}">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:48.004424" level="INFO">Clicking button 'css=#expenseModal .btn-primary'.</msg>
+<arg>${EXPENSE_MODAL_SAVE_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:48.004424" elapsed="1.544093"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:30:51.549321" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:30:49.548517" elapsed="2.000804"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:52.160848" level="INFO">Element 'id=expenseModal' is displayed.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:51.549321" elapsed="0.611527"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:30:52.160848" level="INFO">Validação funcionou - modal permaneceu aberto</msg>
+<arg>Validação funcionou - modal permaneceu aberto</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:30:52.160848" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:30:48.004424" elapsed="4.156424"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Botão de salvar está desabilitado - validação HTML5 funcionando</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:52.160848" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:52.160848" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:48.004424" elapsed="4.156424"/>
+</if>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:52.161844" level="INFO">Executing JavaScript:
+closeModal();
+Without any arguments.</msg>
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:30:52.160848" elapsed="0.308930"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${EXPENSE_MODAL}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:52.470586" elapsed="0.610066"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.080652" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:53.386210" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.082654" elapsed="0.303556"/>
+</kw>
+<msg time="2025-06-25T20:30:53.386210" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.082654" elapsed="0.303556"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:54.477699" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:30:54.477699" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:30:53.386210" elapsed="1.091489">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:30:54.477699" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.386210" elapsed="1.091489"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:54.478700" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:54.478700" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:30:54.478700" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:30:54.477699" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:54.477699" elapsed="0.001001"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:30:54.478700" elapsed="0.610113"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:55.088813" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:55.088813" elapsed="1.562326"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:30:56.651139" elapsed="0.303272"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:30:53.386210" elapsed="3.568201"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:30:53.386210" elapsed="3.568201"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:30:53.081653" elapsed="3.872758"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.081653" elapsed="3.872758"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:30:53.080652" elapsed="3.873759"/>
+</kw>
+<doc>Testa a validação do campo valor obrigatório.</doc>
+<tag>expense</tag>
+<tag>negative</tag>
+<tag>requires_login</tag>
+<status status="PASS" start="2025-06-25T20:30:32.750286" elapsed="24.204125"/>
+</test>
+<test id="s1-t7" name="(H6C1) Editar Valor de Uma Despesa" line="211">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:56.955411" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:30:56.955411" elapsed="0.963146"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:30:57.918557" elapsed="0.306013"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:58.224570" elapsed="0.619622"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:58.844192" elapsed="0.615421"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:30:59.460141" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:30:59.459613" elapsed="0.942331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:00.401944" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:00.401944" elapsed="0.938635"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:01.340579" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:01.340579" elapsed="5.524081"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:30:58.224570" elapsed="8.640090"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:31:06.864660" elapsed="0.303718"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.168378" elapsed="0.305309"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:30:58.224570" elapsed="9.249117"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:31:07.473687" level="INFO">${today} = 2025-06-25</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.473687" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:31:07.474687" level="INFO">${timestamp} = 203107</msg>
+<var>${timestamp}</var>
+<arg>result_format=%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.473687" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:07.474687" level="INFO">${test_desc} = Despesa para Editar 203107</msg>
+<var>${test_desc}</var>
+<arg>Despesa para Editar ${timestamp}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.474687" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:07.475690" level="INFO">Executing JavaScript:
+const formData = new FormData();formData.append('valor', '50.00');formData.append('descricao', 'Despesa para Editar 203107');formData.append('data_gasto', '2025-06-25');formData.append('category_id', '1');fetch('/add-expense', {method: 'POST',body: formData}).then(r =&gt; r.json()).then(d =&gt; {if (d.status === 'success') location.reload();});
+Without any arguments.</msg>
+<arg>const formData = new FormData();</arg>
+<arg>formData.append('valor', '50.00');</arg>
+<arg>formData.append('descricao', '${test_desc}');</arg>
+<arg>formData.append('data_gasto', '${today}');</arg>
+<arg>formData.append('category_id', '1');</arg>
+<arg>fetch('/add-expense', {</arg>
+<arg>method: 'POST',</arg>
+<arg>body: formData</arg>
+<arg>}).then(r =&gt; r.json())</arg>
+<arg>.then(d =&gt; {</arg>
+<arg>if (d.status === 'success') location.reload();</arg>
+<arg>});</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.474687" elapsed="0.304921"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:31:10.780131" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:31:07.779608" elapsed="3.000523"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:10.780131" elapsed="1.125441"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:12.517514" level="INFO">Current page contains text 'Despesa para Editar 203107'.</msg>
+<arg>${test_desc}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-25T20:31:11.905572" elapsed="0.611942"/>
+</kw>
+<msg time="2025-06-25T20:31:12.517514" level="INFO">${expense_exists} = True</msg>
+<var>${expense_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>${test_desc}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:11.905572" elapsed="0.611942"/>
+</kw>
+<if>
+<branch type="IF" condition="${expense_exists}">
+<kw name="Get Expense Row And ID By Description">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:12.518514" elapsed="0.609824"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:13.128338" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]</msg>
+<var>${row_xpath}</var>
+<arg>//tr[.//span[contains(text(), '${description}')]]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:13.128338" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${row_xpath}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:13.128338" elapsed="0.611027"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:14.348404" level="INFO">${expense_id} = 67</msg>
+<var>${expense_id}</var>
+<arg>${row_xpath}</arg>
+<arg>data-id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:13.739365" elapsed="0.609039"/>
+</kw>
+<return>
+<value>${row_xpath}</value>
+<value>${expense_id}</value>
+<status status="PASS" start="2025-06-25T20:31:14.348404" elapsed="0.000000"/>
+</return>
+<msg time="2025-06-25T20:31:14.348404" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]</msg>
+<msg time="2025-06-25T20:31:14.348404" level="INFO">${expense_id} = 67</msg>
+<var>${row_xpath}</var>
+<var>${expense_id}</var>
+<arg>${test_desc}</arg>
+<doc>Retorna o xpath da linha e o ID da despesa pela descrição</doc>
+<status status="PASS" start="2025-06-25T20:31:12.517514" elapsed="1.830890"/>
+</kw>
+<kw name="Click Edit For Expense">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:14.349406" level="INFO">${edit_btn} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//button[@data-action='editar']</msg>
+<var>${edit_btn}</var>
+<arg>${row_xpath}//button[@data-action='editar']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:14.348404" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${edit_btn}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:14.349406" elapsed="0.611111"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:14.960517" level="INFO">Clicking element '//tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//button[@data-action='editar']'.</msg>
+<arg>${edit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:14.960517" elapsed="0.638096"/>
+</kw>
+<arg>${row_xpath}</arg>
+<doc>Clica no botão editar para uma despesa específica</doc>
+<status status="PASS" start="2025-06-25T20:31:14.348404" elapsed="1.250209"/>
+</kw>
+<kw name="Edit Expense Field">
+<if>
+<branch type="IF" condition="'${field_type}' == 'valor'">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:15.599613" level="INFO">${input} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//input[@type='number']</msg>
+<var>${input}</var>
+<arg>${row_xpath}//input[@type='number']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:15.598613" elapsed="0.001000"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:15.599613" elapsed="0.623647"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:16.223260" level="INFO">Typing text '75.50' into text field '//tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//input[@type='number']'.</msg>
+<arg>${input}</arg>
+<arg>${new_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:16.223260" elapsed="0.940195"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:15.598613" elapsed="1.564842"/>
+</branch>
+<branch type="ELSE IF" condition="'${field_type}' == 'descricao'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${input}</var>
+<arg>${row_xpath}//input[@type='text']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${new_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${field_type}' == 'categoria'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${select}</var>
+<arg>${row_xpath}//select[@class='input categoria-select']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>${select}</arg>
+<arg>${new_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:17.163455" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:15.598613" elapsed="1.564842"/>
+</if>
+<arg>${row_xpath}</arg>
+<arg>valor</arg>
+<arg>${EDITED_EXPENSE_VALUE}</arg>
+<doc>Edita um campo específico de uma despesa</doc>
+<status status="PASS" start="2025-06-25T20:31:15.598613" elapsed="1.564842"/>
+</kw>
+<kw name="Click Save For Expense">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:17.164456" level="INFO">${save_btn} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//button[@data-action='salvar']</msg>
+<var>${save_btn}</var>
+<arg>${row_xpath}//button[@data-action='salvar']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:17.164456" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${save_btn}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:17.164456" elapsed="0.614349"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:17.778805" level="INFO">Clicking element '//tr[.//span[contains(text(), 'Despesa para Editar 203107')]]//button[@data-action='salvar']'.</msg>
+<arg>${save_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:17.778805" elapsed="0.632604"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_POPUP}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:18.411409" elapsed="3.039013"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_POPUP}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:21.450422" elapsed="2.227230"/>
+</kw>
+<arg>${row_xpath}</arg>
+<doc>Clica no botão salvar para uma despesa específica</doc>
+<status status="PASS" start="2025-06-25T20:31:17.164456" elapsed="6.513196"/>
+</kw>
+<kw name="Verify Expense In Table">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${description}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:23.677652" elapsed="0.306651"/>
+</kw>
+<kw name="Get Expense Row And ID By Description">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:23.984303" elapsed="0.609371"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:24.593674" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]</msg>
+<var>${row_xpath}</var>
+<arg>//tr[.//span[contains(text(), '${description}')]]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:24.593674" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${row_xpath}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:24.593674" elapsed="0.617755"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:25.820455" level="INFO">${expense_id} = 67</msg>
+<var>${expense_id}</var>
+<arg>${row_xpath}</arg>
+<arg>data-id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:25.211429" elapsed="0.609026"/>
+</kw>
+<return>
+<value>${row_xpath}</value>
+<value>${expense_id}</value>
+<status status="PASS" start="2025-06-25T20:31:25.820455" elapsed="0.000000"/>
+</return>
+<msg time="2025-06-25T20:31:25.820455" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Editar 203107')]]</msg>
+<msg time="2025-06-25T20:31:25.820455" level="INFO">${expense_id} = 67</msg>
+<var>${row_xpath}</var>
+<var>${expense_id}</var>
+<arg>${description}</arg>
+<doc>Retorna o xpath da linha e o ID da despesa pela descrição</doc>
+<status status="PASS" start="2025-06-25T20:31:23.984303" elapsed="1.836152"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:25.820455" level="INFO">${value_formatted} = R$ 75.50</msg>
+<var>${value_formatted}</var>
+<arg>R$ ${value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:25.820455" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:26.436537" level="INFO">Element '//tr[.//span[contains(text(), 'Despesa para Editar 203107')]]' contains text 'R$ 75.50'.</msg>
+<arg>${row_xpath}</arg>
+<arg>${value_formatted}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:31:25.820455" elapsed="0.616082"/>
+</kw>
+<arg>${test_desc}</arg>
+<arg>${EDITED_EXPENSE_VALUE}</arg>
+<doc>Verifica se uma despesa está na tabela com o valor especificado</doc>
+<status status="PASS" start="2025-06-25T20:31:23.677652" elapsed="2.758885"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:12.517514" elapsed="13.919023"/>
+</branch>
+<branch type="ELSE">
+<kw name="Pass Execution" owner="BuiltIn">
+<arg>Despesa não foi criada para testar edição</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:26.436537" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:26.436537" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:12.517514" elapsed="13.919023"/>
+</if>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.436537" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:26.740992" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.437537" elapsed="0.303455"/>
+</kw>
+<msg time="2025-06-25T20:31:26.740992" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.437537" elapsed="0.303455"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:27.801718" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:31:27.801718" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:31:26.740992" elapsed="1.060726">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:31:27.802715" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.740992" elapsed="1.061723"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:27.802715" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:27.802715" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:27.802715" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:27.802715" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:27.802715" elapsed="0.000000"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:27.802715" elapsed="0.609582"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:28.412297" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:28.412297" elapsed="1.557347"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:31:29.969644" elapsed="0.303768"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:26.740992" elapsed="3.532420"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:26.740992" elapsed="3.532420"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:31:26.437537" elapsed="3.835875"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.437537" elapsed="3.835875"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:31:26.436537" elapsed="3.836875"/>
+</kw>
+<doc>Testa a edição do valor de uma despesa existente.</doc>
+<tag>edit</tag>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<status status="PASS" start="2025-06-25T20:30:56.955411" elapsed="33.318001"/>
+</test>
+<test id="s1-t8" name="(H7C1) Excluir Despesa" line="255">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:30.274413" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:31:30.274413" elapsed="0.617956"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:30.892369" elapsed="0.304594"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:31.196963" elapsed="0.617417"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:31.814380" elapsed="0.616352"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:32.430732" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:32.430732" elapsed="0.940939"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:33.371671" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:33.371671" elapsed="0.938505"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:34.310176" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:34.310176" elapsed="5.517538"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:31:31.196963" elapsed="8.630751"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:31:39.827714" elapsed="0.303483"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.131197" elapsed="0.305132"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:31:31.196963" elapsed="9.239366"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:31:40.436329" level="INFO">${today} = 2025-06-25</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.436329" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:31:40.437325" level="INFO">${timestamp} = 203140</msg>
+<var>${timestamp}</var>
+<arg>result_format=%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.437325" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:40.437325" level="INFO">${test_desc} = Despesa para Excluir 203140</msg>
+<var>${test_desc}</var>
+<arg>Despesa para Excluir ${timestamp}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.437325" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:40.438325" level="INFO">Executing JavaScript:
+const formData = new FormData();formData.append('valor', '30.00');formData.append('descricao', 'Despesa para Excluir 203140');formData.append('data_gasto', '2025-06-25');formData.append('category_id', '1');fetch('/add-expense', {method: 'POST',body: formData}).then(r =&gt; r.json()).then(d =&gt; {if (d.status === 'success') location.reload();});
+Without any arguments.</msg>
+<arg>const formData = new FormData();</arg>
+<arg>formData.append('valor', '30.00');</arg>
+<arg>formData.append('descricao', '${test_desc}');</arg>
+<arg>formData.append('data_gasto', '${today}');</arg>
+<arg>formData.append('category_id', '1');</arg>
+<arg>fetch('/add-expense', {</arg>
+<arg>method: 'POST',</arg>
+<arg>body: formData</arg>
+<arg>}).then(r =&gt; r.json())</arg>
+<arg>.then(d =&gt; {</arg>
+<arg>if (d.status === 'success') location.reload();</arg>
+<arg>});</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.437325" elapsed="0.305278"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:31:43.742740" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:31:40.742603" elapsed="3.000137"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:31:43.742740" elapsed="1.111740"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:45.465924" level="INFO">Current page contains text 'Despesa para Excluir 203140'.</msg>
+<arg>${test_desc}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-25T20:31:44.854480" elapsed="0.611444"/>
+</kw>
+<msg time="2025-06-25T20:31:45.465924" level="INFO">${expense_exists} = True</msg>
+<var>${expense_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>${test_desc}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:44.854480" elapsed="0.611444"/>
+</kw>
+<if>
+<branch type="IF" condition="${expense_exists}">
+<kw name="Get Expense Row And ID By Description">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:45.466924" elapsed="0.612445"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:46.079369" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Excluir 203140')]]</msg>
+<var>${row_xpath}</var>
+<arg>//tr[.//span[contains(text(), '${description}')]]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:46.079369" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${row_xpath}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:31:46.079369" elapsed="0.613411"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:47.303016" level="INFO">${expense_id} = 68</msg>
+<var>${expense_id}</var>
+<arg>${row_xpath}</arg>
+<arg>data-id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:46.692780" elapsed="0.610236"/>
+</kw>
+<return>
+<value>${row_xpath}</value>
+<value>${expense_id}</value>
+<status status="PASS" start="2025-06-25T20:31:47.303016" elapsed="0.000000"/>
+</return>
+<msg time="2025-06-25T20:31:47.303016" level="INFO">${row_xpath} = //tr[.//span[contains(text(), 'Despesa para Excluir 203140')]]</msg>
+<msg time="2025-06-25T20:31:47.303016" level="INFO">${expense_id} = 68</msg>
+<var>${row_xpath}</var>
+<var>${expense_id}</var>
+<arg>${test_desc}</arg>
+<doc>Retorna o xpath da linha e o ID da despesa pela descrição</doc>
+<status status="PASS" start="2025-06-25T20:31:45.466924" elapsed="1.836092"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-25T20:31:47.303016" level="INFO">${delete_btn} = //tr[.//span[contains(text(), 'Despesa para Excluir 203140')]]//button[@data-action='deletar']</msg>
+<var>${delete_btn}</var>
+<arg>${row_xpath}//button[@data-action='deletar']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-25T20:31:47.303016" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:47.610820" level="INFO">${count_before} = 25</msg>
+<var>${count_before}</var>
+<arg>${EXPENSE_ROW}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:47.303016" elapsed="0.307804"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:31:47.610820" level="INFO">Despesas antes da exclusão: 25</msg>
+<arg>Despesas antes da exclusão: ${count_before}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:31:47.610820" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:47.610820" level="INFO">Clicking element '//tr[.//span[contains(text(), 'Despesa para Excluir 203140')]]//button[@data-action='deletar']'.</msg>
+<arg>${delete_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:47.610820" elapsed="0.636455"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:48.247275" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg time="2025-06-25T20:31:51.222209" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:31:51.222209" level="FAIL">Alert not found in 2 seconds.</msg>
+<arg>timeout=2s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="FAIL" start="2025-06-25T20:31:48.247275" elapsed="2.975935">Alert not found in 2 seconds.</status>
+</kw>
+<arg>Alert Should Be Present</arg>
+<arg>timeout=2s</arg>
+<arg>AND</arg>
+<arg>Accept Alert</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="FAIL" start="2025-06-25T20:31:48.247275" elapsed="2.975935">Alert not found in 2 seconds.</status>
+</kw>
+<msg time="2025-06-25T20:31:51.223210" level="INFO">${handled} = False</msg>
+<var>${handled}</var>
+<arg>Run Keywords</arg>
+<arg>Alert Should Be Present</arg>
+<arg>timeout=2s</arg>
+<arg>AND</arg>
+<arg>Accept Alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:48.247275" elapsed="2.975935"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${handled}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:31:51.223210" level="INFO">Nenhum alert/confirm detectado</msg>
+<arg>Nenhum alert/confirm detectado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:31:51.223210" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:31:53.224342" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:31:51.224211" elapsed="2.000131"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:53.832339" level="INFO">Current page contains text 'Despesa para Excluir 203140'.</msg>
+<arg>${test_desc}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-25T20:31:53.224342" elapsed="0.607997"/>
+</kw>
+<msg time="2025-06-25T20:31:53.832339" level="INFO">${still_exists} = True</msg>
+<var>${still_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>${test_desc}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:53.224342" elapsed="0.607997"/>
+</kw>
+<if>
+<branch type="IF" condition="${still_exists}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:31:53.832339" level="INFO">Tentando deletar via JavaScript direto</msg>
+<arg>Tentando deletar via JavaScript direto</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:31:53.832339" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:53.833341" level="INFO">Executing JavaScript:
+const id = '68';if (id) {const formData = new FormData();formData.append('id', id);fetch('/delete-expense', {method: 'POST',body: formData}).then(() =&gt; location.reload());}
+Without any arguments.</msg>
+<arg>const id = '${expense_id}';</arg>
+<arg>if (id) {</arg>
+<arg>const formData = new FormData();</arg>
+<arg>formData.append('id', id);</arg>
+<arg>fetch('/delete-expense', {</arg>
+<arg>method: 'POST',</arg>
+<arg>body: formData</arg>
+<arg>}).then(() =&gt; location.reload());</arg>
+<arg>}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:31:53.832339" elapsed="0.304860"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:31:57.137221" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:31:54.137199" elapsed="3.000022"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:53.832339" elapsed="3.304882"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:53.832339" elapsed="3.304882"/>
+</if>
+<status status="PASS" start="2025-06-25T20:31:51.223210" elapsed="5.914011"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:57.137221" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:57.137221" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:51.223210" elapsed="5.914011"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:58.873462" level="INFO">Current page does not contain text 'Despesa para Excluir 203140'.</msg>
+<arg>${test_desc}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-25T20:31:57.137221" elapsed="1.736241"/>
+</kw>
+<msg time="2025-06-25T20:31:58.873462" level="INFO">${expense_gone} = True</msg>
+<var>${expense_gone}</var>
+<arg>Page Should Not Contain</arg>
+<arg>${test_desc}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:57.137221" elapsed="1.736241"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${expense_gone}">
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:58.873462" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EXPENSES_TABLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:58.873462" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<arg>${test_desc}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:58.873462" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:58.873462" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:58.873462" elapsed="0.000000"/>
+</if>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:59.179257" level="INFO">${count_after} = 24</msg>
+<var>${count_after}</var>
+<arg>${EXPENSE_ROW}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:31:58.873462" elapsed="0.305795"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-25T20:31:59.179257" level="INFO">Despesas após exclusão: 24</msg>
+<arg>Despesas após exclusão: ${count_after}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.179257" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_after} &lt; ${count_before}</arg>
+<arg>Número de despesas deve diminuir</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.179257" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:45.465924" elapsed="13.713333"/>
+</branch>
+<branch type="ELSE">
+<kw name="Pass Execution" owner="BuiltIn">
+<arg>Despesa não foi criada para testar exclusão</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2025-06-25T20:31:59.180258" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:31:59.179257" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:45.465924" elapsed="13.714334"/>
+</if>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.180258" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:31:59.484535" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.181259" elapsed="0.303276"/>
+</kw>
+<msg time="2025-06-25T20:31:59.484535" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.181259" elapsed="0.303276"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:00.556159" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:32:00.556159" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:31:59.485537" elapsed="1.071623">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:32:00.557160" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.484535" elapsed="1.072625"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:00.557160" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:00.557160" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:00.557160" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:32:00.557160" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:32:00.557160" elapsed="0.000000"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:32:00.557160" elapsed="0.610094"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:01.167254" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:01.167254" elapsed="1.557074"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:32:02.724328" elapsed="0.303276"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:31:59.484535" elapsed="3.543069"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:31:59.484535" elapsed="3.543069"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:31:59.180258" elapsed="3.847346"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.180258" elapsed="3.847346"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:31:59.180258" elapsed="3.847346"/>
+</kw>
+<doc>Testa a remoção de uma despesa.</doc>
+<tag>delete</tag>
+<tag>expense</tag>
+<tag>requires_login</tag>
+<status status="PASS" start="2025-06-25T20:31:30.274413" elapsed="32.753191"/>
+</test>
+<test id="s1-t9" name="(H9C1) Visualizar Gráfico de Gastos" line="358">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:03.028605" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:32:03.028605" elapsed="0.615688"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:32:03.644293" elapsed="0.304806"/>
+</kw>
+<kw name="Successful Login">
+<kw name="Attempt Login">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:03.950100" elapsed="0.616258"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${ACCESS_CODE_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:04.566358" elapsed="0.616337"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:05.182695" level="INFO">Typing text '6212796124' into text field 'id=telegram_id'.</msg>
+<arg>${TELEGRAM_ID_FIELD}</arg>
+<arg>${telegram_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:05.182695" elapsed="0.940815"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:06.123510" level="INFO">Typing text '123456' into text field 'id=access_code'.</msg>
+<arg>${ACCESS_CODE_FIELD}</arg>
+<arg>${access_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:06.123510" elapsed="0.938620"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:07.062130" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_SUBMIT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:07.062130" elapsed="5.520315"/>
+</kw>
+<arg>${VALID_TELEGRAM_ID}</arg>
+<arg>${VALID_ACCESS_CODE}</arg>
+<doc>Tenta fazer login com as credenciais fornecidas</doc>
+<status status="PASS" start="2025-06-25T20:32:03.949099" elapsed="8.633346"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:32:12.582445" elapsed="0.302901"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DASHBOARD_TITLE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:32:12.885346" elapsed="0.305005"/>
+</kw>
+<doc>Realiza login com credenciais válidas</doc>
+<status status="PASS" start="2025-06-25T20:32:03.949099" elapsed="9.241252"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-25T20:32:13.190351" level="INFO">${today} = 2025-06-25</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-25T20:32:13.190351" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:13.191353" level="INFO">Executing JavaScript:
+const formData = new FormData();formData.append('valor', '100.00');formData.append('descricao', 'Despesa para Gráfico');formData.append('data_gasto', '2025-06-25');formData.append('category_id', '1');fetch('/add-expense', {method: 'POST',body: formData}).then(r =&gt; r.json()).then(d =&gt; {if (d.status === 'success') {setTimeout(() =&gt; location.reload(), 1000);}});
+Without any arguments.</msg>
+<arg>const formData = new FormData();</arg>
+<arg>formData.append('valor', '100.00');</arg>
+<arg>formData.append('descricao', 'Despesa para Gráfico');</arg>
+<arg>formData.append('data_gasto', '${today}');</arg>
+<arg>formData.append('category_id', '1');</arg>
+<arg>fetch('/add-expense', {</arg>
+<arg>method: 'POST',</arg>
+<arg>body: formData</arg>
+<arg>}).then(r =&gt; r.json())</arg>
+<arg>.then(d =&gt; {</arg>
+<arg>if (d.status === 'success') {</arg>
+<arg>setTimeout(() =&gt; location.reload(), 1000);</arg>
+<arg>}</arg>
+<arg>});</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-25T20:32:13.190351" elapsed="0.306131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-25T20:32:16.497441" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-25T20:32:13.496482" elapsed="3.000959"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CHART_CANVAS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T20:32:16.497441" elapsed="2.119039"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:19.226239" level="INFO">Element 'id=graficoGastos' is displayed.</msg>
+<arg>${CHART_CANVAS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:32:18.616480" elapsed="0.609759"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.226239" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Logout From Dashboard">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:19.530516" level="INFO">Current location is 'http://localhost:5000/dashboard'.</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.227240" elapsed="0.303276"/>
+</kw>
+<msg time="2025-06-25T20:32:19.530516" level="INFO">${is_on_dashboard} = True</msg>
+<var>${is_on_dashboard}</var>
+<arg>Location Should Be</arg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.227240" elapsed="0.303276"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_on_dashboard}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:20.611372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-25T20:32:20.612373" level="FAIL">The element 'id=expenseModal' should be visible, but it is not.</msg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-25T20:32:19.530516" elapsed="1.081857">The element 'id=expenseModal' should be visible, but it is not.</status>
+</kw>
+<msg time="2025-06-25T20:32:20.612373" level="INFO">${modal_visible} = False</msg>
+<var>${modal_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${EXPENSE_MODAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.530516" elapsed="1.081857"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Modal está aberto, fechando antes do logout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:20.612373" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>closeModal();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:20.612373" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-25T20:32:20.612373" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-06-25T20:32:20.612373" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:32:20.612373" elapsed="0.000000"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T20:32:20.613374" elapsed="0.609226"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-25T20:32:21.222600" level="INFO">Clicking link 'xpath=//a[contains(@href, '/logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T20:32:21.222600" elapsed="1.557510"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-06-25T20:32:22.780110" elapsed="0.303213"/>
+</kw>
+<status status="PASS" start="2025-06-25T20:32:19.530516" elapsed="3.552807"/>
+</branch>
+<status status="PASS" start="2025-06-25T20:32:19.530516" elapsed="3.552807"/>
+</if>
+<doc>Realiza logout a partir do dashboard</doc>
+<status status="PASS" start="2025-06-25T20:32:19.227240" elapsed="3.856083"/>
+</kw>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.227240" elapsed="3.856083"/>
+</kw>
+<arg>Run Keyword If Test Failed</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Run Keyword If</arg>
+<arg>'requires_login' in @{TEST_TAGS}</arg>
+<arg>Logout From Dashboard</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-25T20:32:19.226239" elapsed="3.857084"/>
+</kw>
+<doc>Verifica se o gráfico de gastos é exibido.</doc>
+<tag>dashboard</tag>
+<tag>requires_login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-06-25T20:32:03.028605" elapsed="20.054718"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-25T20:32:23.084324" elapsed="2.352145"/>
+</kw>
+<doc>Suite de Testes Automatizados para o Sistema GEDIE
+Sistema de Gestão de Despesas Inteligente
+Testes completos baseados nos casos de teste fornecidos</doc>
+<status status="PASS" start="2025-06-25T20:29:21.631527" elapsed="183.804942"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">dashboard</stat>
+<stat pass="1" fail="0" skip="0">delete</stat>
+<stat pass="1" fail="0" skip="0">edit</stat>
+<stat pass="4" fail="0" skip="0">expense</stat>
+<stat pass="4" fail="0" skip="0">login</stat>
+<stat pass="3" fail="0" skip="0">negative</stat>
+<stat pass="6" fail="0" skip="0">requires_login</stat>
+<stat pass="4" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Gedie Tests">Gedie Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
